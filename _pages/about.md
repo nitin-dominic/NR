@@ -5,7 +5,7 @@ permalink: /
 subtitle: <a href='#'>ND State University</a>
 
 profile:
-  align: left
+  align: right
   image: NitinI.webp
   image_circular: false # crops the image to make it circular
   more_info: >
