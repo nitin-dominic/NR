@@ -6,7 +6,7 @@ subtitle: <a href='#'>ND State University</a>
 
 profile:
   align: left
-  image: Nitin21.jpg
+  image: NitinI.webp
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>1231 Ladd Hall</p>
