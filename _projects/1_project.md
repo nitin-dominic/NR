@@ -2,7 +2,7 @@
 layout: page
 title: Automating development of weed prescription map using Arcpy and Python
 description: a project with a background image
-img: assets/img/12.jpg
+img: assets/pm.jpg
 importance: 1
 category: work
 related_publications: einstein1956investigations, einstein1950meaning
