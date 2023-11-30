@@ -2,10 +2,10 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='#'>ND State University</a>. Department of Agricultural and Biosystems Engineering, Ladd Hall
 
 profile:
-  align: right
+  align: left
   image: NitinS.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
