@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Crop/Weed prescription map
+title: Crop/Weed prescription mapping
 description: A project that uses Python with "arcpy" library.
 img: assets/img/pm.jpg
 importance: 1
@@ -9,6 +9,7 @@ related_publications: einstein1956investigations, einstein1950meaning
 ---
 
 # Automating development of weed prescription map using Arcpy and Python
+<b>Rai, N</b> & Flores, P
 
 ### Background
 
@@ -31,7 +32,6 @@ This algorithm imports Arcpy, and Rasterio packages in Python to create a weed p
 
 ### Final out of the developed weed prescription map: 
 
-</div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/pm.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
