@@ -10,13 +10,13 @@ related_publications: einstein1956investigations, einstein1950meaning
 
 ## Background
 
-This algorithm imports Arcpy, and Rasterio packages in Python to create a weed prescription map. A feature to calculate Excess Green and 4 different VIs, namely, Normalised Difference Vegetation Index (NDVI), Normalized Difference Red Edge Index (NDRE), Soil Adjusted Vegetation Index (SAVI), and Optimized Soil Adjusted Vegetation Index (OSAVI) can also be calculated and exported to local drive using this script. The script accepts either a multispectral imagery or an RGB imagery. Based on band count, it calculates the required indices. After indices calculation, it also performs image sharpening and thresholding thereby converting the whole image into a binary image. After that it converts objects within the image to polygons and perfroms weed identification while creating a weed map using Fishnet Grid technique. Full Python code to automate the process can be found [here](https://github.com/nitin-dominic/Automating-development-of-weed-prescription-map-using-Arcpy-and-Python/blob/main/WeedMappingScript.py).
+This algorithm imports Arcpy, and Rasterio packages in Python to create a weed prescription map. A feature to calculate Excess Green and 4 different VIs, namely, Normalised Difference Vegetation Index (NDVI), Normalized Difference Red Edge Index (NDRE), Soil Adjusted Vegetation Index (SAVI), and Optimized Soil Adjusted Vegetation Index (OSAVI) can also be calculated and exported to local drive using this script. The script accepts either a multispectral imagery or an RGB imagery. Based on band count, it calculates the required indices. After indices calculation, it also performs image sharpening and thresholding, thereby converting the whole image into a binary one. After that it converts objects within the image to polygons and perfroms weed identification while creating a weed map using Fishnet Grid technique. Full Python code to automate the process can be found [here](https://github.com/nitin-dominic/Automating-development-of-weed-prescription-map-using-Arcpy-and-Python/blob/main/WeedMappingScript.py).
 
 ## Prerequisites:
 
-1. RGB or a multispectral imagery should be provided by the user.
+1. RGB or multispectral imagery should be provided by the user.
 2. Specify a directory with an empty folder before this scripts starts exporting all the indices (output images) or processed images.
-3. Shapefile (a polygon line drawn over the crops) should be provided by the user.
+3. Shapefile (a polygon line drawn over the crop plants) should be provided by the user.
 
 ## Limitation of this algorithm:
 
