@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description:
+description: Papers are arranged in a descending chronological order based on their publication year.
 nav: true
 nav_order: 1
 ---
