@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>ND State University</a>
+subtitle: <a href='https://www.ndsu.edu/'>ND State University</a>
 
 profile:
   align: right
@@ -27,7 +27,7 @@ As an **agricultural engineer** working closely with precision agriculture techn
 
 ### My academic background
 
-I am a Postdoctoral Associate in the Department of [Agricultural and Biosystems Engineering](https://www.ndsu.edu/aben/) at [North Dakota State University](https://www.ndsu.edu/). I earned my doctoral degree in Agriculturtal and Biosystems Engineering from North Dakota State University in the [NDSU Sun Lab](https://sites.google.com/view/ndsusunslab) where I was advsied by [Dr. Xin (Rex) Sun](https://www.ndsu.edu/aben/faculty_and_staff/personnel/dr_xin_rex_sun/). Prior to this, I earned my master's degree in Agricultural Engineering with a specialization in Agricultural Systems and Management from the [Indian Institute of Technology (IIT), Kharagpur](https://www.iitkgp.ac.in/), India. While my two years at the institute, I worked in the Soil Physics Lab and was advised by [Prof. B.S. Das](https://scholar.google.co.in/citations?hl=en&user=oEvfFMYAAAAJ&view_op=list_works&sortby=pubdate) and co-advised by [Dr. Rajendra Machavaram](https://sites.google.com/site/rajendramachavaram/). I also hold a bachelor's degree in Agricultural Engineering from Sam Higginbottom University of Agriculture, Technology and Sciences [(SHUATS)](https://shuats.edu.in/), India. You can find my extended CV [here](CV_Rai.pdf).
+I am a Postdoctoral Associate in the Department of [Agricultural and Biosystems Engineering](https://www.ndsu.edu/aben/) at [ND State University](https://www.ndsu.edu/). I earned my doctoral degree in Agriculturtal and Biosystems Engineering from ND State University in the [NDSU Sun Lab](https://sites.google.com/view/ndsusunslab) where I was advsied by [Dr. Xin (Rex) Sun](https://www.ndsu.edu/aben/faculty_and_staff/personnel/dr_xin_rex_sun/). Prior to this, I earned my master's degree in Agricultural Engineering with a specialization in Agricultural Systems and Management from the [Indian Institute of Technology (IIT), Kharagpur](https://www.iitkgp.ac.in/), India. While my two years at the institute, I worked in the Soil Physics Lab and was advised by [Prof. B.S. Das](https://scholar.google.co.in/citations?hl=en&user=oEvfFMYAAAAJ&view_op=list_works&sortby=pubdate) and co-advised by [Dr. Rajendra Machavaram](https://sites.google.com/site/rajendramachavaram/). I also hold a bachelor's degree in Agricultural Engineering from Sam Higginbottom University of Agriculture, Technology and Sciences [(SHUATS)](https://shuats.edu.in/), India. You can find my extended CV [here](CV_Rai.pdf).
 
 ### Work philosophy
 
