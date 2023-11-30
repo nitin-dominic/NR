@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>ND State University</a>. Department of Agricultural and Biosystems Engineering, Ladd Hall
+subtitle: <a href='#'>(ND State University)[https://www.ndsu.edu/]</a>. (Department of Agricultural and Biosystems Engineering)[https://www.ndsu.edu/aben/]
 
 profile:
   align: left
