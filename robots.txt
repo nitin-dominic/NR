@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://nitin-dominic.github.io/NR//sitemap.xml
+Sitemap: https://nitin-dominic.github.io/NR//NR/sitemap.xml
