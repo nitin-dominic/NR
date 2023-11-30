@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-# subtitle: <a href='#'>ND State University</a>. Department of Agricultural and Biosystems Engineering
+subtitle: <a href='#'>ND State University</a>. Department of Agricultural and Biosystems Engineering
 
 profile:
   align: left
