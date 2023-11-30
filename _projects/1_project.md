@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Crop/Weed prescription maps
+title: Crop/Weed prescription map
 description: A project that uses Python with "arcpy" library.
 img: assets/img/pm.jpg
 importance: 1
