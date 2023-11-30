@@ -21,7 +21,7 @@ social: true  # includes social icons at the bottom of the page
 
 ### Data-driven agriculture
 
-As an agricultural engineer working closely with precision agriculture technologies, I take a data-driven approach to visualize and monitor farming operations. To address these operations, I integrate artificial intelligence approaches with the data obtained from various ground and aerial-robots to address in-field and site-specific tasks in agriculture. Overall, I am blessed to work on cutting-edge research while hoping to lay a foundation for incoming researchers. I believe that the future of agriculture is data-driven. But what matters the most is how well do we manage, process, and interpret this data so that the farmers, stakeholders, agricultural technology providers (ATPs), and extension specialists could be benefitted from it. I strongly believe in the quote below:
+As an agricultural engineer working closely with precision agriculture technologies, I take a data-driven approach to visualize and monitor farming operations. To address these operations, I integrate artificial intelligence approaches with the data obtained from various ground and aerial-robots to address in-field and site-specific tasks in agriculture. Overall, I am blessed to work on cutting-edge research while hoping to lay a foundation for incoming researchers. I believe that the future of agriculture is data-driven. But what matters the most is how well do we manage, process, and interpret this data so that the farmers, stakeholders, agricultural technology providers, and extension specialists could be benefitted from it. I strongly believe in the quote below:
 
 > Data is the new currency but it will be useful when it is turned into action.
 
