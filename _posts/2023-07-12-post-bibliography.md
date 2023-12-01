@@ -1,12 +1,39 @@
 ---
 layout: post
-title: a post with bibliography
-date: 2023-07-12 09:56:00-0400
-description: an example of a blog post with bibliography
+title: The script that helped me win 3MT thesis competition
+date: 2023-02-16 09:56:00-0400
+description: 
 tags: formatting bib
 categories: sample-posts
-giscus_comments: true
-related_posts: false
-related_publications: einstein1950meaning, einstein1905movement
 ---
-This post shows how to add bibliography to simple blog posts. If you would like something more academic, check the [distill style post]({% post_url 2018-12-22-distill %}).
+After much considerations, I finally plan on writing a small post about the script (summary of my research) that helped me win NDSU's annual 3MT Thesis competition. This was my first time (since the time I joined NDSU in the fall 2019) participating in the competition with 2-levels of rounds, preliminary and championship. Below is the script that I wrote and memorized it really hard while trying to speak atleat 5-times a day so that I don't forget it when facing a large audience. My presentation was titled, **Drone spots illegal weed plants: The future of agriculture takes flight**. I have provided some strike-throughs (~~this~~, with changes made in the brackets) throughout the script that basically portrays how I navigated my script for the final talk after gathering advise from a mentor. Also, the bold fonts (**This one**) mean that an expression or an emphasis was required. 👨‍🔬
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/3MT_Nitin.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Me giving a 3MT Thesis talk inside the Memorial Union (MU) in Anishinaabe Theater while pointing at the presentation.
+</div>
+
+_The script starts below..._
+
+Have you ever **wondered** if an uncrewed aircraft system (UAS) or drones could be used to monitor agricultural farms? Well, I carried the **same curiosity** almost 3-and-a-half years back and now my research focuses on the application of drones in agriculture.
+
+_My name is Nitin Rai and I am a Ph.D. candidate in the department of Agricultural and Biosystems Engineering._
+
+According to a survey, the world population is about to reach **9 billion mark** by the end of 2030. With this population growth rate, growers and farmers **are expected to** increase the use of technolgies that are reliable, fast, and sustainable. One such technologies are drones in agriculture that can be used to monitor weed growth. Now as we all know that weeds are unwanted plants that compete with crop plants for sunlight, water, and nutrients ~~thereby affecting its yield~~ (and what not). For example, a weed by the name of kochia was found to decrease corn production by over 90%. ~~These weeds could be identified by in-field machines and eradicated on-the-go.~~ (**But there's a hope!**). Do you know that these weeds could be eliminated by such advanced technologies in real-time? 
+
+Well allow me to do some time-travelling here ~~by taking you half a century back~~. In the late 1970s, farmers had to ~~literally~~ walk miles in order to manually ~~apply herbicide solutions~~ (eliminate weeds). ~~Fast forwarded to~~ Another 20 years ~~and engineers developed conventional sprayers~~ (and we have big conventional sprayers). Fast-forwarded to another 20 years and we have drone technology. **So, as a 21st century agricultural engineer, what role do I play in making advancements
+and contributions to such technologies?** Well, the answer to this is: I teach drones to identify weeds ~~and that’s where I believe the future of agriculture is headed.~~ (amongst crop plants). 
+
+So, questioning the gist of my research; how do I teach drones? ~~to spot weeds amongst crop plants?~~ Imagine teaching a 4 year old kid about how an apple looks like? Well you may ~~High chances are that you’re going to~~ start by describing its textures, such as, an apple is red color, it has a crisp texture, or is roundish in shape. ~~You may also show an image of an apple with different backgrounds and the next time the kid is with you in Walmart, he’ll certainly point out those red apples for a bite!~~ **A computer is just like that 4 year old kid**. In our research we collect **thousands of images of weeds** and ~~train~~ feed it ~~using an approach~~ in an algorithm called as machine learning algorithm. What these machine learning algorithms are capable of ~~doing~~ achieving is extracting ~~very specific features pertaining to~~ relevant features from a specific class of weed specie. ~~We then take these modeled algorithms and deploy them in multiple unseen locations.~~ Once we have these features modeled, we then take these models to multiple field locations to identify those weed species. ~~Once the algorithm identifies the weeds, we compare it with the ground truth data which are labeled by human experts.~~
+
+As far as the results ~~from our research is concerned~~ are concerned, our ~~trained~~ algorithm/model has been able to achieve an **overall accuracy of over 85% in identifying 5 different species of weeds across 2 location in the state of ND**. ~~With this accuracy~~ Moreover, our algorithm/model can be integrated with the technologies that are used by growers and farmers ~~would be able to integrate this technology with their spraying~~ to identify and spray weeds in their field as well. technology. ~~Moreover, our algorithm could be trained on small computers in less hours.~~
+
+So, does the future of agriculture takes flight ~~by monitoring your agricultural field~~? **Yes, of course it does!** Therefore, the next time when you are about to eat a delicious meal, **think about these technologies and farmers effort** in quenching your starving tummy.
+
+Thank you!!! 😃
+
+P.S: If you're interested in watching a recorded presentation, please click [here](https://youtu.be/j3DfPBQiBS4)🥇.
