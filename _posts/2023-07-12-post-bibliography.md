@@ -17,6 +17,7 @@ After much considerations, I finally plan on writing a small post about the scri
     Me giving a 3MT Thesis talk inside the Memorial Union (MU) in Anishinaabe Theater while pointing at the presentation.
 </div>
 
+
 _The script starts below..._
 
 Have you ever **wondered** if an uncrewed aircraft system (UAS) or drones could be used to monitor agricultural farms? Well, I carried the **same curiosity** almost 3-and-a-half years back and now my research focuses on the application of drones in agriculture.
