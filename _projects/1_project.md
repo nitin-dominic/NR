@@ -4,7 +4,7 @@ title: Crop/Weed prescription mapping
 description: A project that uses Python with "arcpy" library.
 img: assets/img/pm.jpg
 importance: 1
-category:
+category: work
 ---
 
 # Automating development of weed prescription map using Arcpy and Python
