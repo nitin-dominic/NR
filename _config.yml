@@ -121,9 +121,13 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
+blog_name: nitin-rai # blog_name will be displayed in your blog page
 blog_nav_title: Blogs # your blog must have a title for it to be displayed in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_description: Not everything we write/want to write can be published and reviewed by professional reviewers/editors. 
+For this very reason, I write blogs or present opinions on hot topics, technical notes, etc., to spread small information across a bunch of people with similar interests. 
+It sharpens my writing skills and at the same time helps me to think more on related topics. 
+I used to write for Medium but then I stopped doing so because I was not willing to pay a monthly $5 as a subscription fee. 
+If one can learn skills and create their own webpage, why pay for it? Below are some of my blogs, please have a look!
 permalink: /blog/:year/:title/
 
 # Pagination
