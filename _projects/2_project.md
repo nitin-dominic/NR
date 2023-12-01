@@ -5,7 +5,6 @@ description: A project that uses transfer learning to count sunflower stands in 
 img: assets/img/tl1.jpg
 importance: 2
 category: work
-giscus_comments: true
 ---
 
 # Crop stand count automation using transfer learning in ArcGIS Pro
