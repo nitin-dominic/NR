@@ -51,7 +51,7 @@ navbar_fixed: false
 footer_fixed: false
 
 # Dimensions
-max_width: 500px
+max_width: 1200px
 
 # TODO: add layout settings (single page vs. multi-page)
 
