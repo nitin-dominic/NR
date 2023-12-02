@@ -8,10 +8,7 @@ profile:
   align: right
   image: NitinI.webp
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>1231 Ladd Hall</p>
-    <p>Room No. 210C</p>
-    <p>Fargo, ND 58102 USA</p>
+  more_info:
 
 #news: true  # includes a list of news items
 #latest_posts: true  # includes a list of the newest posts
