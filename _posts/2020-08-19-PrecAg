@@ -1,0 +1,32 @@
+---
+layout: post
+title: Is precision agriculture beyond the pale stream?
+date: 2020-08-19 09:56:00-0400
+description: 
+tags: formatting bib
+categories: sample-posts
+---
+
+Imagine yourself in a debate about a topic you really like to talk about but then you notice the other group beating around the bush instead of addressing issues on the topic. Would you like it? Of course not, right? Looking for a precise and targeted solutions/talks about an issue is always desired no matter which area we strive for. Exploring one such area would be agriculture, where Precision Agriculture is a remedy for solving problems by being specific with an intention for a targeted applications. If this saves time, works remotely, replace traditional workflows with automation, requires researchers/users to upgrade themselves via acquainting themselves with newer skills, then may I ask you a question, why is then Precision Agriculture considered beyond the pale stream? On the contrary side, I very much agree with the fact that none of the technologies created so far are ideal (or have no disadvantages at all) and can never surpass humans in many areas and ways. But then our goal as Precision Ag. Engineers is not to develop a technology that replace humans (as in eliminating them) but assist and save time usually for those traditional methods which are done manually and are considered time-taking.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/dronerobo.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    DALL.E2 generated pixalated image of a drone flying on a farm.
+</div>
+
+### What is Precision Agriculture all about?
+
+During my undergraduate study, I came across several myths stating that Agricultural Engineering has no scope. With that in mind, I often used to ponder what my future will be? What will I do after completing my bachelor’s? All these questions have always motivated me to pursue higher education in this field to understand what potential Agricultural Engineering has in shaping one’s career. As the trend demands with reference to emerging technologies, agricultural farms have become more automated and less human-driven. That ultimately doesn’t point out to saying that we have replaced humans with the machines. Humans are still considered an epitome for identifying, counting or detecting, etc several task on field.
+
+Half a century ago, most of the agricultural practices were traditional and intensely conventional. But as always, thanks to computer science, mechanical and electrical fields which bought tremendous growth and evolution after the famous “Green Revolution”. Today, Precision Agriculture (a subdivision of Agricultural Engineering) has emerged with all the technologies and trending methods that once seemed difficult for other field expertise to implement on agricultural farms. Who could have ever thought that drones (which were initially used for military purposes) could be used to monitor crops in large fields? This is a very constructive piece of example I have ever read about. With the advent of tractors and mechanical implements, it is easy for the farmers to till the land in less time. With the advancements in remote sensing area, it is easy to predict crop yield, soil properties, and other related elements in soil without the traditional and arduous laboratory analysis. With the help of sensors when coupled with UAVs, plant stress or soil moisture can be monitored and estimated using the acquired imagery. With the advent of IoT, data transfer using cloud and fog computing has helped farmers knowing about various species, plant disease and other related kinds of stuff about plants on their cell phones. With the advent of UAVs or agricultural drones, it is easy to map land and extract information from UAV imagery using image processing techniques and deep learning tools. With the advent of robots it’s easy to harvest, prune, spray, manage weeds or artificially pollinate crops (Dr. Karkee; WSU) on agricultural land. In short, there’s a lot going on in the area of precision agriculture. Why not experience it yourself?
+
+### Conclusion
+
+Agricultural Engineering is a concoction of different “engineering” fields on a field. So, therefore, is Precision Agriculture still beyond the pale stream? I mainly wrote this blog cause I had countless debates with people in the past regarding the issue of disrupting agriculture by integrating technology in it. I couldn’t do much but just to cite different works and let them know how precision agriculture is changing the face of agriculture and preparing us for future challenges. Let me know in the comments section if there are other threats and disadvantage in the area of Precision Agriculture. I’ll collect information meanwhile to write a blog on the demerits of using technology in agriculture sector too. 
+
+Thanks for your time!
+---
