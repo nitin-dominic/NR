@@ -120,7 +120,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: # blog_name will be displayed in your blog page
+blog_name: My blogging space # blog_name will be displayed in your blog page
 blog_nav_title: Blogs # your blog must have a title for it to be displayed in the nav bar
 blog_description: I love to write! I write blogs or present opinions on hot topics, technical notes, etc., to spread small information across a bunch of people with similar interests. It sharpens my writing skills and at the same time helps me to think more on related topics. Below are some of my blogs, please have a look!
 permalink: /blog/:year/:title/
