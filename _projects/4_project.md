@@ -2,7 +2,7 @@
 layout: page
 title: Project 4
 description: Automating crop stand count using spatial tools in ArcGIS Pro
-img:
+img: assets/img/cropstand.png
 importance: 3
 category: work
 ---
