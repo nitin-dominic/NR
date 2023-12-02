@@ -120,9 +120,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: nitin-rai # blog_name will be displayed in your blog page
+blog_name: # blog_name will be displayed in your blog page
 blog_nav_title: Blogs # your blog must have a title for it to be displayed in the nav bar
-blog_description:
+blog_description: I love to write! I write blogs or present opinions on hot topics, technical notes, etc., to spread small information across a bunch of people with similar interests.
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -131,7 +131,7 @@ pagination:
 
 related_blog_posts:
   enabled: true
-  max_related: 5
+  max_related: 3
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out
