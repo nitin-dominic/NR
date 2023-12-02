@@ -16,9 +16,17 @@ The dataset used in the paper can be found at Mendeley Data (open-source dataset
 
 ### Sample of weed image dataset used in this ressearch study and published on Mendeley Data:
 
-![Ragweed-1](https://raw.githubusercontent.com/nitin-dominic/DarkNet-based_Weed_Detection/main/ragweed1.png?token=GHSAT0AAAAAACC33YWNS27RTGMQZYRWI4CWZGOXQSQ)
-![Ragweed-2](https://raw.githubusercontent.com/nitin-dominic/DarkNet-based_Weed_Detection/main/ragweed4.png?token=GHSAT0AAAAAACC33YWMEBEURDOOVNZVYZ5YZGOXTGQ)
-![Ragweed-3](https://raw.githubusercontent.com/nitin-dominic/DarkNet-based_Weed_Detection/main/ragweed5.png?token=GHSAT0AAAAAACC33YWMXADPOCSRNNX45NBEZGOXS2A)
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/ragweed11.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/ragweed4.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    A simple yet effective way to deploy real-time image processing algorithms on Nvidia Jetson module. 
+</div>
 
 Figure. Represents high-resolution aerial images used for annotation purpose. Following weeds are represented by the colors, (a) ragweed (yellow), (b) kochia (red), and (c) horseweed (violet).
 
