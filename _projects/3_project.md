@@ -4,7 +4,7 @@ title: Project 3
 description: DarkNet Framework-based Weed Detection for Edge Device Implementation
 img: assets/img/ragweed4.png
 redirect: 
-importance: 3
+importance: 1
 category: work
 ---
 
