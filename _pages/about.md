@@ -7,12 +7,11 @@ subtitle:
 profile:
   align: right
   image: NitinI.webp
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Nitin Rai, Ph.D.</p>
-    <p>Ladd Hall 208C</p>
-    <p>Fargo, ND 58102 US</p>
-
+    <p>Nitin Rai, Ph.D.,</p>
+    <p>1231 Ladd Hall 208C, Albrecht Blvd.</p>
+    <p>Fargo, ND 58102 USA</p>
 
 #news: true  # includes a list of news items
 #latest_posts: true  # includes a list of the newest posts
