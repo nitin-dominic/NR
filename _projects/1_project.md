@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Project 1
-description: A project that uses Python with "arcpy" library.
+description: A project that uses Python with "arcpy" library
 img: assets/img/pm.jpg
 importance: 1
 category: work
