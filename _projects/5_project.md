@@ -1,11 +1,13 @@
 ---
 layout: page
 title: Project 5
-description: a project with a background image
+description: Deep learning on RStudio
 img: assets/img/RStudio.svg
 importance: 1
 category: work
 ---
+
+# Image classfication on Maize and Sugar beet images using RStudio and deep learning 
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
