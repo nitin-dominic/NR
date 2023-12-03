@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
+title: Project 6
+description: WaterShed algorithm on Nvidia Jetson
 img:
 importance: 1
 category: work
