@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://www.ndsu.edu/'>ND State University</a>
+subtitle:
 
 profile:
   align: right
