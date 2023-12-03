@@ -2,9 +2,9 @@
 layout: page
 title: Project 1
 description: A project that uses Python with "arcpy" library
-img: assets/img/pm.jpg
+img: assets/img/arcpy.png
 importance: 1
-category: work
+category:
 ---
 
 # Automating development of weed prescription map using Arcpy and Python
