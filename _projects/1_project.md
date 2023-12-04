@@ -82,7 +82,8 @@ elif band_count == 5:
 
 ### 4. Band calculation  
 Calculating the number of bands based on the formulae. You can add your own VI and extract information accordingly.
-    ```
+
+```
     ndvi = (Float(bands[4]) - bands[2]) / (Float(bands[4]) + bands[2]) 
     ndvi.save(ndvi_filename)
     print ("NDVI successfully calculated")
@@ -110,10 +111,11 @@ else:
     print ("You have successfully exported the Excess Green.tif file")
     arcpy.BuildPyramids_management(ExGreen_filename, "", "NONE", "BILINEAR","", "", "")
     print ("Excess Green pyramids successfully calculated")
-    ```
+```
 
 ### 5. Sharpening the image so the objects (crops & weeds) details are highlighted
 The Excess Green image is sharpened using convolution, and then a binary raster is created by applying a threshold.
+
 ```
 sharpen_ExGreen = arcpy.ia.Convolution(ExGreen, 20)
 sharpen_ExGreen.save(r'Your Directory/ExGreen_Sharpened.tif')
@@ -124,6 +126,7 @@ binary_raster = arcpy.ia.Threshold(sharpen_ExGreen)
 binary_raster.save(r"Your Directory/ThresholdSharpen.tif")
 print("You have successfully perfromed Imagery Thresholding!")
 ```
+
 ### 6. Raster to Polygon conversion
 The binary raster is converted to polygons, where pixels with value 1 become polygons.
 ```
@@ -131,18 +134,21 @@ inRaster = "ThresholdSharpen.tif"
 outPolygons = r"Your Directory/RasterToPolygonConvert.shp"
 arcpy.RasterToPolygon_conversion(inRaster, outPolygons, "NO_SIMPLIFY", field)
 ```
+
 ### 7. Shapefile selection and buffering
 Selected features (gridcode > 0) are saved to a new shapefile, and a line shapefile provided by the user is buffered.
+
 ```
 selectedAttributes = arcpy.SelectLayerByAttribute_management(polygonAttached, "NEW_SELECTION", '"gridcode" > 0')
 Buffered_CropsLine = arcpy.Buffer_analysis(cropsline, rowsBuffered, distanceField, sideType, endType, dissolve)
 ```
+
 ### 8. Polygon erasing and fishnet creation
 The script erases features from one polygon layer using another and creates a fishnet grid.
 
+```
 ErasedLayer = r'Your Directory/ErasedPolygonLayerFinal.shp'
 arcpy.Erase_analysis(polygon, eraseFeature, ErasedLayer)
-```
 outFeatureClass = "fishnet_10x10.shp"
 arcpy.CreateFishnet_management(outFeatureClass, origin_coordinate, yAxisCoordinate, CellWidth,
                                CellHeight, numRows, numCols, oppositeCorner,
@@ -156,6 +162,7 @@ A field is added to the fishnet, and a spatial selection is performed to select 
 AddedField = arcpy.AddField_management(inFeatures, addfield, "SHORT", fieldPrecision, field_is_nullable="NULLABLE")
 LocationSelection = arcpy.SelectLayerByLocation_management(ErasedLayer, 'INTERSECT', outFeatureClass)
 ```
+
 ### 10. Copying selected features
 The selected features are copied to a new shapefile.
 ```
