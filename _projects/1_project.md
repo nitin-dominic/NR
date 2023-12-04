@@ -28,7 +28,7 @@ This algorithm imports [ArcPy](https://pro.arcgis.com/en/pro-app/latest/arcpy/ge
 
 ### Code breakdown
 
-1. Importing packages 
+**Importing packages** 
 
    This section imports various Python packages that are used throughout the script, including numpy, arcpy, rasterio, gdal, matplotlib, and others. These packages provide functionality for working with spatial data, raster manipulation, and plotting.
 
