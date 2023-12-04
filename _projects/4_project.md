@@ -10,7 +10,7 @@ category: work
 # Automating Crop Stand Count using Arcpy and Python
 <b>Rai, N</b> & Flores, P
 
-> ##### Caution
+> ##### Tip:
 > This project/script shares its concept from Project 1 except for the fact that it does not create weed prescription map.
 {: .block-tip }
 
