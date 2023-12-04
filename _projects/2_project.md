@@ -112,7 +112,7 @@ end_time = datetime.now()
 print("Duration of Training the dataset was: {}" .format(end_time - start_time))
 ```
 
-### Final ouput of the developed weed prescription map: 
+### Final ouput of the aerial imagery 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
