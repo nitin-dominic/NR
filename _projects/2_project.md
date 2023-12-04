@@ -59,6 +59,7 @@ prepare = prepare_data(dataset_path, class_mapping, chip_size, val_split, batch_
 ```
 
 4. Exporting the image chips for training
+
 The provided Python code snippet is using the ExportTrainingDataForDeepLearning tool from the ArcGIS library to prepare training data for deep learning models. This tool is commonly used for creating training datasets for object detection tasks.
 
 ```
@@ -92,6 +93,7 @@ ExportTrainingDataForDeepLearning(raster_dataset, output, training_samples,
 
 
 5. Setting up hyperparameters to train the model(s):
+
 The provided Python code snippet is training a deep learning model for object detection using RetinaNet. You can chose from various [pre-trained models](https://www.esri.com/en-us/arcgis/deep-learning-models) available within ArcGIS Pro environment. 
 
 ```
