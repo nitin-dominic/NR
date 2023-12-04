@@ -5,6 +5,8 @@ description: A project that uses Python with "arcpy" library
 img: assets/img/arcpy.png
 importance: 1
 category:
+toc:
+  beginning: true
 ---
 
 # Automating development of weed prescription map using Arcpy and Python
