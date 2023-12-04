@@ -26,6 +26,7 @@ This project was done using various ArcPy packages available within the ArcGIS P
 
 ### Code breakdown
 1. Importing all the required packages
+
 ```
 import arcpy,
 from arcpy.ia import *,
@@ -36,7 +37,9 @@ from arcpy.ia import *,
     "from arcgis.learn import YOLOv3,
     "from arcgis.learn import FasterRCNN,
 ```
+
 2. Data loading from the directory
+
 ```
 RGB_imagery = r"E:\Nitin.Rai\ASABE2021\Dataset\sunflower_Clip_2.tif"
 arcpy.env.workspace = RGB_imagery
