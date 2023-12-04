@@ -34,7 +34,34 @@ elif band_count == 5:
     ndre_filename = base + "_NDRE.tif"
     savi_filename = base + "_SAVI.tif"
     osavi_filename = base + "_OSAVI.tif"
-</code></pre></div></div> <h3 id="4-band-calculation">4. Band calculation</h3> <p>Calculating the number of bands based on the formulae. You can add your own VI and extract information accordingly. <code class="language-plaintext highlighter-rouge"> ndvi = (Float(bands[4]) - bands[2]) / (Float(bands[4]) + bands[2]) ndvi.save(ndvi_filename) print ("NDVI successfully calculated") ndre = (Float(bands[4]) - bands[3]) / (Float(bands[4]) + bands[3]) ndre.save(ndre_filename) print ("NDRE successfully calculated") savi = 1.5 * ((Float(bands[4]) - bands[2]) / (Float(bands[4]) + bands[2] + 0.5)) savi.save(savi_filename) print ("SAVI successfully calculated") osavi = 1.16 * ((Float(bands[4]) - bands[2]) / (Float(bands[4]) + bands[2] + 0.16)) osavi.save(osavi_filename) print ("OSAVI successfully calculated") else: path = os.path.dirname(RGB_imagery) base1 = os.path.basename(RGB_imagery) base = os.path.splitext(base1)[0] ExGreen_filename = base + "_ExcessGreen.tif" total_bands = (Float(bands[0] + bands[1] + bands[2])) red_band = (Float(bands[2]) / total_bands) green_band = (Float(bands[1]) / total_bands) blue_band = (Float(bands[0]) / total_bands) ExGreen = (2 * green_band - red_band - blue_band) ExGreen.save(ExGreen_filename) arcpy.env.workspace = path print ("You have successfully exported the Excess Green.tif file") arcpy.BuildPyramids_management(ExGreen_filename, "", "NONE", "BILINEAR","", "", "") print ("Excess Green pyramids successfully calculated") </code></p> <h3 id="5-sharpening-the-image-so-the-objects-crops--weeds-details-are-highlighted">5. Sharpening the image so the objects (crops &amp; weeds) details are highlighted</h3> <p>The Excess Green image is sharpened using convolution, and then a binary raster is created by applying a threshold.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sharpen_ExGreen = arcpy.ia.Convolution(ExGreen, 20)
+</code></pre></div></div> <h3 id="4-band-calculation">4. Band calculation</h3> <p>Calculating the number of bands based on the formulae. You can add your own VI and extract information accordingly.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ndvi = (Float(bands[4]) - bands[2]) / (Float(bands[4]) + bands[2]) 
+    ndvi.save(ndvi_filename)
+    print ("NDVI successfully calculated")
+    ndre = (Float(bands[4]) - bands[3]) / (Float(bands[4]) + bands[3]) 
+    ndre.save(ndre_filename)
+    print ("NDRE successfully calculated")
+    savi = 1.5 * ((Float(bands[4]) - bands[2]) / (Float(bands[4]) + bands[2] + 0.5))
+    savi.save(savi_filename)
+    print ("SAVI successfully calculated")
+    osavi = 1.16 * ((Float(bands[4]) - bands[2]) / (Float(bands[4]) + bands[2] + 0.16))
+    osavi.save(osavi_filename)
+    print ("OSAVI successfully calculated")
+else:
+    path = os.path.dirname(RGB_imagery)
+    base1 = os.path.basename(RGB_imagery)
+    base = os.path.splitext(base1)[0]
+    ExGreen_filename = base + "_ExcessGreen.tif"
+    total_bands = (Float(bands[0] + bands[1] + bands[2]))
+    red_band = (Float(bands[2]) / total_bands)
+    green_band = (Float(bands[1]) / total_bands)
+    blue_band = (Float(bands[0]) / total_bands)
+    ExGreen = (2 * green_band - red_band - blue_band)
+    ExGreen.save(ExGreen_filename)
+    arcpy.env.workspace = path
+    print ("You have successfully exported the Excess Green.tif file")
+    arcpy.BuildPyramids_management(ExGreen_filename, "", "NONE", "BILINEAR","", "", "")
+    print ("Excess Green pyramids successfully calculated")
+</code></pre></div></div> <h3 id="5-sharpening-the-image-so-the-objects-crops--weeds-details-are-highlighted">5. Sharpening the image so the objects (crops &amp; weeds) details are highlighted</h3> <p>The Excess Green image is sharpened using convolution, and then a binary raster is created by applying a threshold.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sharpen_ExGreen = arcpy.ia.Convolution(ExGreen, 20)
 sharpen_ExGreen.save(r'Your Directory/ExGreen_Sharpened.tif')
 print("You have successfully sharpened the Excess Green.tif file!")
 # Converting the above sharpened image into binary image, thresholding technique is applied here 
@@ -47,7 +74,9 @@ outPolygons = r"Your Directory/RasterToPolygonConvert.shp"
 arcpy.RasterToPolygon_conversion(inRaster, outPolygons, "NO_SIMPLIFY", field)
 </code></pre></div></div> <h3 id="7-shapefile-selection-and-buffering">7. Shapefile selection and buffering</h3> <p>Selected features (gridcode &gt; 0) are saved to a new shapefile, and a line shapefile provided by the user is buffered.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>selectedAttributes = arcpy.SelectLayerByAttribute_management(polygonAttached, "NEW_SELECTION", '"gridcode" &gt; 0')
 Buffered_CropsLine = arcpy.Buffer_analysis(cropsline, rowsBuffered, distanceField, sideType, endType, dissolve)
-</code></pre></div></div> <h3 id="8-polygon-erasing-and-fishnet-creation">8. Polygon erasing and fishnet creation</h3> <p>The script erases features from one polygon layer using another and creates a fishnet grid.</p> <p>ErasedLayer = r’Your Directory/ErasedPolygonLayerFinal.shp’ arcpy.Erase_analysis(polygon, eraseFeature, ErasedLayer)</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>outFeatureClass = "fishnet_10x10.shp"
+</code></pre></div></div> <h3 id="8-polygon-erasing-and-fishnet-creation">8. Polygon erasing and fishnet creation</h3> <p>The script erases features from one polygon layer using another and creates a fishnet grid.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ErasedLayer = r'Your Directory/ErasedPolygonLayerFinal.shp'
+arcpy.Erase_analysis(polygon, eraseFeature, ErasedLayer)
+outFeatureClass = "fishnet_10x10.shp"
 arcpy.CreateFishnet_management(outFeatureClass, origin_coordinate, yAxisCoordinate, CellWidth,
                                CellHeight, numRows, numCols, oppositeCorner,
                                labels, templateExtent, geometryType)
