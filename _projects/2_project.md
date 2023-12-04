@@ -44,9 +44,10 @@ bands = [Raster(os.path.join(RGB_imagery, b))
          for b in arcpy.ListRasters()]
 ```
 3. Preparing the dataset for training task
+
 The provided Python code snippet appears to be setting up data preparation for a computer vision task involving image chips. The below code snippet uses [KITTI](https://www.cvlibs.net/datasets/kitti/) rectangles dealing with the rectanglular shapes of teh identified objects in the imgery. Caution: Set all these parameters based on your understanding and imagery requirements.
+
 ```
-# Data Preparation
 dataset_path = r"C:\Users\Nitin.Rai\Desktop\ImageChipsPASCAL"
 class_mapping = None
 chip_size = 448
@@ -55,10 +56,11 @@ batch_size = 64
 transform = False
 dataset_type = 'KITTI_rectangles'
 prepare = prepare_data(dataset_path, class_mapping, chip_size, val_split, batch_size, transform, dataset_type)
-
 ```
+
 4. Exporting the image chips for training
 The provided Python code snippet is using the ExportTrainingDataForDeepLearning tool from the ArcGIS library to prepare training data for deep learning models. This tool is commonly used for creating training datasets for object detection tasks.
+
 ```
 raster_dataset = "D:/ArcGIS Projects/Dataset/SunflowerCropImagery.tif"
 output = "D:/ArcGIS Projects/Dataset/OutputFolder2233445566"
