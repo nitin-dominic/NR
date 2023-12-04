@@ -28,7 +28,7 @@ This algorithm imports [ArcPy](https://pro.arcgis.com/en/pro-app/latest/arcpy/ge
 
 ### Code breakdown
 
-**Importing packages** 
+**1. Importing packages** 
 
    This section imports various Python packages that are used throughout the script, including numpy, arcpy, rasterio, gdal, matplotlib, and others. These packages provide functionality for working with spatial data, raster manipulation, and plotting.
 
@@ -56,8 +56,7 @@ import rasterio # Working with Raster Dataset
 import gdal # Geospatial Data Abstraction Library
 import matplotlib.pyplot as plt
 ```
-2. Reading imagery from the directory
-
+**2. Reading imagery from the directory**
     Here, a raster image file (file_name) is specified, and its bands are extracted using the arcpy.ListRasters() function.
 
 ```
