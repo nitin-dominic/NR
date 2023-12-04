@@ -179,7 +179,7 @@ arcpy.CopyFeatures_management(LocationSelection, 'IntersectFishnetwithErasedLaye
     </div>
 </div>
 <div class="caption">
-    Sample screenshot of the displayed figure. Green represents corn crops and red represent weeds.
+    Sample screenshot of the displayed output. Green represents corn crops and red represent weeds.
 </div>
 
 
