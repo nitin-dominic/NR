@@ -36,6 +36,81 @@ from arcpy.ia import *,
     "from arcgis.learn import YOLOv3,
     "from arcgis.learn import FasterRCNN,
 ```
+2. Data loading from the directory
+```
+RGB_imagery = r"E:\Nitin.Rai\ASABE2021\Dataset\sunflower_Clip_2.tif"
+arcpy.env.workspace = RGB_imagery
+bands = [Raster(os.path.join(RGB_imagery, b))
+         for b in arcpy.ListRasters()]
+```
+3. Preparing the dataset for training task
+The provided Python code snippet appears to be setting up data preparation for a computer vision task involving image chips. The below code snippet uses [KITTI](https://www.cvlibs.net/datasets/kitti/) rectangles dealing with the rectanglular shapes of teh identified objects in the imgery. Caution: Set all these parameters based on your understanding and imagery requirements.
+```
+# Data Preparation
+dataset_path = r"C:\Users\Nitin.Rai\Desktop\ImageChipsPASCAL"
+class_mapping = None
+chip_size = 448
+val_split = 0.3
+batch_size = 64
+transform = False
+dataset_type = 'KITTI_rectangles'
+prepare = prepare_data(dataset_path, class_mapping, chip_size, val_split, batch_size, transform, dataset_type)
+
+```
+4. Exporting the image chips for training
+The provided Python code snippet is using the ExportTrainingDataForDeepLearning tool from the ArcGIS library to prepare training data for deep learning models. This tool is commonly used for creating training datasets for object detection tasks.
+```
+raster_dataset = "D:/ArcGIS Projects/Dataset/SunflowerCropImagery.tif"
+output = "D:/ArcGIS Projects/Dataset/OutputFolder2233445566"
+training_samples = "D:/ArcGIS Projects/Dataset/CropClassification.shp"
+chip_format = "TIFF"
+tile_sizeX = "448"
+tile_sizeY = "448"
+stride_sizeX = "224"
+stride_sizeY = "224"
+nofeature_tiles = "ONLY_TILES_WITH_FEATURES"
+metadeta_format = "PASCAL_VOC_rectangles"
+start_index = 0
+classvalue_field = "Classvalue"
+buffer_radius = 0
+input_mask_polygons = ""
+rotation_angle = 10
+reference_system = "MAP_SPACE"
+processing = "PROCESS_ITEMS_SEPARATELY"
+blacken = "NO_BLACKEN"
+crop_mode = "FIXED_SIZE"
+
+ExportTrainingDataForDeepLearning(raster_dataset, output, training_samples,
+                                  chip_format, tile_sizeX, tile_sizeY, stride_sizeX,
+                                  stride_sizeY, nofeature_tiles, metadeta_format, start_index, 
+                                  classvalue_field, buffer_radius, 
+                                  input_mask_polygons, rotation_angle, reference_system,
+                                  processing, blacken, crop_mode)
+```
+
+
+5. Setting up hyperparameters to train the model(s):
+The provided Python code snippet is training a deep learning model for object detection using RetinaNet. You can chose from various [pre-trained models](https://www.esri.com/en-us/arcgis/deep-learning-models) available within ArcGIS Pro environment. 
+
+```
+start_time = datetime.now()
+dataset = r'E:\Nitin.Rai\ASABE2021\Dataset\ImageChips'
+output_location = r'E:\Nitin.Rai\SunflowerCropDetection\ModelOutput2\RetinaNetReTrained'
+eph = 50
+objectDetection_model = "RETINANET"
+batch_size = 64
+arg = "SCALES '[1,1,0.8]'; RATIOS '[0.5,1,1.5]'; chip_size:416"
+lr = 0.001
+backbone_model = "RESNET50"
+pretrained_model = None
+validate = 20
+stop_training = "STOP_TRAINING"
+freeze = "UNFREEZE_MODEL"
+TrainDeepLearningModel(dataset, output_location, eph, objectDetection_model, batch_size, arg, lr, backbone_model,
+                       pretrained_model, validate, stop_training, freeze)
+end_time = datetime.now()
+print("Duration of Training the dataset was: {}" .format(end_time - start_time))
+```
 
 ### Final ouput of the developed weed prescription map: 
 
