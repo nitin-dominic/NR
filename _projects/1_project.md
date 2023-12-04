@@ -57,7 +57,8 @@ import gdal # Geospatial Data Abstraction Library
 import matplotlib.pyplot as plt
 ```
 **2. Reading imagery from the directory**
-    Here, a raster image file (file_name) is specified, and its bands are extracted using the arcpy.ListRasters() function.
+    
+  Here, a raster image file (file_name) is specified, and its bands are extracted using the arcpy.ListRasters() function.
 
 ```
 RGB_imagery = r"Your Directory/Sunf_AOI_Lab7_2021.tif"
@@ -66,7 +67,7 @@ bands = [Raster(os.path.join(RGB_imagery, b))
          for b in arcpy.ListRasters()]
 ```
 
-3. Band count check in the imported imagery
+**3. Band count check in the imported imagery**
 
    Here the operation is dependent on band count. If the band count is equal to 5 then the script assumes it's a 5-band imagery and starts calculating all the indices. More indices can be added to the workflow. 
 Whereas, if the band count is greater than 5, then an error message is displayed asking user to enter an imagery which is either 3-band or 5-band. If the band count is equal equal to 3 or 4, then Excess Green is automatically calculated and stored to the HDD. As in array function, the index starts from 0 onwards. For a multispectral imagery (RedEdge MicaSense), 0  = Blue band, 1 = green, 2 = red, 3 = RedEdge, 4 = NIR
@@ -84,7 +85,7 @@ elif band_count == 5:
     osavi_filename = base + "_OSAVI.tif"
 ```
 
-4. Band calculation  
+**4. Band calculation**  
 
    Calculating the number of bands based on the formulae. You can add your own VI and extract information accordingly.
 
@@ -118,9 +119,9 @@ else:
     print ("Excess Green pyramids successfully calculated")
 ```
 
-5. Sharpening the image so the objects (crops & weeds) details are highlighted
+**5. Image sharpening**
 
-    The Excess Green image is sharpened using convolution, and then a binary raster is created by applying a threshold.
+  Sharpening the image so the objects (crops & weeds) details are highlighted. The Excess Green image is sharpened using convolution, and then a binary raster is created by applying a threshold.
 
 ```
 sharpen_ExGreen = arcpy.ia.Convolution(ExGreen, 20)
@@ -133,7 +134,7 @@ binary_raster.save(r"Your Directory/ThresholdSharpen.tif")
 print("You have successfully perfromed Imagery Thresholding!")
 ```
 
-6. Raster to Polygon conversion
+**6. Raster to Polygon conversion**
 
    The binary raster is converted to polygons, where pixels with value 1 become polygons.
 ```
@@ -142,7 +143,7 @@ outPolygons = r"Your Directory/RasterToPolygonConvert.shp"
 arcpy.RasterToPolygon_conversion(inRaster, outPolygons, "NO_SIMPLIFY", field)
 ```
 
-7. Shapefile selection and buffering
+**7. Shapefile selection and buffering**
 
    Selected features (gridcode > 0) are saved to a new shapefile, and a line shapefile provided by the user is buffered.
 
@@ -151,7 +152,7 @@ selectedAttributes = arcpy.SelectLayerByAttribute_management(polygonAttached, "N
 Buffered_CropsLine = arcpy.Buffer_analysis(cropsline, rowsBuffered, distanceField, sideType, endType, dissolve)
 ```
 
-8. Polygon erasing and fishnet creation
+**8. Polygon erasing and Fishnet creation**
 
    The script erases features from one polygon layer using another and creates a fishnet grid.
 
@@ -164,7 +165,7 @@ arcpy.CreateFishnet_management(outFeatureClass, origin_coordinate, yAxisCoordina
                                labels, templateExtent, geometryType)
 ```
 
-9. Field addition and spatial selection
+**9. Field addition and spatial selection**
 
    A field is added to the fishnet, and a spatial selection is performed to select features that intersect with the fishnet.
 
@@ -173,9 +174,9 @@ AddedField = arcpy.AddField_management(inFeatures, addfield, "SHORT", fieldPreci
 LocationSelection = arcpy.SelectLayerByLocation_management(ErasedLayer, 'INTERSECT', outFeatureClass)
 ```
 
-10. Copying selected features
+**10. Copying selected features**
 
-    The selected features are copied to a new shapefile.
+  The selected features are copied to a new shapefile.
 
 ```
 arcpy.CopyFeatures_management(LocationSelection, 'IntersectFishnetwithErasedLayer')
