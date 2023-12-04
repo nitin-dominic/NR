@@ -25,7 +25,8 @@ This project was done using various ArcPy packages available within the ArcGIS P
 2. Algorithm has not been tested on multispectral (MS) aerial imgery. We are not sure of the models could be deployed to locate and count sunflower stand in MS imagery. 
 
 ### Code breakdown
-1. Importing all the required packages
+
+**1. Importing all the required packages**
 
 ```
 import arcpy,
@@ -38,7 +39,7 @@ from arcpy.ia import *,
     "from arcgis.learn import FasterRCNN,
 ```
 
-2. Data loading from the directory
+**2. Data loading from the directory**
 
 ```
 RGB_imagery = r"E:\Nitin.Rai\ASABE2021\Dataset\sunflower_Clip_2.tif"
@@ -46,9 +47,10 @@ arcpy.env.workspace = RGB_imagery
 bands = [Raster(os.path.join(RGB_imagery, b))
          for b in arcpy.ListRasters()]
 ```
-3. Preparing the dataset for training task
 
-The provided Python code snippet appears to be setting up data preparation for a computer vision task involving image chips. The below code snippet uses [KITTI](https://www.cvlibs.net/datasets/kitti/) rectangles dealing with the rectanglular shapes of teh identified objects in the imgery. Caution: Set all these parameters based on your understanding and imagery requirements.
+**3. Preparing the dataset for training task**
+
+   The provided Python code snippet appears to be setting up data preparation for a computer vision task involving image chips. The below code snippet uses [KITTI](https://www.cvlibs.net/datasets/kitti/) rectangles dealing with the rectanglular shapes of teh identified objects in the imgery. Caution: Set all these parameters based on your understanding and imagery requirements.
 
 ```
 dataset_path = r"C:\Users\Nitin.Rai\Desktop\ImageChipsPASCAL"
@@ -61,9 +63,9 @@ dataset_type = 'KITTI_rectangles'
 prepare = prepare_data(dataset_path, class_mapping, chip_size, val_split, batch_size, transform, dataset_type)
 ```
 
-4. Exporting the image chips for training
+**4. Exporting the image chips for training**
 
-The provided Python code snippet is using the ExportTrainingDataForDeepLearning tool from the ArcGIS library to prepare training data for deep learning models. This tool is commonly used for creating training datasets for object detection tasks.
+   The provided Python code snippet is using the ExportTrainingDataForDeepLearning tool from the ArcGIS library to prepare training data for deep learning models. This tool is commonly used for creating training datasets for object detection tasks.
 
 ```
 raster_dataset = "D:/ArcGIS Projects/Dataset/SunflowerCropImagery.tif"
@@ -95,9 +97,9 @@ ExportTrainingDataForDeepLearning(raster_dataset, output, training_samples,
 ```
 
 
-5. Setting up hyperparameters to train the model(s):
+**5. Setting up hyperparameters to train the model(s):**
 
-The provided Python code snippet is training a deep learning model for object detection using RetinaNet. You can chose from various [pre-trained models](https://www.esri.com/en-us/arcgis/deep-learning-models) available within ArcGIS Pro environment. 
+   The provided Python code snippet is training a deep learning model for object detection using RetinaNet. You can chose from various [pre-trained models](https://www.esri.com/en-us/arcgis/deep-learning-models) available within ArcGIS Pro environment. 
 
 ```
 start_time = datetime.now()
