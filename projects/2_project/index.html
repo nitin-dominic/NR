@@ -18,7 +18,7 @@ batch_size = 64
 transform = False
 dataset_type = 'KITTI_rectangles'
 prepare = prepare_data(dataset_path, class_mapping, chip_size, val_split, batch_size, transform, dataset_type)
-</code></pre></div></div> <ol> <li>Exporting the image chips for training The provided Python code snippet is using the ExportTrainingDataForDeepLearning tool from the ArcGIS library to prepare training data for deep learning models. This tool is commonly used for creating training datasets for object detection tasks.</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raster_dataset = "D:/ArcGIS Projects/Dataset/SunflowerCropImagery.tif"
+</code></pre></div></div> <ol> <li>Exporting the image chips for training</li> </ol> <p>The provided Python code snippet is using the ExportTrainingDataForDeepLearning tool from the ArcGIS library to prepare training data for deep learning models. This tool is commonly used for creating training datasets for object detection tasks.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raster_dataset = "D:/ArcGIS Projects/Dataset/SunflowerCropImagery.tif"
 output = "D:/ArcGIS Projects/Dataset/OutputFolder2233445566"
 training_samples = "D:/ArcGIS Projects/Dataset/CropClassification.shp"
 chip_format = "TIFF"
@@ -44,7 +44,7 @@ ExportTrainingDataForDeepLearning(raster_dataset, output, training_samples,
                                   classvalue_field, buffer_radius, 
                                   input_mask_polygons, rotation_angle, reference_system,
                                   processing, blacken, crop_mode)
-</code></pre></div></div> <ol> <li>Setting up hyperparameters to train the model(s): The provided Python code snippet is training a deep learning model for object detection using RetinaNet. You can chose from various <a href="https://www.esri.com/en-us/arcgis/deep-learning-models" rel="external nofollow noopener" target="_blank">pre-trained models</a> available within ArcGIS Pro environment.</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>start_time = datetime.now()
+</code></pre></div></div> <ol> <li>Setting up hyperparameters to train the model(s):</li> </ol> <p>The provided Python code snippet is training a deep learning model for object detection using RetinaNet. You can chose from various <a href="https://www.esri.com/en-us/arcgis/deep-learning-models" rel="external nofollow noopener" target="_blank">pre-trained models</a> available within ArcGIS Pro environment.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>start_time = datetime.now()
 dataset = r'E:\Nitin.Rai\ASABE2021\Dataset\ImageChips'
 output_location = r'E:\Nitin.Rai\SunflowerCropDetection\ModelOutput2\RetinaNetReTrained'
 eph = 50
