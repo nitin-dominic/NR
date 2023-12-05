@@ -1,16 +1,15 @@
 ---
 layout: page
 title: Project 1
-description: A project that uses Python with "arcpy" library
-img: assets/img/arcpy.png
+description: Edge computing in precision agriculture
+img: assets/img/edge.png
 importance: 1
 category:
 toc:
-  beginning: true
+beginning: true
 ---
 
-# Automating development of weed prescription map using Arcpy and Python
-<b>Rai, N</b> & Flores, P
+# Agricultural Weed Identification Using Optimized Deep Learning Architecture
 
 ### Background
 
