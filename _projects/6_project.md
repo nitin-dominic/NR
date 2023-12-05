@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project 6
+title: Project 7
 description: WaterShed algorithm on Nvidia Jetson
 img: assets/img/jetson.jpg
 importance: 1
