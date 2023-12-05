@@ -9,7 +9,7 @@ toc:
 beginning: true
 ---
 
-# Agricultural Weed Identification Using Optimized Deep Learning Architecture
+# Agricultural weed identification using optimized deep learning architecture
 
 ### Bckground
 The work presented in this research uses state-of-the-art [YOLOv7 tiny](https://github.com/WongKinYiu/yolov7) architecture and integrates two optimization techniques within the backbone and neck components. These two optimization techniques are: (a) module re-parameterized convolutional layer (RCL), and (b) filter-based structured pruning (model compression). Both of these techniques have been adopted from [here](https://arxiv.org/abs/2307.11904) and [here](https://arxiv.org/abs/2207.02696). For more details read the paper [here]() and browse through the repository to download the trained models along with the architecture. The developed architecture uses 78% less parameters compared to the YOLOv7-Base model.
