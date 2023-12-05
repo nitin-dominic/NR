@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project 2
+title: Project 3
 description: A project that uses transfer learning technique to count sunflower stands in drone-acquired imagery
 img: assets/img/tl1.jpg
 importance: 1
