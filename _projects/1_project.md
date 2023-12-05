@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project 1
+title: Project 2
 description: A project that uses Python with "arcpy" library
 img: assets/img/arcpy.png
 importance: 1
