@@ -17,7 +17,7 @@ The work presented in this research uses state-of-the-art [YOLOv7 tiny](https://
 ### Novel aspects of this research study are:
 1. Integration of RepConv (Re-parameterized Convolutional Module in the neck compoenent)
 2. Filter-based structured pruning approach
-3. Conversion to FP16 (floating points) to edge deployment
+3. Conversion to FP16 (floating points) for edge deployment
 
 ### Highlights of this research swork includes:
 1. [Open-source dataset](https://data.mendeley.com/datasets/8kjcztbjz2/2): 3,929 images and 12k bounding-box annotations used in this study.
