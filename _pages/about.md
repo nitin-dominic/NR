@@ -2,16 +2,13 @@
 layout: about
 title: About
 permalink: /
-subtitle:
+subtitle: Postodctoral Associate, <a href='https://www.ndsu.edu/'>ND State University</a>. 1231 Ladd Hall, Albrecht Blvd.
 
 profile:
   align: right
   image: NitinI.webp
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Nitin Rai, Ph.D.</p>
-    <p>1231 Ladd Hall, Albrecht Blvd.</p>
-    <p>Fargo, ND 58102 USA</p>
+  more_info:
 
 #news: true  # includes a list of news items
 #latest_posts: true  # includes a list of the newest posts
