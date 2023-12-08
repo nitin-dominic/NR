@@ -1,1 +1,3 @@
 ### Why Suffering?: Finding Meaning and Comfort When Life Doesn't Make Sense -- Ravi Zacharias
+
+"If God is good, then why is there suffering?" This is a very common question asked by many atheists and agnostics. In this book, Ravi tries to address the logical fallacy that entangles itself with the idea that because there is so much suffering, therefore God does not exist! He also presents some of his own life's testimony and other incidents that cement the idea that God is indeed present in the shadows. Moreover, he takes us on the journey of philosophically trying to understand the Book of Job from the Bible. Please give it a try, even if you don't believe in the divine being!
