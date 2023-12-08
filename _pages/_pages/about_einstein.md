@@ -1,3 +1,5 @@
-### Grand Weaver by Dr. Ravi Zacharias is one of my favorites. 
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-I read this book back in 2017 and enjoyed reading it. This book is mostly about Dr. Ravi's testimony and how God shaped his life thorugh trials and suffering. This is a great read for someone who is in the midst of suffering/trials but do not want to loose hope in God. This book will definitely help you understand life's suffereing through God's lenses thereby rekindling or stirring up the passion to serve him more. 
+Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
