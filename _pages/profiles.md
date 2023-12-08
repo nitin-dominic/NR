@@ -1,6 +1,6 @@
 ---
 layout: profiles
-permalink: /bookreads/
+permalink: /people/
 title: BookReads
 description: This page hosts a collection of books I have read so far. The reviewed title are the ones that I thoroughly enjoyed reading. I picked up reading habit at the age of 19 when the first book I read was titled, Relentless-The Power You Need to Never Give Up by John Bevere. Since then I have been highly interested in reading genres that include God and Science, Science and Technology, Early Church Fathers and how they shaped Catholic theology and Church teachings, and Christian Apologetics. I am not fond of reading science fiction at all and hardly recall reading one.  
 nav: true
