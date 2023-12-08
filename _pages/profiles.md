@@ -36,7 +36,7 @@ profiles:
     more_info: >
    - align: right
     image: suffer.jpg
-    content: grand_weaver.md
+    content: suffering.md
     image_circular: false # crops the image to make it circular
     more_info: >
   - align: right
