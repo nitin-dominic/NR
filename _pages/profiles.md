@@ -1,9 +1,9 @@
 ---
 layout: profiles
 permalink: /people/
-title: people
+title: Bookreads
 description: members of the lab or group
-nav: false
+nav: true
 nav_order: 6
 
 profiles:
