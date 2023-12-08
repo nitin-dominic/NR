@@ -1,4 +1,4 @@
-### Deep Work: Rules for Focused Success in a Distracted World
+### Deep Work: Rules for Focused Success in a Distracted World by Cal Newport
 
 
 In the present age of ADHD, I highly recommend this book! The book describes several rules for navigating your path to help you achieve more focus. Therefore, I'll categorize it as more of a self-help genre. 
