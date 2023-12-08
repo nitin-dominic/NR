@@ -24,4 +24,9 @@ profiles:
     content: deep_work.md
     image_circular: false # crops the image to make it circular
     more_info: >
+  - align: right
+    image: csee.webp
+    content: csee.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
 ---
