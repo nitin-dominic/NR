@@ -1,4 +1,4 @@
-Can Science Explain Everything? by John Lennox
+### Can Science Explain Everything? by John Lennox
 
 Dr. Lennox is one of my favorite writers who thinks critically and presents thoughtful evidence about the presence of God behind this universe. Being a mathematician, I love how he takes both his science and God seriously! Dr. Lennox has penned this book very thoughtfully. It's difficult for me to summarize the whole here because he has presented numerous theories and pieces of evidence for the existence of God.
 
