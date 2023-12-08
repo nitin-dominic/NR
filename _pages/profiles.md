@@ -11,7 +11,7 @@ profiles:
   # and create one content file for each profile inside _pages/
   - align: right
     image: GW.webp
-    content: 
+    content: grand_weaver.md
     image_circular: false # crops the image to make it circular
   - align: left
     image: prof_pic.jpg
