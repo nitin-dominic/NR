@@ -10,11 +10,6 @@ profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
   - align: right
-    image: GW.webp
-    content: grand_weaver.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-  - align: right
     image: RAI.jpg
     content: rebooting.md
     image_circular: false # crops the image to make it circular
@@ -27,6 +22,11 @@ profiles:
   - align: right
     image: csee.jpg
     content: csee.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
+  - align: right
+    image: GW.webp
+    content: grand_weaver.md
     image_circular: false # crops the image to make it circular
     more_info: >
 ---
