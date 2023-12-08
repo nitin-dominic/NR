@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: Bookreads
-description: This page hosts a collection of books I have read so far.
+description: This page hosts a collection of books I have read so far. The reviewed title are the ones that I thoroughly enjoyed reading. I picked up reading habit at the age of 19 when the first book I read was titled, Relentless: The Power You Need to Never Give Up by John Bevere. 
 nav: true
 nav_order: 6
 
