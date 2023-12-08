@@ -25,7 +25,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
   - align: right
-    image: csee.webp
+    image: csee.jpg
     content: csee.md
     image_circular: false # crops the image to make it circular
     more_info: >
