@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /bookreads/
 title: BookReads
-description: This page hosts a collection of books I have read so far. The reviewed title are the ones that I thoroughly enjoyed reading (all the review aremine and are not ChatGPTied). I picked up reading habit at the age of 19 when the first book I read was titled, Relentless-The Power You Need to Never Give Up by John Bevere. Since then I have been highly interested in reading genres that include God and Science, Science and Technology, Early Church Fathers and how they shaped Catholic theology and Church teachings, and Christian Apologetics. I am not fond of reading science fiction at all and hardly recall reading one.  
+description: This page hosts a collection of books I have read so far. The reviewed title are the ones that I thoroughly enjoyed reading (all the review are mine and are not ChatGPTied). I picked up reading habit at the age of 19 when the first book I read was titled, Relentless-The Power You Need to Never Give Up by John Bevere. Since then I have been highly interested in reading genres that include God and Science, Science and Technology, Early Church Fathers and how they shaped Catholic theology and Church teachings, and Christian Apologetics. I am not fond of reading science fiction at all and hardly recall reading one.  
 nav: true
 nav_order: 6
 
