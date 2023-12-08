@@ -10,8 +10,8 @@ profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
   - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
+    image: GW.webp
+    content: grand_weaver.md
     image_circular: false # crops the image to make it circular
     more_info: >
       <p>555 your office number</p>
