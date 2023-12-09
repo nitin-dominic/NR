@@ -38,4 +38,4 @@ The work presented in this research uses state-of-the-art [YOLOv7 tiny](https://
 </div>
 
 ### Reference
-**Rai, N**., Zhang, Y., Villamil, M., Howatt, K., Ostlie, M., & Sun, X. (2023). Agricultural weed identification in images and videos by integrating optimized deep learning architecture on an edge computing technology . Computers and Electronics in Agriculture, 216, 108442. [https://doi.org/10.1016/j.compag.2023.108442](https://doi.org/10.1016/j.compag.2023.108442)
+**Rai, N**., Zhang, Y., Villamil, M., Howatt, K., Ostlie, M., & Sun, X. (2023). Agricultural weed identification in images and videos by integrating optimized deep learning architecture on an edge computing technology . *Comput. Electron. Agric*., 216, 108442. [https://doi.org/10.1016/j.compag.2023.108442](https://doi.org/10.1016/j.compag.2023.108442)
