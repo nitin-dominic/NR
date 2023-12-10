@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postodctoral Associate, <a href='https://www.ndsu.edu/'>ND State University</a>. 1231 Ladd Hall, Albrecht Blvd.
+subtitle: Postodctoral Associate, <a href='https://www.ndsu.edu/'>ND State University</a>. 1231 Ladd Hall, Albrecht Blvd., Fargo, ND 58102, USA
 
 profile:
   align: right
