@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Object detection in UAS-acquired imagery using ArcGIS Pro and deep learning
+title: Object Detection in UAS-acquired Imagery Using ArcGIS Pro and Deep Learning
 date: 2020-08-20 09:56:00-0400
 description: 
 tags:
