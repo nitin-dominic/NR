@@ -7,6 +7,5 @@ nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
+### PAG 315 - Electronic Systems in Precision Ag.
+I am currently teaching this course in the Spring of 2024. This course comprises of 2-lectures (50 mins each) and 1-lab (1 hr 50 mins) in a week. I am the sole instructor of this coursework where students get to learn about various electrical components used in Precision Ag. technologies. The labs are based on equipping students about the use of Arduino Microcontroller and Programming Interface. Syllabus to this course can be found here. 
