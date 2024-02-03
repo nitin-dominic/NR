@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: I have over three years of teaching experience with an emphasis on precision ag. technologies. 
 nav: true
 nav_order: 5
 ---
