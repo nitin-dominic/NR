@@ -24,7 +24,7 @@ technologies. First, it enables real-time weed detection, allowing for the immed
 
 ### Novel/vital aspects of this research study are:
 1. Exploring C3 and C3X modules within the DL architecture for robust feature extraction from i/p images
-2. Testing the model on five catrgories of datasets acquired using various combinations of data augmentation
+2. Testing the model on five catrgories of datasets acquired using various combinations of data augmentation techniques
 3. Assessing model performance on edge device and real-time tasks.
 
 ### Highlights of this research work includes:
