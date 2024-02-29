@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Project 10
-description: Application of edge computing in precision agriculture
+description: Detection and instance segmentation in aerial videos
 img: assets/img/edge.png
 importance: 1
 category:
@@ -9,8 +9,8 @@ toc: true
 beginning: true
 ---
 
-# Agricultural weed identification using optimized deep learning architecture
-**Rai, Nitin;** Zhang, Yu; Villamil, Maria; Howatt, Kirk; Ostlie, Michael; Sun, Xin
+# WeedVision: A single-stage deep learning architecture to perform weed detection and segmentation using drone-acquired images
+**Rai, Nitin;** Sun, Xin
 
 ### Bckground
 The work presented in this research uses state-of-the-art [YOLOv7 tiny](https://github.com/WongKinYiu/yolov7) architecture and integrates two optimization techniques within the backbone and neck components. These two optimization techniques are: (a) module re-parameterized convolutional layer (RCL), and (b) filter-based structured pruning (model compression). Both of these techniques have been adopted from [here](https://arxiv.org/abs/2307.11904) and [here](https://arxiv.org/abs/2207.02696). For more details read the paper [here](https://www.sciencedirect.com/science/article/pii/S016816992300830X) and browse through the [repository](https://github.com/nitin-dominic/Agricultural_Weed_Identification_Using_Optimized_Deep_Learning) to download the metric files and other assessment docs. The developed architecture uses 78% less parameters compared to the YOLOv7-Base model and has been built and optimized for weed detection and localization for site-specific weed management application.
