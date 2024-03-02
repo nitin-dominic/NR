@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project 9
+title: Project 10
 description: Deploying k-means clustering using MATLAB 
 img: assets/img/matlab.png
 importance: 1
