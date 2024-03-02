@@ -12,7 +12,7 @@ beginning: true
 # WeedVision: A single-stage deep learning architecture to perform weed detection and segmentation using drone-acquired images
 **Rai, Nitin;** Sun, Xin
 
-### Bckground
+### Background
 Deep learning (DL) inspired models have achieved tremendous success in locating target weed species through bounding-box approach (single-stage models) or pixel-wise semantic segmentation (two-stage models), but not
 both. Therefore, the goal of this research study was to develop a single-stage DL architecture that not only locate weed presence through bounding-boxes but also achieves pixel-wise instance segmentation on unmanned aerial
 system (UAS) acquired remote sensing images. Moreover, the developed architecture experiments on integrating a novel C3 and C3x module within its backbone for dense feature extraction, as well as ProtoNet (Prototypical
