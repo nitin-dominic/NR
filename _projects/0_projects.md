@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project 1
+title: Project 2
 description: Application of edge computing in precision agriculture
 img: assets/img/edge.png
 importance: 1
