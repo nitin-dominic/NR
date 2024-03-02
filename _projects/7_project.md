@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project 9
+title: Project 8
 description: Machine learning on Plant Seedling Dataset
 img: assets/img/mlp.png
 importance: 1
