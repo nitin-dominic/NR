@@ -33,13 +33,12 @@ technologies. First, it enables real-time weed detection, allowing for the immed
 ### Hardware used to perform training and inference tasks:
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/Fig6.7_Page_1_Image_0006.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-        {% include figure.html path="assets/img/Fig6.7_Page_1_Image_0007.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/WeedVision.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Multiple hardware were used for model development and deployment. (a) Nvidia's Jetson AGX Xavier, and (b) RTX 3060 GPU-based desktop PC.
+    Multiple species of weeds detected and masked using UAS-acquired images in in-field conditions. 
 </div>
 
 ### Reference
-**Rai, N**., & Sun, X. (2024). WeedVision: A single-stage deep learning architecture to perform weed detection and segmentation using drone-acquired images. *Comput. Electron. Agric*., 108792.
+**Rai, N**., & Sun, X. (2024). WeedVision: A single-stage deep learning architecture to perform weed detection and segmentation using drone-acquired images. *Comput. Electron. Agric*., 108792. [https://doi.org/10.1016/j.compag.2024.108792](https://doi.org/10.1016/j.compag.2024.108792)
