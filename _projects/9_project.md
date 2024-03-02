@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project 10
+title: Project 1
 description: Detection and instance segmentation in aerial videos
 img: assets/img/Fig6.7_Page_1_Image_0006.jpg
 importance: 1
