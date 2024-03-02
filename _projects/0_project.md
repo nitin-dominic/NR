@@ -31,6 +31,11 @@ technologies. First, it enables real-time weed detection, allowing for the immed
 
 
 ### Hardware used to perform training and inference tasks:
+- Single-stage model that achieves weed detection and segmentation.
+- Integrating C3x module within the backbone for detailed feature extraction.
+- Model trained on C4 category achieved the best detection and segmentation scores of 85.4 % and 82.1 %, respectively.
+- Model with ONNX format gained 1.25x inference speed on an edge device.
+  
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/WeedVision.png" title="example image" class="img-fluid rounded z-depth-1" %}
