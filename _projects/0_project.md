@@ -33,7 +33,7 @@ technologies. First, it enables real-time weed detection, allowing for the immed
 - Model trained on C4 category achieved the best detection and segmentation scores of 85.4 % and 82.1 %, respectively.
 - Model with ONNX format gained 1.25x inference speed on an edge device.
 
-# Extracted features from the input images based on the developed architecture:
+### Extracted features from the input images based on the developed architecture:
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/features.png" title="example image" class="img-fluid rounded z-depth-1" %}
