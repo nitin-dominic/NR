@@ -28,14 +28,22 @@ technologies. First, it enables real-time weed detection, allowing for the immed
 3. Assessing model performance on edge device and real-time tasks.
 
 ### Highlights of this research work includes:
-
-
-### Hardware used to perform training and inference tasks:
 - Single-stage model that achieves weed detection and segmentation.
 - Integrating C3x module within the backbone for detailed feature extraction.
 - Model trained on C4 category achieved the best detection and segmentation scores of 85.4 % and 82.1 %, respectively.
 - Model with ONNX format gained 1.25x inference speed on an edge device.
-  
+
+# Extracted features from the input images based on the developed architecture:
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/features.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Extracted features from input images at several levels within the neural network architecture.
+</div>
+
+### Detected and masked weed species: 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/WeedVision.png" title="example image" class="img-fluid rounded z-depth-1" %}
