@@ -32,4 +32,4 @@ I am a Postdoctoral Research Associate in the Department of [Agricultural and Bi
 
 ### My working **philosophy**
 
-My working philosophies are inspired by biblical characters and their perspective towards life, meaning, and purpose. 
+My working philosophies are inspired by biblical heroes and their perspective towards life's purpose. 
