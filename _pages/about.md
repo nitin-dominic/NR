@@ -31,4 +31,5 @@ I am a Postdoctoral Research Associate in the Department of [Agricultural and Bi
 ### My wokring **philosophy**
 
 My work philosophy is inspired by biblical heroes and their perspectives on life's meaning and purpose!
+
 ---
