@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postodctoral Associate, <a href='https://www.ufl.edu/'>-University of Florida - Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI.</a>.
+subtitle: Postodctoral Associate, <a href='https://www.ufl.edu/'>University of Florida - Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI.</a>.
 
 profile:
   align: right
