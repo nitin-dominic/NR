@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postodctoral Research Associate, <a href='https://www.ndsu.edu/'>ND State University</a>. 1231 Ladd Hall, Albrecht Blvd., Fargo, ND 58102, USA
+subtitle: Postodctoral Associate, <a href='https://www.ufl.edu/'>-University of Florida - Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI.</a>.
 
 profile:
   align: right
@@ -26,7 +26,7 @@ As an **agricultural engineer** working closely with precision agriculture techn
 
 ### My **academic** background
 
-I am a Postdoctoral Research Associate in the Department of [Agricultural and Biosystems Engineering](https://www.ndsu.edu/aben/) at [ND State University](https://www.ndsu.edu/). I obtained my Ph.D. in Agricultural Engineering at ND State University in 2023, working with [Dr. Xin (Rex) Sun](https://www.ndsu.edu/aben/faculty_staff/dr_xin_rex_sun/) as a member of the [NDSU Sun Lab](https://sites.google.com/view/ndsusunslab). Prior to this, I earned my masters degree in Agricultural Engineering with a specialization in Agricultural Systems & Management from the [Indian Institute of Technology (IIT), Kharagpur](https://www.iitkgp.ac.in/), India. While my two years at the institute, I worked in the [Soil Physics Lab](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas) and was advised by [Prof. B.S. Das](https://scholar.google.co.in/citations?hl=en&user=oEvfFMYAAAAJ&view_op=list_works&sortby=pubdate) and co-advised by [Dr. R. Machavaram](https://sites.google.com/site/rajendramachavaram/). I also hold a bachelors degree in Agricultural Engineering from Sam Higginbottom University of Agriculture, Technology and Sciences [(SHUATS)](https://shuats.edu.in/) (formerly, Allahabad Agricultural Institute), India.
+I am a Postdoctoral Associate at the [Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI](https://gcrec.ifas.ufl.edu/research-programs/center-for-artificial-intelligence/), [University of Florida](https://www.ufl.edu/). I obtained my Ph.D. in Agricultural and Biosystems Engineering at ND State University in 2023, working with [Dr. Xin (Rex) Sun](https://www.ndsu.edu/aben/faculty_staff/dr_xin_rex_sun/) as a member of the [NDSU Sun Lab](https://sites.google.com/view/ndsusunslab). Prior to this, I earned my masters degree in Agricultural Engineering with a specialization in Agricultural Systems & Management from the [Indian Institute of Technology (IIT), Kharagpur](https://www.iitkgp.ac.in/), India. While my two years at the institute, I worked in the [Soil Physics Lab](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas) and was advised by [Prof. B.S. Das](https://scholar.google.co.in/citations?hl=en&user=oEvfFMYAAAAJ&view_op=list_works&sortby=pubdate) and co-advised by [Dr. R. Machavaram](https://sites.google.com/site/rajendramachavaram/). I also hold a bachelors degree in Agricultural Engineering from Sam Higginbottom University of Agriculture, Technology and Sciences [(SHUATS)](https://shuats.edu.in/) (formerly, Allahabad Agricultural Institute), India.
 
 ---
 
