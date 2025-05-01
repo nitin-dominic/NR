@@ -6,7 +6,7 @@ subtitle: Postodctoral Research Associate, <ahref='https://gcrec.ifas.ufl.edu/'>
 
 profile:
   align: right
-  image: Rai1.jpg
+  image: Rai2.jpg
   image_circular: false # crops the image to make it circular
   more_info:
 
