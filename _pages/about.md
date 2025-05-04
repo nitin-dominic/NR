@@ -2,8 +2,8 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postodctoral Research Associate, University of Florida - Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI.
-
+subtitle: Postodctoral Research Associate, <a href='https://www.ufl.edu/'?>University of Florida - Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI</a>.
+<a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 profile:
   align: right
   image: github_rai.jpg
