@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postodctoral Research Associate, <ahref='https://gcrec.ifas.ufl.edu/'>University of Florida - Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI</a>.
+subtitle: Postodctoral Research Associate, University of Florida - Gulf Coast Research and Education Center (GCREC) and the Center for Applied AI.
 
 profile:
   align: right
