@@ -163,11 +163,11 @@ blockquote {
 
 .profile {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 25px;
 
   .more-info {
     margin-bottom: 5px;
-    margin-top: 8px;
+    margin-top: 12px;
     font-family: monospace;
 
     p {
@@ -177,12 +177,14 @@ blockquote {
   }
 }
 
-.profile.float-left {
-  margin-left: 1rem;
+.profile.float-left {                   // space between photo and text
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 
-.profile.float-left {
-  margin-right: 1rem;
+.profile.float-right {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 @media (min-width: 576px) {
