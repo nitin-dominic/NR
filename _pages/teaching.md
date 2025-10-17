@@ -3,7 +3,7 @@ layout: page
 permalink: /teaching/
 title: Teaching
 description: I have over three years of teaching experience with an emphasis on precision ag. technologies. 
-nav: true
+nav: false
 nav_order: 5
 ---
 
