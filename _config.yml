@@ -163,12 +163,12 @@ disqus_shortname: al-folio # put your disqus shortname
 collections:
   news:
     defaults:
-    #  layout: post
-    # output: true
-   # permalink: /news/:path/
-  #projects:
-   # output: true
-   # permalink: /projects/:path/
+  layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 #announcements:
   #enabled: true
