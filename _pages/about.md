@@ -25,13 +25,13 @@ With over 6+ years of experience in developing data-driven solutions for sustain
 
 > Data is the new currency but it will be useful when it is turned into action.
 
-My research interests (areas of focus) include:
-
-- AI-driven computer vision for precision agriculture.
-- Autonomous ground and aerial robotics with edge-AI.  
-- Site-specific crop management including targeted spraying and high-throughput phenotyping. 
-- Cyber-physical systems, robotic navigation, and spatial analytics.  
-- Technology transfer and "stakeholder-driven" transdisciplinary research.
+<ul class="research-list">
+  <li><i class="fas fa-eye"></i> AI-driven computer vision for precision agriculture</li>
+  <li><i class="fas fa-robot"></i> Autonomous ground and aerial robotics with edge-AI</li>
+  <li><i class="fas fa-spray-can"></i> Site-specific crop management including targeted spraying and high-throughput phenotyping</li>
+  <li><i class="fas fa-project-diagram"></i> Cyber-physical systems, robotic navigation, and spatial analytics</li>
+  <li><i class="fas fa-handshake"></i> Technology transfer and stakeholder-driven transdisciplinary research</li>
+</ul>
 
 ---
 
