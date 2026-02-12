@@ -28,7 +28,7 @@ With over 6+ years of experience in developing data-driven solutions for sustain
 My research interests (areas of focus) include:
 
 * AI-based computer vision and object detection for agricultural applications.
-* utonomous ground and aerial robotic platforms with edge-AI deployment.
+* Autonomous ground and aerial robotic platforms with edge-AI deployment.
 * Smart sprayer technology and site-specific weed and disease management.
 * Robotic navigation, cyber-physical systems, and automated GIS workflows for spatial and image analysis.
 
