@@ -1,1 +1,1 @@
-body{background:url("assets/img/website.png") no-repeat center center fixed;background-size:cover}body::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,0.55);pointer-events:none}
+body{background:url("../img/website.png") no-repeat center center fixed;background-size:cover}body::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,0.55);pointer-events:none}
