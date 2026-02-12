@@ -47,3 +47,19 @@ li {
   margin-bottom: 8px;
   font-weight: 500;
 }
+
+/* Profile image square + responsive position */
+header .profile-picture img {
+  border: 3px solid #fff;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  header .profile-picture {
+    margin-top: 30px;
+  }
+}
+
