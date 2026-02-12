@@ -1,0 +1,182 @@
+/* ===================================================
+   Clean, theme-aware custom styles for al-folio
+   Place as: assets/css/custom.css
+   =================================================== */
+
+/* ---------------------------
+   THEME-AWARE TEXT COLORS
+   Support both html.dark and html[data-theme="dark"]
+   --------------------------- */
+
+/* Dark theme (two common patterns) */
+html.dark body,
+html[data-theme="dark"] body {
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+/* Light theme (default) */
+html:not(.dark) body,
+html:not([data-theme="dark"]) body,
+html[data-theme="light"] body {
+  color: #111;
+  font-weight: 500;
+}
+
+/* ---------------------------
+   TYPOGRAPHY
+   --------------------------- */
+body {
+  /* keep browser font-size; adjust if you want larger globally */
+  line-height: 1.6;
+}
+
+p {
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* ---------------------------
+   LINKS / ACCENT
+   --------------------------- */
+:root {
+  --accent-color: #669ecc;
+}
+
+a {
+  color: var(--accent-color);
+  transition: color 150ms ease-in-out;
+}
+a:hover,
+a:focus {
+  color: #4a85b5;
+}
+
+/* ---------------------------
+   BULLETS / LISTS
+   --------------------------- */
+ul {
+  list-style-type: disc;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Ensure marker contrast for dark themes */
+html.dark li::marker,
+html[data-theme="dark"] li::marker {
+  color: #ffffff;
+}
+
+/* ---------------------------
+   PROFILE IMAGE (square + responsive)
+   --------------------------- */
+header .profile-picture img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;    /* subtle rounded corners */
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Slight downward shift on larger screens only */
+@media (min-width: 768px) {
+  header .profile-picture {
+    margin-top: 30px;
+  }
+}
+
+/* ---------------------------
+   RESEARCH LIST (icons + alignment)
+   Usage: <ul class="research-list"> ... </ul> in Markdown (HTML allowed)
+   --------------------------- */
+.research-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.research-list li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* Font Awesome / icon spacing */
+.research-list i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: var(--accent-color);
+  width: 22px;           /* keep alignment even if icon widths vary */
+  text-align: center;
+}
+
+/* ---------------------------
+   BLOCKQUOTE / RESEARCH QUOTE
+   Uses accent color #669ecc; removes theme white boxes and shadows
+   --------------------------- */
+blockquote {
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 18px 22px;
+  margin: 28px 0;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 8px;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Dark theme tinted background for quote */
+html.dark blockquote,
+html[data-theme="dark"] blockquote {
+  background: rgba(102, 158, 204, 0.12) !important; /* subtle blue tint */
+  color: #ffffff;
+}
+
+/* Light theme tinted background for quote */
+html:not(.dark) blockquote,
+html:not([data-theme="dark"]) blockquote,
+html[data-theme="light"] blockquote {
+  background: rgba(102, 158, 204, 0.06) !important; /* very subtle tint */
+  color: #111;
+}
+
+/* Remove inner paragraph margins inside blockquote */
+blockquote p {
+  margin: 0;
+}
+
+/* ---------------------------
+   OPTIONAL: Remove white panels that hide background (commented)
+   Uncomment only if you intentionally want content panels transparent
+   --------------------------- */
+/*
+.page-content,
+.container,
+.card {
+  background: transparent !important;
+}
+*/
+
+/* ---------------------------
+   SMALL UTILITY TWEAKS
+   --------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make code blocks slightly higher contrast */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+}
