@@ -125,5 +125,28 @@ header .profile-picture img {
 .research-list i {
   margin-right: 10px;
   font-size: 18px;
-  color: #66b9cc;  /* adjust to your theme color */
+  color: #6692cc;  /* adjust to your theme color */
+}
+
+/* ---------- Custom Blockquote Styling ---------- */
+blockquote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 25px;
+  border-left: 5px solid #6692cc; /* accent color */
+  margin: 30px 0;
+  border-radius: 8px;
+  backdrop-filter: blur(3px);
+}
+
+/* Dark Theme */
+html.dark blockquote {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+/* Light Theme */
+html:not(.dark) blockquote {
+  background: rgba(255, 255, 255, 0.7);
+  color: #111;
 }
