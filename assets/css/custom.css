@@ -125,28 +125,36 @@ header .profile-picture img {
 .research-list i {
   margin-right: 10px;
   font-size: 18px;
-  color: #6692cc;  /* adjust to your theme color */
+  color: #66a0cc;  /* adjust to your theme color */
 }
 
 /* ---------- Custom Blockquote Styling ---------- */
+
 blockquote {
   font-size: 1.2rem;
   font-weight: 600;
   padding: 20px 25px;
-  border-left: 5px solid #6692cc; /* accent color */
   margin: 30px 0;
+  border-left: 5px solid #66a0cc;
   border-radius: 8px;
-  backdrop-filter: blur(3px);
+
+  background: transparent !important;   /* remove white background */
+  box-shadow: none !important;          /* remove theme shadow */
 }
 
 /* Dark Theme */
 html.dark blockquote {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(102, 158, 204, 0.15) !important;
   color: #ffffff;
 }
 
 /* Light Theme */
 html:not(.dark) blockquote {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(102, 158, 204, 0.08) !important;
   color: #111;
+}
+
+/* Remove extra paragraph spacing inside blockquote */
+blockquote p {
+  margin: 0;
 }
