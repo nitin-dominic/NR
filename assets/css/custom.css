@@ -62,4 +62,20 @@ header .profile-picture img {
     margin-top: 30px;
   }
 }
+.research-list {
+  list-style: none;
+  padding-left: 0;
+}
 
+.research-list li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.research-list i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #66cc99;  /* adjust to your theme color */
+}
