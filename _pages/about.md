@@ -6,7 +6,7 @@ subtitle: Postodctoral Research Associate, <a href='https://www.ufl.edu/'?>Unive
 
 profile:
   align: right
-  image: gtihub_rai.jpg
+  image: RaiN.jpg
   image_circular: false # crops the image to make it circular
   more_info:
 
