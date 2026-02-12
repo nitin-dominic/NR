@@ -29,7 +29,7 @@ My research interests (areas of focus) include:
 
 - AI-driven computer vision for precision agriculture.
 - Autonomous ground and aerial robotics with edge-AI.  
-- Site-specific crop management including targeted spraying, and high-throughput phenotyping. 
+- Site-specific crop management including targeted spraying and high-throughput phenotyping. 
 - Cyber-physical systems, robotic navigation, and spatial analytics.  
 - Technology transfer and "stakeholder-driven" transdisciplinary research.
 
