@@ -180,23 +180,3 @@ pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
   font-size: 0.95rem;
 }
-
-/* ============================
-   Transparent Content Panels
-   ============================ */
-
-/* Light theme panels */
-html:not(.dark) .container,
-html:not(.dark) .page-content,
-html:not(.dark) .card {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(4px); /* soft blur behind panels */
-}
-
-/* Dark theme panels */
-html.dark .container,
-html.dark .page-content,
-html.dark .card {
-  background: rgba(18, 18, 18, 0.85) !important;
-  backdrop-filter: blur(4px); /* keep blur on dark */
-}
