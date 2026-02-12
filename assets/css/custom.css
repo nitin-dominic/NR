@@ -122,8 +122,8 @@ header .profile-picture img {
   align-items: center;
 }
 
-.research-list li::before {
-  content: "▸";
+.research-list i {
   margin-right: 10px;
-  color: #66accc;
+  font-size: 18px;
+  color: #66b9cc;  /* adjust to your theme color */
 }
