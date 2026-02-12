@@ -1,5 +1,38 @@
-/* Full-page image background */
+/* ---- Background Image Layer ---- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("../img/website.png") center center / cover no-repeat;
+  filter: blur(7px);                 /* Adjust blur strength here */
+  transform: scale(1.05);            /* Prevent edge cutoff after blur */
+
+  z-index: -2;
+}
+
+/* ---- Dark Overlay for Contrast ---- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);    /* Adjust darkness (0.35–0.6) */
+  z-index: -1;
+}
+
+/* ---- Improve Readability ---- */
 body {
-  background: url("../img/website.png") no-repeat center center fixed;
-  background-size: cover;
+  font-weight: 500;
+  color: #f5f5f5;                    /* light text for dark overlay */
+}
+
+/* Paragraphs */
+p {
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
