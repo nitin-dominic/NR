@@ -25,6 +25,8 @@ With over 6+ years of experience in developing data-driven solutions for sustain
 
 > Data is the new currency but it will be useful when it is turned into action.
 
+My research interests (areas of focus) include:
+
 <ul class="research-list">
   <li><i class="fas fa-eye"></i> AI-driven computer vision for precision agriculture.</li>
   <li><i class="fas fa-robot"></i> Autonomous ground and aerial robotics with edge computing.</li>
