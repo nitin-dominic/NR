@@ -1,43 +1,74 @@
-/* ---- Background Image Layer ---- */
+/* =========================================================
+   Theme-aware background + typography (al-folio / GitHub Pages)
+   Put this entire file in: assets/css/custom.css
+   ========================================================= */
+
+/* ---------- Background image layer (blurred) ---------- */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
 
-  background: url("../img/website.png") center center / cover no-repeat;
-  filter: blur(8px);
-  transform: scale(1.05);
+  /* IMPORTANT: update filename if needed */
+  background: url("../img/website.png") center / cover no-repeat;
+
+  filter: blur(5px);          /* adjust blur (4–8px) */
+  transform: scale(1.05);     /* avoids edge cutoff due to blur */
 
   z-index: -2;
 }
 
-/* ---- Dark Overlay for Contrast ---- */
+/* ---------- Overlay layer (theme-specific colors below) ---------- */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.58);
+  pointer-events: none;
   z-index: -1;
 }
 
-/* ---- Improve Readability ---- */
-body {
+/* =========================================================
+   THEME OVERRIDES
+   al-folio usually toggles: html[data-theme="dark"] / "light"
+   ========================================================= */
+
+/* ----- DARK THEME ----- */
+html[data-theme="dark"] body {
+  color: #f5f5f5;     /* readable on dark overlay */
   font-weight: 500;
-  color: #f5f5f5;
 }
 
-/* Paragraphs */
+html[data-theme="dark"] body::after {
+  background: rgba(0, 0, 0, 0.55);  /* dark overlay */
+}
+
+/* ----- LIGHT THEME ----- */
+html[data-theme="light"] body {
+  color: #111;        /* readable on light UI */
+  font-weight: 500;
+}
+
+html[data-theme="light"] body::after {
+  background: rgba(255, 255, 255, 0.55); /* light overlay */
+}
+
+/* =========================================================
+   TYPOGRAPHY POLISH
+   ========================================================= */
+
 p {
   font-weight: 500;
   line-height: 1.7;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* ---- Bullet Styling ---- */
+/* =========================================================
+   BULLET LIST VISIBILITY (optional, helps on dark bg)
+   ========================================================= */
+
 ul {
   list-style-type: disc;
   padding-left: 1.4rem;
@@ -47,6 +78,23 @@ li {
   margin-bottom: 8px;
   font-weight: 500;
 }
+
+/* Make bullet markers visible on dark theme */
+html[data-theme="dark"] li::marker {
+  color: #ffffff;
+}
+
+/* =========================================================
+   OPTIONAL: Make content cards transparent so bg shows through
+   Uncomment if your theme uses white panels that hide the bg
+   ========================================================= */
+/*
+.page-content,
+.container,
+.card {
+  background: transparent !important;
+}
+*/
 
 /* Profile image square + responsive position */
 header .profile-picture img {
