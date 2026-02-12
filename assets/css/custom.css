@@ -1,0 +1,5 @@
+/* Full-page image background */
+body {
+  background: url("/assets/img/agtech-collage.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
