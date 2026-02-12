@@ -21,10 +21,16 @@ social: true  # includes social icons at the bottom of the page
 
 As an **agricultural engineer** working closely with precision agriculture technologies, I take a **data-driven** approach to visualize and monitor farming operations. To address these operations, I integrate advanced data analytics and artificial intelligence (AI) techniques with the data obtained from ground and aerial-robots to accomplish site-specific needs. 
 
-With over seven years of experience in developing data-driven solutions for sustainable practices in precision agriculture, I specialize in both foundational and applied research in artificial intelligence (AI), machine learning, and autonomous systems for site-specific management in row and specialty crops. My expertise spans in-field data acquisition using autonomous ground and aerial robotic systems, the development of predictive AI models, and their deployment on edge platforms for real-time, closed-loop decision-making as part of on-farm research. This includes AI-driven perception, localization, and actuation for tasks such as targeted spraying. Overall, I am blessed to work on cutting-edge research while hoping to lay a foundation for incoming researchers. I believe that the **future of agriculture is data-driven**. But what matters the most is how well do we **manage**, **process**, and **interpret** this data so that farmers, growers, stakeholders, agricultural technology providers, and extension educators could be benefitted from it. I strongly believe in the quote below:
+With over 6+ years of experience in developing data-driven solutions for sustainable practices in precision agriculture, I specialize in both foundational and applied research in artificial intelligence (AI), machine learning, and autonomous systems for site-specific management in row and specialty crops. My expertise spans in-field data acquisition using autonomous ground and aerial robotic systems, the development of predictive AI models, and their deployment on edge platforms for real-time, closed-loop decision-making as part of on-farm research. This includes AI-driven perception, localization, and actuation for tasks such as targeted spraying. Overall, I am blessed to work on cutting-edge research while hoping to lay a foundation for incoming researchers. I believe that the **future of agriculture is data-driven**. But what matters the most is how well do we **manage**, **process**, and **interpret** this data so that farmers, growers, stakeholders, agricultural technology providers, and extension educators could be benefitted from it. I strongly believe in the quote below:
 
 > Data is the new currency but it will be useful when it is turned into action.
 
+My research interests (areas of focus) include:
+
+* AI-based computer vision and object detection for agricultural applications.
+* utonomous ground and aerial robotic platforms with edge-AI deployment.
+* Smart sprayer technology and site-specific weed and disease management.
+* Robotic navigation, cyber-physical systems, and automated GIS workflows for spatial and image analysis.
 
 ---
 
