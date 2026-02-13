@@ -17,7 +17,7 @@ social: true  # includes social icons at the bottom of the page
 
 ---
 
-### **Data-driven** agriculture
+### **Short bio and research vision
 
 As an **agricultural engineer** working closely with precision agriculture technologies, I take a **data-driven** approach to visualize and monitor farming operations. To address these operations, I integrate advanced data analytics and artificial intelligence (AI) techniques with the data obtained from ground and aerial-robots to accomplish site-specific needs. 
 
