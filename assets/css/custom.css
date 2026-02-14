@@ -180,3 +180,48 @@ pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
   font-size: 0.95rem;
 }
+
+/* =========================================
+   Social Media Brand Colors
+   ========================================= */
+
+/* GitHub */
+.social a[href*="github"] i {
+  color: #181717 !important;
+}
+
+/* Twitter / X */
+.social a[href*="twitter"] i,
+.social a[href*="x.com"] i {
+  color: #1DA1F2 !important;
+}
+
+/* Google Scholar */
+.social a[href*="scholar"] i {
+  color: #4285F4 !important;
+}
+
+/* ResearchGate */
+.social a[href*="researchgate"] i {
+  color: #00CCBB !important;
+}
+
+/* LinkedIn */
+.social a[href*="linkedin"] i {
+  color: #0A66C2 !important;
+}
+
+/* Email */
+.social a[href^="mailto"] i {
+  color: #D44638 !important;
+}
+
+/* Slight hover effect */
+.social a i {
+  opacity: 0.85;
+  transition: transform 0.2s ease;
+}
+
+.social a:hover i {
+  transform: scale(1.15);
+}
