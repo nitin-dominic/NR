@@ -1146,11 +1146,13 @@ nav[data-toggle="toc"] {
         aspect-ratio: 16 / 9;
         overflow: hidden;
         display: flex !important;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         margin-bottom: 0 !important;
+        padding: 10px !important;
         background: linear-gradient(135deg, #f4f2ed 0%, #e4e0d8 100%);
-
+      }
+      
         abbr {
           font-size: 0.85rem;
           font-weight: 700;
