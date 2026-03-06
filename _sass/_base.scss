@@ -1133,7 +1133,7 @@ nav[data-toggle="toc"] {
           height: 100% !important;
           max-width: none !important;
           max-height: none !important;
-          object-fit: cover !important;
+          object-fit: contain !important;
           transition: transform 0.45s ease;
         }
       }
