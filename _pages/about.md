@@ -17,7 +17,7 @@ social: true  # includes social icons at the bottom of the page
 
 ---
 
-### **Short bio and research vision**
+### **Short Bio and Research Vision**
 
 As an **agricultural engineer** working closely with precision agriculture technologies, I take a **data-driven** approach to visualize and monitor farming operations. To address these operations, I integrate advanced data analytics and artificial intelligence (AI) techniques with the data obtained from ground and aerial-robots to accomplish site-specific needs. 
 
@@ -37,7 +37,7 @@ My research interests (areas of focus) include:
 
 ---
 
-### My **academic** background
+### My **Academic** Background
 
 I am a Postdoctoral Research Associate at the [University of Florida](https://www.ufl.edu/) - [Gulf Coast Research and Education Center (GCREC)](https://gcrec.ifas.ufl.edu/research-programs/center-for-artificial-intelligence/), supervised by [Prof. Arnold Schumann](https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/) and co-supervised by [Prof. Nathan Boyd](https://gcrec.ifas.ufl.edu/gcrec-facultystaff-directory/drnathanboyd/). I lead a USDA-NIFA SBIR/STTR-funded project focused on developing an AI-enabled targeted smart spraying system for watermelon growers, emphasizing site-specific disease management and commercialization in collaboration with the agtech startup, [EZ Ag Innovations](https://ezaginnovations.com/). I previously served as a Postdoctoral Research Associate at [North Dakota State University](https://www.ndsu.edu/) (NDSU), where I co-led projects in high-throughput phenotyping, aerial and ground robotic systems, crop-yield prediction, and disease severity estimation in soybean and wheat crops using deep learning and computer vision approaches. These projects aimed to enable optimized, data-driven agronomic decision-making at the farm scale. I earned my Ph.D. in Agricultural and Biosystems Engineering at NDSU in 2023, working with [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun). Prior to this, I earned my master's degree in Agricultural and Food Engineering with a specialization in Agricultural Systems & Management from the [Indian Institute of Technology (IIT), Kharagpur](https://www.iitkgp.ac.in/), India. While my two years at the institute, I worked in the [Soil Physics Lab](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas) and was advised by [Prof. B.S. Das](https://scholar.google.co.in/citations?hl=en&user=oEvfFMYAAAAJ&view_op=list_works&sortby=pubdate) and co-advised by [Dr. R. Machavaram](https://sites.google.com/site/rajendramachavaram/). I also hold a bachelor's degree in Agricultural Engineering from Sam Higginbottom University of Agriculture, Technology and Sciences [(SHUATS)](https://shuats.edu.in/) (formerly, Allahabad Agricultural Institute), India.
 
