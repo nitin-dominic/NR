@@ -102,3 +102,41 @@ model.train(
     name='strawberry_yolo11'
 )
 ```
+```yaml
+runs/detect/strawberry_yolo11/weights/best.pt
+```
+## 3. Converting the Model for Deployment on LanderPi
+
+The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for
+faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. The full conversion pipeline is:
+
+```yaml
+strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberry.bin
+
+```
+
+# Step 1: Export .pt to ONNX
+
+```python
+
+from ultralytics import YOLO
+
+model = YOLO("strawberry.pt")
+model.export(format="onnx", opset=12)
+# Generates: strawberry.onnx
+
+```
+# Step 2: Convert ONNX to OpenVINO IR
+
+```python
+# Using newer OpenVINO CLI (recommended)
+ovc strawberry.onnx --output_model strawberry.xml
+
+# Or using older Model Optimizer
+mo --input_model strawberry.onnx --output_dir openvino_model/
+```
+
+This generates:
+
+> `strawberry.xml` — model architecture
+> `strawberry.bin` — model weights
