@@ -115,7 +115,7 @@ strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberr
 
 ```
 
-### Step 1: Export .pt to ONNX
+### Step 1: Export `.pt` to ONNX
 
 ```python
 
