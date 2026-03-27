@@ -82,7 +82,7 @@ Collect images of strawberries in different:
 - 📐 Angles (top-down, frontal, side view)
 - 🌿 Backgrounds (soil, leaves, greenhouse)
 
-Your `data.yaml` should look like this:
+Your `strawberry_data.yaml` should look like this:
 
 ```yaml
 train: /path/to/train/images
@@ -91,7 +91,7 @@ nc: 2
 names: ['ripe', 'unripe']
 ```
 
-```
+```python
 from ultralytics import YOLO
 model = YOLO('yolo11n.pt')  # Start from nano pretrained weights
 model.train(
@@ -110,7 +110,7 @@ runs/detect/strawberry_yolo11/weights/best.pt
 The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for
 faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. The full conversion pipeline is:
 
-```yaml
+```text
 strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberry.bin
 
 ```
@@ -140,3 +140,10 @@ This generates:
 
 > `strawberry.xml` — model architecture
 > `strawberry.bin` — model weights
+
+### Step 3: Place the Model Files
+
+```console
+cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
+```
+   
