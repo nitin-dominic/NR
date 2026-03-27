@@ -58,3 +58,14 @@ train: /path/to/train/images
 val: /path/to/val/images
 nc: 2
 names: ['ripe', 'unripe']
+
+from ultralytics import YOLO
+
+model = YOLO('yolo11n.pt')  # Start from nano pretrained weights
+model.train(
+    data='data.yaml',
+    epochs=100,
+    imgsz=640,
+    batch=16,
+    name='strawberry_yolo11'
+)
