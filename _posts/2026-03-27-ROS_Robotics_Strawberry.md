@@ -9,7 +9,7 @@ thumbnail: assets/img/strawberry_pick.png
 ---
 
 <div style="text-align: center; margin-bottom: 2em;">
-  <img src="/assets/img/strawberry_pick.png" alt="Strawberry Picking Robot" style="width:100%; border-radius:12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);"/>
+  <img src="assets/img/strawberry_pick.png" alt="Strawberry Picking Robot" style="width:100%; border-radius:12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);"/>
   <p style="color: gray; font-size: 0.9em; margin-top: 0.5em;">
     HiWonder LanderPi autonomously detecting and picking a ripe strawberry using YOLOv11 and depth-based inverse kinematics.
   </p>
