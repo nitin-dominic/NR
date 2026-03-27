@@ -86,3 +86,4 @@ train: /path/to/train/images
 val: /path/to/val/images
 nc: 2
 names: ['ripe', 'unripe']
+```
