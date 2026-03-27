@@ -6,13 +6,16 @@ description: "A complete guide to training a custom YOLOv11 model, converting it
 tags: ros2 robotics yolo deep-learning raspberry-pi agriculture computer-vision
 categories: robotics
 thumbnail: assets/img/strawberry_pick.png
+
 ---
 
-<div style="text-align: center; margin-bottom: 2em;">
-  <img src="assets/img/strawberry_pick.png" alt="Strawberry Picking Robot" style="width:100%; border-radius:12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);"/>
-  <p style="color: gray; font-size: 0.9em; margin-top: 0.5em;">
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/strawberry_pick.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
     HiWonder LanderPi autonomously detecting and picking a ripe strawberry using YOLOv11 and depth-based inverse kinematics.
-  </p>
 </div>
 
 ---
