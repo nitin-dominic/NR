@@ -50,7 +50,6 @@ The entire pipeline covers:
 8. [Running the Pipeline](#8-running-the-pipeline)
 9. [Tuning the Arm for Accurate Picking](#9-tuning-the-arm-for-accurate-picking)
 10. [Known Issues and Limitations](#10-known-issues-and-limitations)
-11. [Future Work](#11-future-work)
 
 ---
 
@@ -102,9 +101,11 @@ model.train(
     name='strawberry_yolo11'
 )
 ```
+
 ```yaml
 runs/detect/strawberry_yolo11/weights/best.pt
 ```
+
 ## 3. Converting the Model for Deployment on LanderPi
 
 The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for
@@ -118,14 +119,12 @@ strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberr
 ### Step 1: Export `.pt` to ONNX
 
 ```python
-
 from ultralytics import YOLO
-
 model = YOLO("strawberry.pt")
 model.export(format="onnx", opset=12)
 # Generates: strawberry.onnx
-
 ```
+
 ### Step 2: Convert ONNX to OpenVINO IR
 
 ```python
@@ -146,4 +145,3 @@ This generates:
 ```console
 cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 ```
-   
