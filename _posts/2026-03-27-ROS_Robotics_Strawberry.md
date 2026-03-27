@@ -115,7 +115,7 @@ strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberr
 
 ```
 
-# Step 1: Export .pt to ONNX
+### Step 1: Export .pt to ONNX
 
 ```python
 
@@ -126,7 +126,7 @@ model.export(format="onnx", opset=12)
 # Generates: strawberry.onnx
 
 ```
-# Step 2: Convert ONNX to OpenVINO IR
+### Step 2: Convert ONNX to OpenVINO IR
 
 ```python
 # Using newer OpenVINO CLI (recommended)
