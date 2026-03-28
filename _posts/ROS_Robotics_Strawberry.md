@@ -51,7 +51,7 @@ The entire pipeline covers:
 2. [Training the Strawberry Detection Model](#2-training-the-strawberry-detection-model)
 3. [Converting the Model for Deployment](#3-converting-the-model-for-deployment)
 4. [Setting Up the ROS2 Package](#4-setting-up-the-ros2-package)
-5. [How the Picking Pipeline Works](#5-how-the-picking-pipeline-works)
+5. [How the Picking Pipeline Works?](#5-how-the-picking-pipeline-works?)
 6. [The Main Node](#6-the-main-node-strawberry_pick_ikpy)
 7. [The Launch File](#7-the-launch-file-strawberry_pick_iklaunchpy)
 8. [Running the Pipeline](#8-running-the-pipeline)
