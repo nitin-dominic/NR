@@ -221,6 +221,112 @@ colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Re
 
 The full autonomous pipeline runs as follows:
 
+## 5. How the Picking Pipeline Works
+
+The full autonomous pipeline runs as follows [5][6]:
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin-bottom:1.5em;">
+  <thead>
+    <tr style="background-color:#2d2d2d; color:white;">
+      <th style="padding:8px 12px; text-align:left;">Stage</th>
+      <th style="padding:8px 12px; text-align:left;">What Happens</th>
+      <th style="padding:8px 12px; text-align:left;">ROS2 Topic / Service</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>🧠 YOLO Detection</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">YOLOv11 detects ripe and unripe strawberries in every frame</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>/yolo_node/object_detect</code></td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>📷 Image Sync</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">RGB, depth, and camera_info are time-synchronized</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>/ascamera/camera_publisher/rgb0/image</code></td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>🎯 PID Tracking</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Camera servos adjust to center the ripe berry in frame using PID control</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>/servo_controller</code></td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>⏱️ Stability Check</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Waits 5 seconds of stable PID tracking before triggering the grab</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Internal timer</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>📐 Depth + IK</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Depth ROI averaged → pixel + depth → 3D camera coords → world coords via hand-eye matrix</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>/kinematics/set_pose_target</code></td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>🦾 Grab</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Arm moves to computed 3D position and gripper closes around the berry</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>/servo_controller</code></td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>⬆️ Lift</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Arm lifts berry slightly upward before moving to safe retract position</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>/servo_controller</code></td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>📦 Place</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Arm moves to placement position on the left side and gripper opens to release</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>/servo_controller</code></td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px;"><strong>🏠 Return Home</strong></td>
+      <td style="padding:6px 12px;">Arm returns to initial scanning position and tracker resets for next berry</td>
+      <td style="padding:6px 12px;"><code>/servo_controller</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Key Tuning Parameters
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin-bottom:1.5em;">
+  <thead>
+    <tr style="background-color:#2d2d2d; color:white;">
+      <th style="padding:8px 12px; text-align:left;">Parameter</th>
+      <th style="padding:8px 12px; text-align:left;">Location</th>
+      <th style="padding:8px 12px; text-align:left;">Default</th>
+      <th style="padding:8px 12px; text-align:left;">What it controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>conf</code></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">launch file [5]</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>0.45</code></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">YOLO confidence threshold</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>position[2] -= X</code></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">strawberry_pick_ik.py [6]</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>0.02</code></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">How low the arm reaches to grab</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Stability timer</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">strawberry_pick_ik.py [6]</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>5 sec</code></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Wait time before triggering grab</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Depth ROI</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">strawberry_pick_ik.py [6]</td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><code>24×24 px</code></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Area used for depth averaging</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px;">PID threshold</td>
+      <td style="padding:6px 12px;">strawberry_pick_ik.py [6]</td>
+      <td style="padding:6px 12px;"><code>0.01</code></td>
+      <td style="padding:6px 12px;">Sensitivity of camera centering adjustments</td>
+    </tr>
+  </tbody>
+</table>
+
 ---
 
 ## 6. The Main Node: ```strawberry_pick_ik.py```
