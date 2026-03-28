@@ -190,3 +190,24 @@ Finally, head-on to building a package using the command line below. The ``--sym
 cd ~/ros2_ws
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-select example
 ```
+---
+
+## How the Picking Pipeline Works?
+
+The full autonomous pipeline runs as follows: 
+
+┌─────────────────────────────────────────────────────────┐
+│               STRAWBERRY PICKING PIPELINE               │
+├─────────────────────────────────────────────────────────┤
+│  YOLO node         →  /yolo_node/strawberry_detect      │
+│       ↓                                                 │
+│  StrawberryPickIK  →  RGB + Depth + CameraInfo sync     │
+│       ↓                                                 │
+│  PID Tracker       →  Centers camera on ripe berry      │
+│       ↓                                                 │
+│  Stability Check   →  Waits 5s of stable tracking       │
+│       ↓                                                 │
+│  Depth + IK        →  Pixel + depth → 3D world coords   │
+│       ↓                                                 │
+│  pick()            →  Grab → Lift → Place → Home        │
+└─────────────────────────────────────────────────────────┘
