@@ -184,3 +184,9 @@ Just in case for whatever reasons, if `__init__.py` file does not exist within t
 ```console
 touch ~/ros2_ws/src/example/example/rgbd_function/__init__.py
 ```
+Finally, headon to building a package using the command line below. The ``--symlink-install`` flag is particularly useful during development. Since it creates symlinks from the install directory directly to your source files command, any changes you make to an existing ``.py`` file like ``strawberry_pick_ik.py`` are instantly reflected without needing to rebuild. You only need to rebuild when adding new files or new entry points to ``setup.py``.
+
+```console
+cd ~/ros2_ws
+colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-select example
+```
