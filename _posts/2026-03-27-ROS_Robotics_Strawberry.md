@@ -61,7 +61,6 @@ The entire pipeline covers:
 ---
 
 ## 1. Hardware and Software Requirements
-
 | Component | Details |
 |---|---|
 | **Robot** | HiWonder LanderPi with Mecanum chassis [2] |
