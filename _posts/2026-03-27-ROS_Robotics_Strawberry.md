@@ -35,12 +35,13 @@ The entire pipeline covers:
 - Basics of Robotics Operating System (ROS) and Computer Vision,
 - Working with Linux-based OS,
 - Must have followed primary instructions as stated within [Robotic Arm Control/LanderPi](https://wiki.hiwonder.com/projects/LanderPi/en/latest/),
+- A virtual machine (VM) with Ubuntu 22.04 (Jammy) to visualize simulations using [Rviz](https://github.com/ros-visualization/rviz) (Optional!!!),
+- A working knowledge of training vision models (YOLO in this case) using necessary hyperparameters,
 - HiWonder LanderPi with Mecanum chassis,
 - Aurora 930 depth camera,
 - ROS2 Humble running inside Docker,
 - The workspace lives at `/home/ubuntu/ros2_ws` within the container [1],
 - All commands must run inside the Docker container unless stated otherwise,
-- 
 
 ---
 
