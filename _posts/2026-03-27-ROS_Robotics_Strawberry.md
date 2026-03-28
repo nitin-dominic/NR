@@ -179,7 +179,7 @@ Within the vim file, press `i` to insert the line, `'strawberry_pick_ik = exampl
     'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main',
 ],
 ```
-Just in case for whatever reasons, if `__init.py` file does not exist within the `/rgbd_function` folder, create one using the command below. This step is important because when building a package, python needs to treat ````example.rgbd_function```` as a package, not just a folder. The ``__init__.py`` file is what tells Python *this directory* is a Python package that can be imported. Without it, ROS2 will try to load your node, Python will see ``rgbd_function/`` as just a plain folder and wil throw an error.
+Just in case for whatever reasons, if `__init__.py` file does not exist within the `/rgbd_function` folder, create one using the command below. This step is important because when building a package, python needs to treat ````example.rgbd_function```` as a package, not just a folder. The ``__init__.py`` file is what tells Python *this directory* is a Python package that can be imported. Without it, ROS2 will try to load your node, Python will see ``rgbd_function/`` as just a plain folder and wil throw an error.
 
 ```console
 touch ~/ros2_ws/src/example/example/rgbd_function/__init__.py
