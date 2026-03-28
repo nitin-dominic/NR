@@ -22,8 +22,7 @@ thumbnail: assets/img/strawberry_pick.png
 
 ## 🍓 Overview
 
-This write-up is for those working with the **HiWonder LanderPi** robot who want to implement
-**autonomous strawberry detection and picking** using computer vision and robotic arm control. However, the major focus of this tutorial is targeted towards **optimized arm control** and an end-effector **gripper** rather than vision-based detection.
+This write-up is for those working with the **HiWonder LanderPi** robot and want to implement **autonomous strawberry detection and picking** using computer vision and robotic arm control. However, the major focus of this tutorial is targeted towards **optimized arm control** and an end-effector **gripper** rather than vision-based detection.
 The entire pipeline covers:
 
 - Training a custom **YOLOv11** model on ripe/unripe strawberry classes (Very brief!)
