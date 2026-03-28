@@ -328,6 +328,7 @@ The full autonomous pipeline runs as follows:
 ## 6. The Main Node: ```strawberry_pick_ik.py```
 
 The node uses a custom YoloTracker class that replaces traditional HSV color detection with YOLO bounding box centers ``strawberry_pick_ik.py``. It subscribes to /yolo_node/object_detect and uses PID controllers to center the camera on the best detected ripe strawberry. Within the `strawberry_pick_ik.py`, look for these lines (below) to understand the code structure. 
+
 YoloTracker Class
 
 ```python
