@@ -78,8 +78,7 @@ The entire pipeline covers:
 > 🕐 **This is the most important and time-consuming part.** The quality of your dataset
 > directly determines how well the robot detects strawberries.
 
-I trained a custom YOLOv11 model with two classes: `ripe` and `unripe`. I used
-[Roboflow](https://roboflow.com) to annotate images and export in YOLO format.
+I trained a custom YOLOv11 model with two classes: `ripe` and `unripe` uisng the dataset from [Roboflow](https://universe.roboflow.com/eric-z0ptd/strawberry_picking_2). However, within the repo that you'll clone, I have already provided `strawberry.pt` file to get started. I trained my own model with cusotm hyperparameters. With the interest of space within this `Blog`, I am not going explain in detail on how to train a YOLO-based vision model for detection purpose. If you encounter any issues, please reach out to me or pull an issue.
 
 ### a. Dataset Preparation
 
