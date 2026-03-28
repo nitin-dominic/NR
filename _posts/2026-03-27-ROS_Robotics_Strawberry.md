@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vision-Guided Autonomous Fruit Harvesting Using YOLOv11 and Depth-Based Inverse Kinematics on a ROS2 Mobile Manipulator"
+title: "Perception-to-Actuation Pipeline for Autonomous Strawberry Harvesting Using YOLOv11, Depth-Based Inverse Kinematics, and ROS2 Approach"
 date: 2026-03-27 09:00:00-0400
 description: "A complete guide to training a custom YOLOv11 model, converting it to OpenVINO format, and deploying it on a LanderPi robot for autonomous strawberry detection and picking using a depth camera and inverse kinematics."
 tags: ros2 robotics yolo deep-learning raspberry-pi agriculture computer-vision
