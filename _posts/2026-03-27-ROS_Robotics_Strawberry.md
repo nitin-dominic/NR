@@ -23,13 +23,13 @@ thumbnail: assets/img/strawberry_pick.png
 ## 🍓 Overview
 
 This write-up is for those working with the **HiWonder LanderPi** robot who want to implement
-**autonomous strawberry detection and picking** using computer vision and robotic arm control.
+**autonomous strawberry detection and picking** using computer vision and robotic arm control. However, the major focus of this tutorial is targeted towards **optimized arm control** and an end-effector **gripper** rather than vision-based detection.
 The entire pipeline covers:
 
-- Training a custom **YOLOv11** model on ripe/unripe strawberry classes
-- Converting the model to **OpenVINO IR format** for faster inference on Raspberry Pi
-- Deploying it on LanderPi running **ROS2 Humble** inside Docker
-- Using a **depth camera + inverse kinematics** to physically pick ripe strawberries
+- Training a custom **YOLOv11** model on ripe/unripe strawberry classes (Very brief!)
+- Converting the model to **OpenVINO IR format** for faster inference on Raspberry Pi (Very brief!)
+- Deploying it on LanderPi running **ROS2 Humble** inside Docker (Detailed!)
+- Using a **depth camera + inverse kinematics** to physically pick ripe strawberries (Detailed!)
 
 > ⚠️ **Prerequisites** ⚠️
 - Basic knowledge of Robot Operating System (ROS) and Computer Vision,
