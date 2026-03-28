@@ -36,7 +36,7 @@ The entire pipeline covers:
 - Working with Linux-based OS,
 - Must have followed primary instructions as stated within [Robotic Arm Control/LanderPi](https://wiki.hiwonder.com/projects/LanderPi/en/latest/),
 - A virtual machine (VM) with Ubuntu 22.04 (Jammy) to visualize simulations using [Rviz](https://github.com/ros-visualization/rviz) (Optional!!!),
-- A working knowledge of training vision models (YOLO in this case) using necessary hyperparameters,
+- A working knowledge of training vision models ([YOLO](https://github.com/ultralytics/ultralytics) in this case) using necessary hyperparameters,
 - HiWonder LanderPi with Mecanum chassis,
 - Aurora 930 depth camera,
 - ROS2 Humble running inside Docker,
