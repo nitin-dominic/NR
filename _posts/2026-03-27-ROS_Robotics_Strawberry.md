@@ -327,4 +327,79 @@ The full autonomous pipeline runs as follows:
 
 ## 6. The Main Node: ```strawberry_pick_ik.py```
 
-The node uses a custom YoloTracker class that replaces traditional HSV color detection with YOLO bounding box centers ``strawberry_pick_ik.py``. It subscribes to /yolo_node/object_detect and uses PID controllers to center the camera on the best detected ripe strawberry.
+The node uses a custom YoloTracker class that replaces traditional HSV color detection with YOLO bounding box centers ``strawberry_pick_ik.py``. It subscribes to /yolo_node/object_detect and uses PID controllers to center the camera on the best detected ripe strawberry. Within the `strawberry_pick_ik.py`, look for these lines (below) to understand the code structure. 
+YoloTracker Class
+
+```python
+class YoloTracker:
+    """Uses YOLO bounding box center for PID tracking."""
+
+    def __init__(self, target_class='ripe'):
+        self.target_class = target_class
+        self.pid_yaw = pid.PID(20.5, 1.0, 1.2)
+        self.pid_pitch = pid.PID(20.5, 1.0, 1.2)
+        self.yaw = 500
+        self.pitch = 150
+        self.center = None
+        self.detected = False
+
+    def update_detection(self, objects):
+        best = None
+        for obj in objects:
+            if obj.class_name == self.target_class:
+                cx = (obj.box[0] + obj.box[2]) / 2.0
+                cy = (obj.box[1] + obj.box[3]) / 2.0
+                if best is None or obj.score > best[3]:
+                    best = (cx, cy,
+                            max(abs(obj.box[2]-obj.box[0]),
+                                abs(obj.box[3]-obj.box[1]))/2.0,
+                            obj.score)
+        if best is not None:
+            self.center = (best[0], best[1])
+            self.detected = True
+        else:
+            self.center = None
+            self.detected = False
+```
+
+Stability Check and Depth-to-3D Conversion
+
+```python
+# Stability check: wait 5 seconds of settled tracking before grabbing. Make sure this deplay between detection and grabbing is at least 5 secs. I faced a lot of problem with values below 3. The strawberry was being detected but the arm did not get time to settle-in.
+if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
+        and abs(self.last_pitch_yaw[1] - p_y[1]) < 3:
+    if time.time() - self.stamp > 5 and not self.moving:
+
+        # Enlarged 24x24 ROI for stable depth reading
+        roi = [
+            max(0, int(center_y) - 12), min(h, int(center_y) + 12),
+            max(0, int(center_x) - 12), min(w, int(center_x) + 12),
+        ]
+        roi_distance = depth_image[roi[0]:roi[1], roi[2]:roi[3]]
+        valid_depths = roi_distance[
+            np.logical_and(roi_distance > 0, roi_distance < 10000)]
+        dist = round(float(np.mean(valid_depths) / 1000.0), 3)
+
+        dist += 0.015  # Object radius compensation
+        dist += 0.015  # Error compensation
+
+        # Convert pixel + depth → 3D camera coordinates
+        K = depth_camera_info.k
+        position = depth_pixel_to_camera(
+            (center_x, center_y), dist, (K[0], K[4], K[2], K[5]))
+
+        # RGB-to-depth camera offset compensation
+        position[0] -= 0.01
+        position[1] -= 0.02
+        position[2] -= 0.02  # ← Tune this if arm grabs above or below berry
+
+        # Transform to world coordinates via hand-eye calibration matrix
+        pose_end = np.matmul(
+            self.hand2cam_tf_matrix,
+            common.xyz_euler_to_mat(position, (0, 0, 0)))
+        world_pose = np.matmul(self.endpoint, pose_end)
+        pose_t, _ = common.mat_to_xyz_euler(world_pose)
+
+        self.moving = True
+        threading.Thread(target=self.pick, args=(pose_t,)).start()
+```
