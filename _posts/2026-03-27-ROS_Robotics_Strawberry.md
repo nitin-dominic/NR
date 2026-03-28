@@ -118,7 +118,6 @@ faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. The full 
 
 ```text
 strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberry.bin
-
 ```
 
 ### Step 1: Export `.pt` to ONNX
