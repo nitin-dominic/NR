@@ -31,10 +31,11 @@ The entire pipeline covers:
 - Deploying it on LanderPi running **ROS2 Humble** inside Docker
 - Using a **depth camera + inverse kinematics** to physically pick ripe strawberries
 
-> ⚠️ **Prerequisites:** HiWonder LanderPi with Mecanum chassis, Aurora 930 depth camera,
-> and ROS2 Humble running inside Docker. The workspace lives at `/home/ubuntu/ros2_ws`
-> inside the container [1]. All commands should be run inside the Docker container unless
-> stated otherwise.
+> ⚠️ **Prerequisites:** HiWonder LanderPi with Mecanum chassis,
+> Aurora 930 depth camera,
+> ROS2 Humble running inside Docker,
+> the workspace lives at `/home/ubuntu/ros2_ws` within the container [1],
+> all commands must run inside the Docker container unless stated otherwise. 
 
 ---
 
