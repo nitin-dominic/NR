@@ -221,10 +221,6 @@ colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Re
 
 The full autonomous pipeline runs as follows:
 
-## 5. How the Picking Pipeline Works
-
-The full autonomous pipeline runs as follows [5][6]:
-
 <table style="width:100%; border-collapse:collapse; font-size:0.9em; margin-bottom:1.5em;">
   <thead>
     <tr style="background-color:#2d2d2d; color:white;">
