@@ -14,7 +14,7 @@
 </code></pre></div></div> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
 <span class="n">model</span> <span class="o">=</span> <span class="nc">YOLO</span><span class="p">(</span><span class="sh">'</span><span class="s">yolo11n.pt</span><span class="sh">'</span><span class="p">)</span>  <span class="c1"># Start from nano pretrained weights
 </span><span class="n">model</span><span class="p">.</span><span class="nf">train</span><span class="p">(</span>
-    <span class="n">data</span><span class="o">=</span><span class="sh">'</span><span class="s">data.yaml</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="sh">'</span><span class="s">strawberry_data.yaml</span><span class="sh">'</span><span class="p">,</span>
     <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
     <span class="n">imgsz</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span>
     <span class="n">batch</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
