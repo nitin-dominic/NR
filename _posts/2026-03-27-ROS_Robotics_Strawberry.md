@@ -40,8 +40,8 @@ The entire pipeline covers:
 - HiWonder LanderPi with Mecanum chassis,
 - Aurora 930 depth camera,
 - ROS2 Humble running inside Docker,
-- The workspace lives at `/home/ubuntu/ros2_ws` within the container [1],
-- All commands must run inside the Docker container unless stated otherwise,
+- The workspace lives at `/home/ubuntu/ros2_ws` within the container [1], and
+- All commands must run inside the Docker container unless stated otherwise.
 
 ---
 
