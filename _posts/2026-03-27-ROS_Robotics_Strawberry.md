@@ -120,7 +120,7 @@ faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. The full 
 strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberry.bin
 ```
 
-# Step 1: Export `.pt` to ONNX
+#### Step 1: Export `.pt` to ONNX
 
 ```python
 from ultralytics import YOLO
@@ -129,7 +129,7 @@ model.export(format="onnx", opset=12)
 # Generates: strawberry.onnx
 ```
 
-# Step 2: Convert ONNX to OpenVINO IR
+#### Step 2: Convert ONNX to OpenVINO IR
 
 ```python
 # Using newer OpenVINO CLI (recommended)
@@ -144,7 +144,7 @@ This generates:
 >- `strawberry.xml` — model architecture
 >- `strawberry.bin` — model weights
 
-# Step 3: Place the Model Files
+#### Step 3: Place the Model Files
 
 ```console
 cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
