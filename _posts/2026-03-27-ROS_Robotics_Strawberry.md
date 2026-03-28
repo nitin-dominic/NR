@@ -76,7 +76,8 @@ The entire pipeline covers:
 ## 2. Training the Strawberry Detection Model
 
 > 🕐 **This is the most important and time-consuming part.** The quality of your dataset
-> directly determines how well the robot detects strawberries. However, to save time, i have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invole detection which will then trigger picking nodes. I have discussed this in [5].
+> directly determines how well the robot detects strawberries. However, to save time, I have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invoke detection which will then trigger picking nodes of the robotic arm.
+> I have discussed this in [5](#5-how-the-picking-pipeline-works).
 
 I trained a custom YOLOv11n (nano for Raspberry Pi) model with two classes: `ripe` and `unripe` uisng the dataset from [Roboflow](https://universe.roboflow.com/eric-z0ptd/strawberry_picking_2). However, within the repo that you'll clone, I have already provided `strawberry.pt` file to get started. I trained my own model with custom hyperparameters. With the interest of space within this `Blog`, I am not going explain in detail on how to train a YOLO-based vision model for detection purpose. If you encounter any issues, please reach out to me or pull an issue.
 
