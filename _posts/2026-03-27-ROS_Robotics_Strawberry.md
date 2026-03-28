@@ -191,7 +191,7 @@ colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Re
 ```
 ---
 
-## How the Picking Pipeline Works?
+## 5. How the Picking Pipeline Works?
 
 The full autonomous pipeline runs as follows: 
 
@@ -210,3 +210,9 @@ The full autonomous pipeline runs as follows:
 │       ↓                                                 │
 │  pick()            →  Grab → Lift → Place → Home        │
 └─────────────────────────────────────────────────────────┘
+
+---
+
+## 6. The Main Node: ```strawberry_pick_ik.py```
+
+The node uses a custom YoloTracker class that replaces traditional HSV color detection with YOLO bounding box centers ``strawberry_pick_ik.py``. It subscribes to /yolo_node/object_detect and uses PID controllers to center the camera on the best detected ripe strawberry.
