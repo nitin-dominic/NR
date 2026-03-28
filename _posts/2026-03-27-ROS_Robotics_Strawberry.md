@@ -80,20 +80,22 @@ The entire pipeline covers:
 
 I trained a custom YOLOv11n (nano for Raspberry Pi) model with two classes: `ripe` and `unripe` uisng the dataset from [Roboflow](https://universe.roboflow.com/eric-z0ptd/strawberry_picking_2). However, within the repo that you'll clone, I have already provided `strawberry.pt` file to get started. I trained my own model with custom hyperparameters. With the interest of space within this `Blog`, I am not going explain in detail on how to train a YOLO-based vision model for detection purpose. If you encounter any issues, please reach out to me or pull an issue.
 
-### a. Dataset Preparation
-
-Collect images of strawberries in different:
-- 🌤️ Lighting conditions (sunlight, shade, indoor)
-- 📐 Angles (top-down, frontal, side view)
-- 🌿 Backgrounds (soil, leaves, greenhouse)
-
-Your `strawberry_data.yaml` should look like this:
+Your `strawberry_data.yaml` should look like this. Make sure when you're training, this `.yaml` file lives inside the main dataset folder where `test`, `train`, and `'valid` folders are.
 
 ```yaml
-train: /path/to/train/images
-val: /path/to/val/images
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
 nc: 2
 names: ['ripe', 'unripe']
+
+roboflow:
+  workspace: eric-z0ptd
+  project: strawberry_picking_2
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/eric-z0ptd/strawberry_picking_2/dataset/1
 ```
 
 ```python
@@ -106,10 +108,6 @@ model.train(
     batch=16,
     name='strawberry_yolo11'
 )
-```
-
-```yaml
-runs/detect/strawberry_yolo11/weights/best.pt
 ```
 
 ## 3. Converting the Model for Deployment on LanderPi
