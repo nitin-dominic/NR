@@ -155,3 +155,26 @@ cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detec
 
 The strawberry picking node lives inside the example package under `rgbd_function/`. The workspace is automatically sourced via /source .zshrc → .robotrc every time you open a
 new shell
+
+```text
+ros2_ws/src/example/example/rgbd_function/
+├── __init__.py                    ← Required for Python module resolution
+├── strawberry_pick_ik.py          ← Main picking node
+└── strawberry_pick_ik.launch.py   ← Launch file
+```
+
+Entry Point in setup.py. This `setup.py` lives inside ros2_ws/src/. Use the command line below to edit this and add the example `strawberry_pick_ik` within this file. Doing this will add to the source file and then you can rebuild the packages.
+
+```console
+cd ros2_ws
+ls
+vim setup.py
+```
+Within the vim file, press `i` to insert the line, `'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main'`. Once inserted, press ESC and `:wq` to save and exit. 
+
+```vim
+'console_scripts': [
+    # ... existing entries ...
+    'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main',
+],
+```
