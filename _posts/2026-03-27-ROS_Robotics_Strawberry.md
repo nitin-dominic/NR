@@ -31,11 +31,16 @@ The entire pipeline covers:
 - Deploying it on LanderPi running **ROS2 Humble** inside Docker
 - Using a **depth camera + inverse kinematics** to physically pick ripe strawberries
 
-> ⚠️ **Prerequisites:** HiWonder LanderPi with Mecanum chassis,
+> ⚠️ **Prerequisites**
+- Basics of Robotics Operating System (ROS) and Computer Vision,
+- Working with Linux-based OS,
+- Must have followed primary instructions as stated within [Robotic Arm Control/LanderPi](https://wiki.hiwonder.com/projects/LanderPi/en/latest/),
+- HiWonder LanderPi with Mecanum chassis,
 - Aurora 930 depth camera,
 - ROS2 Humble running inside Docker,
-- the workspace lives at `/home/ubuntu/ros2_ws` within the container [1],
-- all commands must run inside the Docker container unless stated otherwise. 
+- The workspace lives at `/home/ubuntu/ros2_ws` within the container [1],
+- All commands must run inside the Docker container unless stated otherwise,
+- 
 
 ---
 
