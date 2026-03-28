@@ -49,7 +49,7 @@ The entire pipeline covers:
 1. [Hardware and Software Requirements](#1-hardware-and-software-requirements)
 2. [Training the Strawberry Detection Model](#2-training-the-strawberry-detection-model)
 3. [Converting the Model for Deployment](#3-converting-the-model-for-deployment)
-4. [Setting Up the ROS2 Package](#4-setting-up-the-ros2-package)
+4. [Setting Up the ROS2 Package with Strawberry Pick Launch Files](#4-setting-up-the-ros2-package-with-strawberry-pick-launch-files)
 5. [How the Picking Pipeline Works?](#5-how-the-picking-pipeline-works?)
 6. [The Main Node](#6-the-main-node-strawberry_pick_ikpy)
 7. [The Launch File](#7-the-launch-file-strawberry_pick_iklaunchpy)
@@ -176,7 +176,7 @@ cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detec
 ```
 ---
 
-## 4. Setting Up the ROS2 Package
+## 4. Setting Up the ROS2 Package with Strawberry Pick Launch Files
 
 The strawberry picking node lives inside the example package under `rgbd_function/`. The workspace is automatically sourced via /source .zshrc → .robotrc every time you open a
 new shell
