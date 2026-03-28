@@ -141,8 +141,8 @@ mo --input_model strawberry.onnx --output_dir openvino_model/
 
 This generates:
 
-> `strawberry.xml` — model architecture
-> `strawberry.bin` — model weights
+- `strawberry.xml` — model architecture
+- `strawberry.bin` — model weights
 
 ### Step 3: Place the Model Files
 
