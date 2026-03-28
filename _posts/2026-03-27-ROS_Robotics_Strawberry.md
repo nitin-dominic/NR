@@ -170,7 +170,8 @@ cd ros2_ws
 ls
 vim setup.py
 ```
-Within the vim file, press `i` to insert the line, `'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main'`. Once inserted, press ESC and `:wq` to save and exit. 
+
+Within the vim file, press `i` to insert the line, `'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main'`. Once inserted, press ESC and `:wq` to save and exit. If you do not prefer vim comamnd, alternatively, you can also do `gedit` and edit the file. However, please double-check it. I am not sure if this will work.
 
 ```vim
 'console_scripts': [
