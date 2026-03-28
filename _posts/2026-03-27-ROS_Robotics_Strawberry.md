@@ -110,6 +110,7 @@ model.train(
     name='strawberry_yolo11'
 )
 ```
+---
 
 ## 3. Converting the Model for Deployment on LanderPi
 
@@ -144,13 +145,13 @@ This generates:
 - `strawberry.xml` — model architecture
 - `strawberry.bin` — model weights
 
----
-
 #### Step 3: Place the Model Files
 
 ```console
 cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 ```
+---
+
 ## 4. Setting Up the ROS2 Package
 
 The strawberry picking node lives inside the example package under `rgbd_function/`. The workspace is automatically sourced via /source .zshrc → .robotrc every time you open a
