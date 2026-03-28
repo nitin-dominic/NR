@@ -69,7 +69,6 @@ The entire pipeline covers:
 | **OS** | Ubuntu 22.04, ROS2 Humble [1] |
 | **ML Framework** | Ultralytics YOLOv11 + OpenVINO Runtime [5] |
 | **Language** | Python 3.10 |
-
 ---
 
 ## 2. Training the Strawberry Detection Model
