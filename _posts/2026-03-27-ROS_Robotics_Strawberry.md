@@ -120,7 +120,7 @@ faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. The full 
 strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberry.bin
 ```
 
-### Step 1: Export `.pt` to ONNX
+# Step 1: Export `.pt` to ONNX
 
 ```python
 from ultralytics import YOLO
@@ -129,7 +129,7 @@ model.export(format="onnx", opset=12)
 # Generates: strawberry.onnx
 ```
 
-### Step 2: Convert ONNX to OpenVINO IR
+# Step 2: Convert ONNX to OpenVINO IR
 
 ```python
 # Using newer OpenVINO CLI (recommended)
@@ -144,7 +144,7 @@ This generates:
 >- `strawberry.xml` — model architecture
 >- `strawberry.bin` — model weights
 
-### Step 3: Place the Model Files
+# Step 3: Place the Model Files
 
 ```console
 cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
@@ -152,6 +152,4 @@ cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detec
 ## 4. Setting Up the ROS2 Package
 
 The strawberry picking node lives inside the example package under `rgbd_function/`. The workspace is automatically sourced via /source .zshrc → .robotrc every time you open a
-new shell 
-.robotrc +1
- .
+new shell
