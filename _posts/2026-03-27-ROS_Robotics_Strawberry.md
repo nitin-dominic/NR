@@ -61,14 +61,40 @@ The entire pipeline covers:
 
 ## 1. Hardware and Software Requirements
 
-| Component | Details |
-|---|---|
-| **Robot** | HiWonder LanderPi with Mecanum chassis [2] |
-| **Camera** | Aurora 930 depth camera (RGB + depth) [2] |
-| **Compute** | Raspberry Pi 5 inside Docker container [1] |
-| **OS** | Ubuntu 22.04, ROS2 Humble [1] |
-| **ML Framework** | Ultralytics YOLOv11 + OpenVINO Runtime [5] |
-| **Language** | Python 3.10 |
+<table style="width:100%; border-collapse:collapse; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#2d2d2d; color:white;">
+      <th style="padding:8px 12px; text-align:left;">Component</th>
+      <th style="padding:8px 12px; text-align:left;">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>🤖 Robot</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">HiWonder LanderPi with Mecanum chassis</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>📷 Camera</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Aurora 930 depth camera (RGB + depth)</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>💻 Compute</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Raspberry Pi 5 inside Docker container</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>🐧 OS</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Ubuntu 22.04, ROS2 Humble</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;"><strong>🧠 ML Framework</strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">Ultralytics YOLOv11 + OpenVINO Runtime</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px;"><strong>🐍 Language</strong></td>
+      <td style="padding:6px 12px;">Python 3.10</td>
+    </tr>
+  </tbody>
+</table>
 ---
 
 ## 2. Training the Strawberry Detection Model
