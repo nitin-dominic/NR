@@ -15,7 +15,7 @@ thumbnail: assets/img/strawberry_pick.png
     </div>
 </div>
 <div class="caption">
-    A screenshot of HiWonder's LanderPi autonomously detecting and picking a `ripe` strawberry using YOLOv11 and depth-based inverse kinematics.
+    A screenshot of HiWonder's LanderPi autonomously detecting and picking a 'ripe' strawberry using YOLOv11 and depth-based inverse kinematics. It consists of three parts within the video: (a) the real-time feed from the depth-camera detecting strawberry, (b) the middle screen with a simulation video on Rviz, and (c) real footage picking strawberry using the end-effector gripper.
 </div>
 
 ---
