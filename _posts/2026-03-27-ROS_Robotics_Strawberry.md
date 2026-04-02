@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Autonomous strawberry picking using computer vision and ROS approach"
+title: "Autonomous strawberry picking with a mobile manipulator using computer vision and ROS approach"
 date: 2026-03-27 09:00:00-0400
 description: "A complete guide to training a custom YOLOv11 model, converting it to OpenVINO format, and deploying it on a LanderPi robot for autonomous strawberry detection and picking using a depth camera and inverse kinematics."
 tags: ros2 robotics yolo deep-learning raspberry-pi agriculture computer-vision
