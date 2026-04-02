@@ -417,4 +417,4 @@ if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
 
 
 
-![Views](https://YOURCODE.goatcounter.com/counter/NR/blog/2026/ROS_Robotics_Strawberry/.svg) views
+![Views](https://nitinrai.goatcounter.com/counter/NR/blog/2026/ROS_Robotics_Strawberry/.svg)
