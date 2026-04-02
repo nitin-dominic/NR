@@ -415,3 +415,38 @@ if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
 ```
 
 ![Views](https://nitinrai.goatcounter.com/counter//NR/NR/blog/2026/ROS_Robotics_Strawberry/.svg)
+
+## 7. The Launch Node: ```strawberry_pick_ik.launch.py```
+
+The launch file starts all required nodes together in one command: `strawberry_pick_ik.launch.py`
+
+```python
+
+# YOLO detection node — loads strawberry.xml OpenVINO model
+yolov11_node = Node(
+    package='yolov11_detect',
+    executable='yolov11_node',
+    output='screen',
+    parameters=[
+        {'classes': ['ripe', 'unripe']},
+        {'model': 'strawberry', 'conf': conf},
+        {'start': True},
+    ]
+)
+
+# Strawberry IK picking node
+strawberry_pick_ik_node = Node(
+    package='example',
+    executable='strawberry_pick_ik',
+    output='screen',
+    parameters=[{'start': start}],
+)
+
+```
+All nodes launched together:
+
+- 📷 Depth camera (RGB + depth + camera_info)
+- 🎮 Servo controller manager
+- 🦾 Kinematics IK solver
+- 🧠 YOLOv11 detection node
+- 🍓 Strawberry pick IK node
