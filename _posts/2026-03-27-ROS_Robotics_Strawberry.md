@@ -413,3 +413,8 @@ if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
         self.moving = True
         threading.Thread(target=self.pick, args=(pose_t,)).start()
 ```
+
+
+
+
+![Views](https://nitinrai.goatcounter.com/counter/blog/2026/ROS_Robotics_Strawberry.svg)
