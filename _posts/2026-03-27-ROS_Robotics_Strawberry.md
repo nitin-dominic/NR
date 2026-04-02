@@ -20,6 +20,21 @@ thumbnail: assets/img/strawberry_pick.png
 
 ---
 
+---
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="assets/video/final_video.mp4" 
+        class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    </div>
+</div>
+<div class="caption">
+    HiWonder's LanderPi autonomously detecting and picking a 'ripe' strawberry using 
+    YOLOv11 and depth-based inverse kinematics.
+</div>
+
+---
+
 ## 🍓 🤖 Background 
 
 Small robots (or mobile manipulators) are extremely helpful in settings that are compact or limited with space, such as greenhouses. Often, strawberries grown in greenhouses are harvested manually, and that is exactly where these small robots could make a real difference. Imagine multiple of these working in coordination (like a swarm), moving autonomously through narrow greenhouse rows, identifying only the berries that are ripe, and picking them one by one without disturbing the plant or the fruit around it. No fatigue, no missed berry, no damage!
