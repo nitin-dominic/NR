@@ -35,8 +35,7 @@ This write-up is for those working with the **HiWonder LanderPi** robot and want
 All you will have to do is to simply move the relevant files into respective docker container folders and perform build in order to add strawberry detection and picking package to the ROS2 `setup.py` file. This process won't take more than 15-20 mins provided you know working with Linux-based system. If you want to learn step-by-step process, then start following the steps as mentioned below. 
 
 <div style="background-color:#d4edda; border-left:6px solid #28a745; 
-padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-  <strong>✅ </strong> *PRO TIP*: Remember, following the steps below could be painful and extremely slow sometimes / some days. Be consistent as this learning curve could lead to very fruitful results once you see the robot picking strawberries. It happened with me!
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;"> <strong>✅</strong> PRO TIP: Remember, following the steps below could be painful and extremely slow sometimes / some days. Be consistent as this learning curve could lead to very fruitful results once you see the robot picking strawberries. It happened with me!
 </div>
 
 The entire pipeline covers:
