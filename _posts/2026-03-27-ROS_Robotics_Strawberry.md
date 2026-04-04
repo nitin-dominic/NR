@@ -47,29 +47,35 @@ The entire pipeline covers:
 
 
 <div style="background-color:#fff3cd; border-left:6px solid #ffc107;
-padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
+padding:12px 16px; border-radius:4px; margin:1em 0;">
 
-  <strong>⚠️ Prerequisites ⚠️</strong>
+  <strong style="color:#000000; font-size:1.1em;">⚠️ Prerequisites ⚠️</strong>
 
-  <ul>
-    <li>Basic knowledge of Robot Operating System (ROS) and Computer Vision</li>
-    <li>Working with Linux-based OS</li>
-    <li>Must have followed primary instructions as stated within 
-        <a href="https://wiki.hiwonder.com/projects/LanderPi/en/latest/">
-        Robotic Arm Control/LanderPi</a></li>
-    <li>A virtual machine (VM) with Ubuntu 22.04 (Jammy) to visualize simulations 
-        using <a href="https://github.com/ros-visualization/rviz">RViz</a> 
-        <strong>(Optional)</strong></li>
-    <li>A working knowledge of training vision models 
-        (<a href="https://github.com/ultralytics/ultralytics">YOLO</a> in this case) 
+  <ul style="color:#000000; margin-top:8px; margin-bottom:0;">
+    <li style="color:#000000;">Basic knowledge of Robot Operating System (ROS) and Computer Vision</li>
+    <li style="color:#000000;">Working with Linux-based OS</li>
+    <li style="color:#000000;">Must have followed primary instructions as stated within
+        <a href="https://wiki.hiwonder.com/projects/LanderPi/en/latest/" 
+        style="color:#0056b3;">Robotic Arm Control/LanderPi</a></li>
+    <li style="color:#000000;">A virtual machine (VM) with Ubuntu 22.04 (Jammy) to visualize 
+        simulations using <a href="https://github.com/ros-visualization/rviz" 
+        style="color:#0056b3;">RViz</a> 
+        <strong style="color:#000000;">(Optional)</strong></li>
+    <li style="color:#000000;">A working knowledge of training vision models 
+        (<a href="https://github.com/ultralytics/ultralytics" 
+        style="color:#0056b3;">YOLO</a> in this case) 
         using necessary hyperparameters</li>
-    <li>HiWonder LanderPi with Mecanum chassis [2]</li>
-    <li>Aurora 930 depth camera [2]</li>
-    <li>ROS2 Humble running inside Docker [1]</li>
-    <li>The workspace lives at <code>/home/ubuntu/ros2_ws</code> 
+    <li style="color:#000000;">HiWonder LanderPi with Mecanum chassis [2]</li>
+    <li style="color:#000000;">Aurora 930 depth camera [2]</li>
+    <li style="color:#000000;">ROS2 Humble running inside Docker [1]</li>
+    <li style="color:#000000;">The workspace lives at 
+        <code style="background-color:#e8e8e8; color:#000000; 
+        padding:2px 4px; border-radius:3px;">/home/ubuntu/ros2_ws</code> 
         within the container [1]</li>
-    <li>All commands must run inside the Docker container unless stated otherwise</li>
+    <li style="color:#000000;">All commands must run inside the Docker container 
+        unless stated otherwise</li>
   </ul>
+
 </div>
 
 > ⚠️ **Prerequisites** ⚠️
