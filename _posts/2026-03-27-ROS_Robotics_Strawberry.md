@@ -215,8 +215,54 @@ ls
 
 ## 4. Setting Up the ROS2 Package with Strawberry Pick Launch Files
 
-The strawberry picking node lives inside the example package under `rgbd_function/`. The workspace is automatically sourced via /source .zshrc → .robotrc every time you open a
-new shell
+Before getting into this section, let's understand why does ROS2 need a `setup.py` entry point? It will be worth understanding why this is necessary considering you plan on doing custom work with LanderPi beyond just this tutorial. In ROS2, when you create a Python-based package, the `setup.py` file is the bridge
+between your Python source code (in this case the strawberry `.py` files) and the ROS2 build system (colcon). Without this entry, ROS2 has no idea your node exists even if the `.py` file is physically sitting in the right folder. This is why running `ros2 launch example strawberry_pick_ik.launch.py` without the entry point will throw:
+
+```text
+PackageNotFoundError: No package metadata was found for example
+```
+#### Step 1: Add the Entry Point to `setup.py`
+
+The `setup.py` file lives at ~/ros2_ws/src/example/setup.py. Open it either using `vim` or `gedit`. For me `gedit` did not work for the first time and threw errors. So, I would recommend using `vim`. 
+
+```console
+cd ~/ros2_ws/src/example
+vim setup.py
+```
+
+<div style="background-color:#fff3cd; border-left:6px solid #ffc107;
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
+<strong>⚠️ vim quick reference:</strong> Press <code>i</code> to enter insert mode, make your edit, then press <code>ESC</code> followed by <code>:wq</code> to save and exit. If you make a mistake, press <code>ESC</code> then <code>:q!</code> to exit without saving.
+</div>
+
+Once inside the `setup.py` using `vim`, console_scripts section and add your entry point:
+
+```vim
+'console_scripts': [
+    # ... existing entries ...
+    'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main',
+],
+```
+
+<div style="background-color:#cce5ff; border-left:6px solid #004085;
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
+<strong>ℹ️ Note:</strong> The existing entries in <code>console_scripts</code> are all the other LanderPi nodes — color detection, hand tracking, navigation transport, etc [4]. Do not remove or modify those lines. Just add your new line at the end of the list, making sure the previous line ends with a comma.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The strawberry picking node lives inside the example package under `rgbd_function/`. The workspace is automatically sourced via `source ~/.zshrc` every time you open a new docker terminal. However, you can always source it again.
 
 ```text
 ros2_ws/src/example/example/rgbd_function/
@@ -225,7 +271,7 @@ ros2_ws/src/example/example/rgbd_function/
 └── strawberry_pick_ik.launch.py   ← Launch file
 ```
 
-Entry Point in setup.py. This `setup.py` lives inside ros2_ws/src/. Use the command line below to edit this and add the example `strawberry_pick_ik` within this file. Doing this will add to the source file and then you can rebuild the packages.
+Add an entry Point in setup.py. This `setup.py` lives inside ros2_ws/src/. Use the command line below to edit this and add the example `strawberry_pick_ik` within this file. Doing this will add to the source file and then you can rebuild the packages.
 
 ```console
 cd ros2_ws
