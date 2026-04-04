@@ -223,7 +223,7 @@ PackageNotFoundError: No package metadata was found for example
 ```
 ##### Step 1: Add the Entry Point to `setup.py`
 
-The `setup.py` file lives at ~/ros2_ws/src/example/setup.py. Open it either using `vim` or `gedit`. For me `gedit` did not work for the first time and threw errors. So, I would recommend using `vim`. 
+The `setup.py` file lives at `~/ros2_ws/src/example/setup.py`. Open it either using `vim` or `gedit`. For me `gedit` did not work for the first time and threw errors. So, I would recommend using `vim`. 
 
 ```console
 cd ~/ros2_ws/src/example
