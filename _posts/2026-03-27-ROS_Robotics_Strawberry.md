@@ -232,7 +232,7 @@ vim setup.py
 
 <div style="background-color:#fff3cd; border-left:6px solid #ffc107;
 padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-<strong>⚠️ vim quick reference:</strong> Press <code>i</code> to enter insert mode, make your edit, then press <code>ESC</code> followed by <code>:wq</code> to save and exit. If you make a mistake, press <code>ESC</code> then <code>:q!</code> to exit without saving.
+<strong>⚠️</strong>vim quick reference: Press <code>i</code> to enter insert mode, make your edit, then press <code>ESC</code> followed by <code>:wq</code> to save and exit. If you make a mistake, press <code>ESC</code> then <code>:q!</code> to exit without saving.
 </div>
 
 Once inside the `setup.py` using `vim`, console_scripts section and add your entry point:
@@ -246,59 +246,126 @@ Once inside the `setup.py` using `vim`, console_scripts section and add your ent
 
 <div style="background-color:#cce5ff; border-left:6px solid #004085;
 padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-<strong>ℹ️ Note:</strong> The existing entries in <code>console_scripts</code> are all the other LanderPi nodes — color detection, hand tracking, navigation transport, etc [4]. Do not remove or modify those lines. Just add your new line at the end of the list, making sure the previous line ends with a comma.
+<strong>ℹ️</strong>Note: The existing entries in <code>console_scripts</code> are all the other LanderPi nodes — color detection, hand tracking, navigation transport, etc [4]. Do not remove or modify those lines. Just add your new line at the end of the list, making sure the previous line ends with a comma.
 </div>
 
+#### Step 2: Create `__init__.py` if It Does Not Exist
 
-
-
-
-
-
-
-
-
-
-
-
-
-The strawberry picking node lives inside the example package under `rgbd_function/`. The workspace is automatically sourced via `source ~/.zshrc` every time you open a new docker terminal. However, you can always source it again.
-
-```text
-ros2_ws/src/example/example/rgbd_function/
-├── __init__.py                    ← Required for Python module resolution
-├── strawberry_pick_ik.py          ← Main picking node
-└── strawberry_pick_ik.launch.py   ← Launch file
-```
-
-Add an entry Point in setup.py. This `setup.py` lives inside ros2_ws/src/. Use the command line below to edit this and add the example `strawberry_pick_ik` within this file. Doing this will add to the source file and then you can rebuild the packages.
-
-```console
-cd ros2_ws
-ls
-vim setup.py
-```
-
-Within the vim file, press `i` to insert the line, `'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main'`. Once inserted, press ESC and `:wq` to save and exit. If you do not prefer vim comamnd, alternatively, you can also do `gedit` and edit the file. However, please double-check it. I am not sure if this will work.
-
-```vim
-'console_scripts': [
-    # ... existing entries ...
-    'strawberry_pick_ik = example.rgbd_function.strawberry_pick_ik:main',
-],
-```
-Just in case for whatever reasons, if `__init__.py` file does not exist within the `/rgbd_function` folder, create one using the command below. This step is important because when building a package, python needs to treat ````example.rgbd_function```` as a package, not just a folder. The ``__init__.py`` file is what tells Python *this directory* is a Python package that can be imported. Without it, ROS2 will try to load your node, Python will see ``rgbd_function/`` as just a plain folder and wil throw an error.
+This step is important and easy to miss. Check if `__init__.py` already exists. Just in case for whatever reasons, if `__init__.py` file does not exist within the `/rgbd_function` folder, create one using the command below. 
 
 ```console
 touch ~/ros2_ws/src/example/example/rgbd_function/__init__.py
 ```
-Finally, head-on to building a package using the command line below. The ``--symlink-install`` flag is particularly useful during development. Since it creates symlinks from the install directory directly to your source files command, any changes you make to an existing ``.py`` file like ``strawberry_pick_ik.py`` are instantly reflected without needing to rebuild. You only need to rebuild when adding new files or new entry points to ``setup.py``.
+
+So, why is this step important? When `colcon` builds the package, Python needs to treat `example.rgbd_function` as a proper importable package, not just a filesystem folder. The `__init__.py` file, even though it is completely empty, is the signal Python uses to make this distinction. Without it, when ROS2 tries to resolve your entry point `example.rgbd_function.strawberry_pick_ik:main`, Python will look for a package called `rgbd_function` inside example, finding only a folder with no `__init__.py`, and throw:
+
+```text
+ModuleNotFoundError: No module named 'example.rgbd_function'
+```
+#### Step 3: Build the ROS2 Package
+
+Now rebuild the example package so `colcon` picks up your new entry point and registers it in the install directory. Use the code below.
 
 ```console
 cd ~/ros2_ws
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-select example
 ```
----
+
+Here is what flag means: 
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#2d2d2d; color:white;">
+      <th style="padding:8px 12px; text-align:left;">Flag</th>
+      <th style="padding:8px 12px; text-align:left;">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        <strong><code>colcon build</code></strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        The ROS2 build command that compiles all packages in the workspace [4]</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        <strong><code>--event-handlers console_direct+</code></strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        Prints the full build output directly to the terminal in real time — 
+        useful for seeing errors immediately instead of buffering them [4]</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        <strong><code>--cmake-args -DCMAKE_BUILD_TYPE=Release</code></strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        Tells CMake to build in <strong>Release mode</strong>, enabling compiler 
+        optimizations for faster and more efficient runtime performance 
+        compared to Debug mode [4]</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        <strong><code>--symlink-install</code></strong></td>
+      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+        Instead of <strong>copying</strong> files into the install directory, 
+        creates <strong>symbolic links</strong> back to your source files [4]. 
+        Any edits to existing <code>.py</code> files like 
+        <code>strawberry_pick_ik.py</code> are instantly reflected 
+        without rebuilding [6]</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px; color:#000000;">
+        <strong><code>--packages-select example</code></strong></td>
+      <td style="padding:6px 12px; color:#000000;">
+        Builds <strong>only</strong> the <code>example</code> package instead 
+        of rebuilding the entire workspace — much faster during 
+        development [4]</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="background-color:#d4edda; border-left:6px solid #28a745;
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
+<strong>✅</strong>Pro tip — The symlink advantage: The <code>--symlink-install</code> flag [4] is particularly useful during development. Since it creates symlinks from the install directory directly back to your source files, any changes you make to an existing <code>.py</code> file like <code>strawberry_pick_ik.py</code> [6] are <strong>instantly reflected</strong> without needing to rebuild. You only need to rebuild when adding new files or new entry points to <code>setup.py</code>.
+</div>
+
+A successful build will show:
+
+```text
+
+Finished <<< example [Xs]
+Summary: 1 package finished [Xs]
+```
+
+The `stderr` warnings about `setuptools` deprecation are harmless and can be ignored.
+
+#### Step 4: Verify the Build
+
+After building, confirm your node was installed correctly:
+
+```console
+ls ~/ros2_ws/install/example/lib/example/strawberry_pick_ik
+```
+And verify the `main()` function is present in your source file:
+
+```console
+grep -n "def main" ~/ros2_ws/src/example/example/rgbd_function/strawberry_pick_ik.py
+```
+Both should return valid output. If `grep` returns nothing, your source file is missing the `main()` function and the node will fail to launch. Remove the old log files and try to rebuild the package. 
+
+#### Step 5: Open a Fresh Terminal and Launch
+
+Open a fresh terminal inside the Docker container. Like I said before, everything is sourced already. However, you can source again using `source ~/.zshrc`. IT IS TIME TO LAUNCH AND SEE THE ROBOT IN ACTION!!!!!!!!! 
+
+```console
+ros2 launch example strawberry_pick_ik.launch.py
+```
+
+<div style="background-color:#ffcccc; border-left:6px solid #cc0000;
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
+<strong>⛔ </strong>Important: Always open a <strong>fresh terminal</strong> after
+building. Reusing the same terminal keeps stale environment variables cached from
+before the build, which can cause sourcing errors even if the build succeeded. I faced this issue and it took me a while to understand.
+</div>
 
 ## 5. How the Picking Pipeline Works?
 
