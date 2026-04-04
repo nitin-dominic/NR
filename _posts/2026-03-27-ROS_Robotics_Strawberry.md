@@ -30,7 +30,7 @@ The broader implication is not just about strawberries. It is about demonstratin
 
 ## 🍓 Overview
 
-This write-up is for those working with the **HiWonder LanderPi** robot and want to implement **autonomous strawberry detection and picking** using computer vision and robotic arm control. However, the major focus of this tutorial is targeted towards **optimized arm control** and an end-effector **gripper** rather than vision-based detection. If you already know ROS and computer vision, you can clone this repo [LanderPi](https://github.com/nitin-dominic/LanderPi.git) on your RaspberryPi as I have already added all the configuration files along with the trained strawberry model architecture + relevant `.py` files: `strawberry_pick_ik.py` and `strawberry_pick_ik.launch.py`, to jump-start detection and picking. 
+This write-up is for those working with a **HiWonder LanderPi** robot and want to implement **autonomous strawberry detection and picking** using computer vision and robotic arm control. However, the major focus of this tutorial is targeted towards **optimized arm control** and an end-effector **gripper** rather than vision-based detection. If you already know ROS and computer vision, you can clone this repo [LanderPi](https://github.com/nitin-dominic/LanderPi.git) on your RaspberryPi as I have already added all the configuration files along with the trained strawberry model architecture + relevant `.py` files: `strawberry_pick_ik.py` and `strawberry_pick_ik.launch.py`, to jump-start detection and picking. 
 
 All you will have to do is to simply move the relevant files into respective docker container folders and perform build in order to add strawberry detection and picking package to the ROS2 `setup.py` file. This process won't take more than 15-20 mins provided you know working with Linux-based system. If you want to learn step-by-step process, then start following the steps as mentioned below. 
 
@@ -134,7 +134,7 @@ padding:12px 16px; border-radius:4px; margin:1em 0;">
 ## 2. Training the Strawberry Detection Model
 
 <div style="background-color:#cce5ff; border-left:6px solid #004085; 
-padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;"> <strong>ℹ️</strong>Note: This is the most important and time-consuming part. The quality of your dataset directly determines how well the robot detects strawberries. However, to save time, I have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invoke detection which will then trigger picking nodes of the robotic arm. I have discussed this in [5](#5-how-the-picking-pipeline-works).
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;"> <strong>ℹ️</strong>Note: This is the most important and time-consuming part. The quality of your dataset directly determines how well the robot detects strawberries. However, to save time, I have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invoke detection which will then trigger picking nodes of the robotic arm. I have discussed this in [5].
 </div>
 
 I trained a custom YOLOv11n (nano for Raspberry Pi) model with two classes: `ripe` and `unripe` uisng the dataset from [Roboflow](https://universe.roboflow.com/eric-z0ptd/strawberry_picking_2). However, within the repo that you'll clone, I have already provided `strawberry.pt` file to get started. I trained my own model with custom hyperparameters. With the interest of space within this `Blog`, I am not going explain in detail on how to train a YOLO-based vision model for detection purpose. If you encounter any issues, please reach out to me or pull an issue.
@@ -172,29 +172,26 @@ model.train(
 
 ## 3. Converting the Model for Deployment on LanderPi
 
-Once your model is trained, you will see `strawberry.pt` (or whatever name you trained your model with) is saved inside the cusotm path. The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. So, the next following step is to convert The full conversion pipeline is:
+Once your model is trained, you will see `strawberry.pt` (or whatever name you trained your model with) is saved inside the cusotm path. Now this step completely depends on where you trained your model. There are two options: (a) if you trained the model on the Pi, the `.pt` file stays on your Pi based on whatever path you gave, and (b) if you trained it on your desktop with better GPU VRAM (it is recomemnded since Pi will be slow), then you will have to move all the relevant files from the desktop to the Pi. In this case, I have already provided these files on my forked [repo](https://github.com/nitin-dominic/LanderPi/tree/main). But if you trained the model, then just run the command below in order to generate `.xml` and `.bin` files using your `'strawberry.pt.` file. The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. So, the next following step is to convert The full conversion pipeline is:
 
 ```text
-strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberry.bin
+strawberry.pt  ──►  strawberry.xml + strawberry.bin
 ```
 
-##### Step 1: Export `.pt` to ONNX
+##### Step 1: Export `.pt` to `.xml` and `.bin` files
 
 ```python
-from ultralytics import YOLO
-model = YOLO("strawberry.pt")
-model.export(format="onnx", opset=12)
-# Generates: strawberry.onnx
-```
 
-##### Step 2: Convert ONNX to OpenVINO IR
+# On the Pi (or your VM)
+pip install openvino-dev --break-system-packages 
 
-```python
-# Using newer OpenVINO CLI (recommended)
-ovc strawberry.onnx --output_model strawberry.xml
+# Export your .pt to OpenVINO format
+yolo export model=/path/to/strawberry.pt format=openvino imgsz=640
 
-# Or using older Model Optimizer
-mo --input_model strawberry.onnx --output_dir openvino_model/
+# This creates a folder with:
+#   strawberry_openvino_model/
+#     strawberry.xml
+#     strawberry.bin
 ```
 
 This generates:
@@ -202,10 +199,18 @@ This generates:
 - `strawberry.xml` — model architecture
 - `strawberry.bin` — model weights
 
-##### Step 3: Place the Model Files
+##### Step 2: Place the Model Files
 
 ```console
-cp strawberry.xml strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
+# Copy the .xml and .bin to the models directory
+cp path/to/your/strawberry.xml MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
+cp path/to/your/strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
+
+# Check if both the files have been successfully copied. Once you do 
+
+cd ros2_ws/src/yolov11_detect/models/
+ls # this line should show all the files including .xml and .bin files.
+
 ```
 ---
 
