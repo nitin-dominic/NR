@@ -21,8 +21,7 @@
     <span class="n">name</span><span class="o">=</span><span class="sh">'</span><span class="s">strawberry_yolo11</span><span class="sh">'</span>
 <span class="p">)</span>
 </code></pre></div></div> <hr> <h2 id="3-converting-the-model-for-deployment-on-landerpi">3. Converting the Model for Deployment on LanderPi</h2> <p>Once your model is trained, you will see <code class="language-plaintext highlighter-rouge">strawberry.pt</code> (or whatever name you trained your model with) is saved inside the cusotm path. Now this step completely depends on where you trained your model. There are two options: (a) if you trained the model on the Pi, the <code class="language-plaintext highlighter-rouge">.pt</code> file stays on your Pi based on whatever path you gave, and (b) if you trained it on your desktop with better GPU VRAM (it is recomemnded since Pi will be slow), then you will have to move all the relevant files from the desktop to the Pi. In this case, I have already provided these files on my forked <a href="https://github.com/nitin-dominic/LanderPi/tree/main" rel="external nofollow noopener" target="_blank">repo</a>. But if you trained the model, then just run the command below in order to generate <code class="language-plaintext highlighter-rouge">.xml</code> and <code class="language-plaintext highlighter-rouge">.bin</code> files using your <code class="language-plaintext highlighter-rouge">'strawberry.pt.</code> file. The LanderPi’s <code class="language-plaintext highlighter-rouge">yolov11_detect node</code> uses OpenVINO IR format <code class="language-plaintext highlighter-rouge">(.xml/.bin)</code> for faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. So, the next following step is to convert The full conversion pipeline is:</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>strawberry.pt  ──►  strawberry.xml + strawberry.bin
-</code></pre></div></div> <h5 id="step-1-export-pt-to-xml-and-bin-files">Step 1: Export <code class="language-plaintext highlighter-rouge">.pt</code> to <code class="language-plaintext highlighter-rouge">.xml</code> and <code class="language-plaintext highlighter-rouge">.bin</code> files</h5> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="c1"># On the Pi (or your VM)
+</code></pre></div></div> <h5 id="step-1-export-pt-to-xml-and-bin-files">Step 1: Export <code class="language-plaintext highlighter-rouge">.pt</code> to <code class="language-plaintext highlighter-rouge">.xml</code> and <code class="language-plaintext highlighter-rouge">.bin</code> files</h5> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># On the Pi (or your VM)
 </span><span class="n">pip</span> <span class="n">install</span> <span class="n">openvino</span><span class="o">-</span><span class="n">dev</span> <span class="o">--</span><span class="k">break</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">packages</span> 
 
 <span class="c1"># Export your .pt to OpenVINO format
@@ -32,15 +31,15 @@
 #   strawberry_openvino_model/
 #     strawberry.xml
 #     strawberry.bin
-</span></code></pre></div></div> <p>This generates:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">strawberry.xml</code> — model architecture</li> <li> <code class="language-plaintext highlighter-rouge">strawberry.bin</code> — model weights</li> </ul> <h5 id="step-2-place-the-model-files">Step 2: Place the Model Files</h5> <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Copy the .xml and .bin to the models directory
-<span class="go">cp path/to/your/strawberry.xml MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
+</span></code></pre></div></div> <p>This generates:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">strawberry.xml</code> — model architecture</li> <li> <code class="language-plaintext highlighter-rouge">strawberry.bin</code> — model weights</li> </ul> <h5 id="step-2-place-the-model-files-within-the-docker-container-on-the-pi">Step 2: Place the Model Files Within the Docker Container on the Pi</h5> <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Copy the .xml and .bin to the models directory
+<span class="go">
+cp path/to/your/strawberry.xml MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 cp path/to/your/strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 
 </span><span class="gp">#</span><span class="w"> </span>Check <span class="k">if </span>both the files have been successfully copied.
 <span class="go">
 cd ros2_ws/src/yolov11_detect/models/
 ls
-
 </span></code></pre></div></div> <hr> <h2 id="4-setting-up-the-ros2-package-with-strawberry-pick-launch-files">4. Setting Up the ROS2 Package with Strawberry Pick Launch Files</h2> <p>The strawberry picking node lives inside the example package under <code class="language-plaintext highlighter-rouge">rgbd_function/</code>. The workspace is automatically sourced via /source .zshrc → .robotrc every time you open a new shell</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2_ws/src/example/example/rgbd_function/
 ├── __init__.py                    ← Required for Python module resolution
 ├── strawberry_pick_ik.py          ← Main picking node
