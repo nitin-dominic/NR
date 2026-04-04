@@ -134,13 +134,12 @@ padding:12px 16px; border-radius:4px; margin:1em 0;">
 ## 2. Training the Strawberry Detection Model
 
 <div style="background-color:#cce5ff; border-left:6px solid #004085; 
-padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-  <strong>ℹ️</strong>Note: This is the most important and time-consuming part. The quality of your dataset directly determines how well the robot detects strawberries. However, to save time, I have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invoke detection which will then trigger picking nodes of the robotic arm. I have discussed this in [5](#5-how-the-picking-pipeline-works).
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;"> <strong>ℹ️</strong>Note: This is the most important and time-consuming part. The quality of your dataset directly determines how well the robot detects strawberries. However, to save time, I have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invoke detection which will then trigger picking nodes of the robotic arm. I have discussed this in [5](#5-how-the-picking-pipeline-works).
 </div>
 
 I trained a custom YOLOv11n (nano for Raspberry Pi) model with two classes: `ripe` and `unripe` uisng the dataset from [Roboflow](https://universe.roboflow.com/eric-z0ptd/strawberry_picking_2). However, within the repo that you'll clone, I have already provided `strawberry.pt` file to get started. I trained my own model with custom hyperparameters. With the interest of space within this `Blog`, I am not going explain in detail on how to train a YOLO-based vision model for detection purpose. If you encounter any issues, please reach out to me or pull an issue.
 
-Your `strawberry_data.yaml` should look like this. Make sure when you're training, this `.yaml` file lives inside the main dataset folder where `test`, `train`, and `'valid` folders are.
+Your `strawberry_data.yaml` should look like this (below). Make sure when you are training your own YOLOv11n model, this `*.yaml` file lives inside the main dataset folder where `test`, `train`, and `valid` folders are present.
 
 ```yaml
 train: ../train/images
@@ -173,8 +172,7 @@ model.train(
 
 ## 3. Converting the Model for Deployment on LanderPi
 
-The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for
-faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. The full conversion pipeline is:
+Once your model is trained, you will see `strawberry.pt` (or whatever name you trained your model with) is saved inside the cusotm path. The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for faster inference on the Raspberry Pi CPU strawberry_pick_ik.launch.py. So, the next following step is to convert The full conversion pipeline is:
 
 ```text
 strawberry.pt  ──►  strawberry.onnx  ──►  strawberry.xml + strawberry.bin
