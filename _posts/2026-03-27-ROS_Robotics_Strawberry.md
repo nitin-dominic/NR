@@ -181,7 +181,6 @@ strawberry.pt  ──►  strawberry.xml + strawberry.bin
 ##### Step 1: Export `.pt` to `.xml` and `.bin` files
 
 ```python
-
 # On the Pi (or your VM)
 pip install openvino-dev --break-system-packages 
 
@@ -199,10 +198,11 @@ This generates:
 - `strawberry.xml` — model architecture
 - `strawberry.bin` — model weights
 
-##### Step 2: Place the Model Files
+##### Step 2: Place the Model Files Within the Docker Container on the Pi
 
 ```console
 # Copy the .xml and .bin to the models directory
+
 cp path/to/your/strawberry.xml MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 cp path/to/your/strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 
@@ -210,7 +210,6 @@ cp path/to/your/strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/
 
 cd ros2_ws/src/yolov11_detect/models/
 ls
-
 ```
 ---
 
