@@ -6,7 +6,6 @@ description: "A complete guide to training a custom YOLOv11 model, converting it
 tags: ros2 robotics yolo deep-learning raspberry-pi agriculture computer-vision
 categories: robotics
 thumbnail: assets/img/strawberry_pick.png
-
 ---
 
 <div class="row">
@@ -33,11 +32,11 @@ The broader implication is not just about strawberries. It is about demonstratin
 
 This write-up is for those working with the **HiWonder LanderPi** robot and want to implement **autonomous strawberry detection and picking** using computer vision and robotic arm control. However, the major focus of this tutorial is targeted towards **optimized arm control** and an end-effector **gripper** rather than vision-based detection. If you already know ROS and computer vision, you can clone this repo [LanderPi](https://github.com/nitin-dominic/LanderPi.git) on your RaspberryPi as I have already added all the configuration files along with the trained strawberry model architecture + relevant `.py` files: `strawberry_pick_ik.py` and `strawberry_pick_ik.launch.py`, to jump-start detection and picking. 
 
-All you will have to do is to simply move the relevant files into respective docker container folders and perform build in order to add strawberry detection and picking package to the ROS2 setup.py file. This process won't take more than 15-20 mins provided you know working with Linux-based system. If you want to learn step-by-step process, then start following the steps as mentioned below. 
+All you will have to do is to simply move the relevant files into respective docker container folders and perform build in order to add strawberry detection and picking package to the ROS2 `setup.py` file. This process won't take more than 15-20 mins provided you know working with Linux-based system. If you want to learn step-by-step process, then start following the steps as mentioned below. 
 
 <div style="background-color:#d4edda; border-left:6px solid #28a745; 
 padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-  <strong>✅ </strong> PRO TIP. Remember, following the steps below could be painful and extremely slow sometimes / some days. Be consistent as this learning curve could lead to very fruitful results once you see the robot picking strawberries. It happened with me!
+  <strong>✅ </strong> *PRO TIP*: Remember, following the steps below could be painful and extremely slow sometimes / some days. Be consistent as this learning curve could lead to very fruitful results once you see the robot picking strawberries. It happened with me!
 </div>
 
 The entire pipeline covers:
