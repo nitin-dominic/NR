@@ -36,11 +36,11 @@
 <span class="go">cp path/to/your/strawberry.xml MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 cp path/to/your/strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 
-</span><span class="gp">#</span><span class="w"> </span>Check <span class="k">if </span>both the files have been successfully copied. Once you <span class="k">do</span> 
+</span><span class="gp">#</span><span class="w"> </span>Check <span class="k">if </span>both the files have been successfully copied.
 <span class="go">
 cd ros2_ws/src/yolov11_detect/models/
-</span><span class="gp">ls #</span><span class="w"> </span>this line should show all the files including .xml and .bin files.
-<span class="go">
+ls
+
 </span></code></pre></div></div> <hr> <h2 id="4-setting-up-the-ros2-package-with-strawberry-pick-launch-files">4. Setting Up the ROS2 Package with Strawberry Pick Launch Files</h2> <p>The strawberry picking node lives inside the example package under <code class="language-plaintext highlighter-rouge">rgbd_function/</code>. The workspace is automatically sourced via /source .zshrc → .robotrc every time you open a new shell</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2_ws/src/example/example/rgbd_function/
 ├── __init__.py                    ← Required for Python module resolution
 ├── strawberry_pick_ik.py          ← Main picking node
