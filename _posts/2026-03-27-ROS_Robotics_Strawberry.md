@@ -284,20 +284,20 @@ Here is what flag means:
     <tr>
       <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
         <strong><code>colcon build</code></strong></td>
-      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">
         The ROS2 build command that compiles all packages in the workspace [4]</td>
     </tr>
     <tr>
       <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
         <strong><code>--event-handlers console_direct+</code></strong></td>
-      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">
         Prints the full build output directly to the terminal in real time — 
         useful for seeing errors immediately instead of buffering them [4]</td>
     </tr>
     <tr>
       <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
         <strong><code>--cmake-args -DCMAKE_BUILD_TYPE=Release</code></strong></td>
-      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">
         Tells CMake to build in <strong>Release mode</strong>, enabling compiler 
         optimizations for faster and more efficient runtime performance 
         compared to Debug mode [4]</td>
@@ -305,7 +305,7 @@ Here is what flag means:
     <tr>
       <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
         <strong><code>--symlink-install</code></strong></td>
-      <td style="padding:6px 12px; border-bottom:1px solid #444; color:#000000;">
+      <td style="padding:6px 12px; border-bottom:1px solid #444;">
         Instead of <strong>copying</strong> files into the install directory, 
         creates <strong>symbolic links</strong> back to your source files [4]. 
         Any edits to existing <code>.py</code> files like 
@@ -317,15 +317,15 @@ Here is what flag means:
         <strong><code>--packages-select example</code></strong></td>
       <td style="padding:6px 12px; color:#000000;">
         Builds <strong>only</strong> the <code>example</code> package instead 
-        of rebuilding the entire workspace — much faster during 
+        of rebuilding the entire workspace, much faster during 
         development [4]</td>
     </tr>
   </tbody>
 </table>
 
 <div style="background-color:#d4edda; border-left:6px solid #28a745;
-padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-<strong>✅</strong>Pro tip — The symlink advantage: The <code>--symlink-install</code> flag [4] is particularly useful during development. Since it creates symlinks from the install directory directly back to your source files, any changes you make to an existing <code>.py</code> file like <code>strawberry_pick_ik.py</code> [6] are <strong>instantly reflected</strong> without needing to rebuild. You only need to rebuild when adding new files or new entry points to <code>setup.py</code>.
+padding:12px 16px; border-radius:4px; margin:1em 0;">
+<strong>✅</strong>Pro tip: The symlink advantage: The <code>--symlink-install</code> flag [4] is particularly useful during development. Since it creates symlinks from the install directory directly back to your source files, any changes you make to an existing <code>.py</code> file like <code>strawberry_pick_ik.py</code> [6] are <strong>instantly reflected</strong> without needing to rebuild. You only need to rebuild when adding new files or new entry points to <code>setup.py</code>.
 </div>
 
 A successful build will show:
