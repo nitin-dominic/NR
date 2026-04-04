@@ -323,8 +323,25 @@ Here is what flag means:
   </tbody>
 </table>
 
-<div style="background-color:#d4edda; border-left:6px solid #28a745;
-padding:12px 16px; border-radius:4px; margin:1em 0;">
+<div style="background-color:#d4edda; border-left:6px solid #28a745; 
+padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
+  <strong style="color:#000000;">✅ Pro tip — The symlink advantage:</strong> 
+  The <code style="background-color:#c3e6cb; color:#000000; padding:2px 4px; 
+  border-radius:3px;">--symlink-install</code> flag [4] is particularly useful 
+  during development. Since it creates symlinks from the install directory directly 
+  back to your source files, any changes you make to an existing 
+  <code style="background-color:#c3e6cb; color:#000000; padding:2px 4px; 
+  border-radius:3px;">.py</code> file like 
+  <code style="background-color:#c3e6cb; color:#000000; padding:2px 4px; 
+  border-radius:3px;">strawberry_pick_ik.py</code> [6] are 
+  <strong style="color:#000000;">instantly reflected</strong> without needing 
+  to rebuild. You only need to rebuild when adding new files or new entry points 
+  to <code style="background-color:#c3e6cb; color:#000000; padding:2px 4px; 
+  border-radius:3px;">setup.py</code>.
+</div>
+
+
+<div style="background-color:#d4edda; border-left:6px solid #28a745; padding:12px 16px; border-radius:4px; margin:1em 0;">
 <strong>✅</strong>Pro tip: The symlink advantage: The <code>--symlink-install</code> flag [4] is particularly useful during development. Since it creates symlinks from the install directory directly back to your source files, any changes you make to an existing <code>.py</code> file like <code>strawberry_pick_ik.py</code> [6] are <strong>instantly reflected</strong> without needing to rebuild. You only need to rebuild when adding new files or new entry points to <code>setup.py</code>.
 </div>
 
