@@ -135,7 +135,7 @@ padding:12px 16px; border-radius:4px; margin:1em 0;">
 
 <div style="background-color:#cce5ff; border-left:6px solid #004085; 
 padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-  <strong>ℹ️ Note:</strong> This is the most important and time-consuming part. The quality of your dataset directly determines how well the robot detects strawberries. However, to save time, I have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invoke detection which will then trigger picking nodes of the robotic arm. I have discussed this in [5](#5-how-the-picking-pipeline-works).
+  <strong>ℹ️</strong>Note: This is the most important and time-consuming part. The quality of your dataset directly determines how well the robot detects strawberries. However, to save time, I have provided `strawberry.pt` file which you'll have to move to a particular destination in order to invoke detection which will then trigger picking nodes of the robotic arm. I have discussed this in [5](#5-how-the-picking-pipeline-works).
 </div>
 
 > 🕐 **This is the most important and time-consuming part.** The quality of your dataset
