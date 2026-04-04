@@ -206,10 +206,10 @@ This generates:
 cp path/to/your/strawberry.xml MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 cp path/to/your/strawberry.bin MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
 
-# Check if both the files have been successfully copied. Once you do 
+# Check if both the files have been successfully copied.
 
 cd ros2_ws/src/yolov11_detect/models/
-ls # this line should show all the files including .xml and .bin files.
+ls
 
 ```
 ---
