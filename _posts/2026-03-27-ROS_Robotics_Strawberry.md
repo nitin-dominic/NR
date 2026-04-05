@@ -341,7 +341,6 @@ padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
 A successful build will show:
 
 ```text
-
 Finished <<< example [Xs]
 Summary: 1 package finished [Xs]
 ```
@@ -355,11 +354,13 @@ After building, confirm your node was installed correctly:
 ```console
 ls ~/ros2_ws/install/example/lib/example/strawberry_pick_ik
 ```
+
 And verify the `main()` function is present in your source file:
 
 ```console
 grep -n "def main" ~/ros2_ws/src/example/example/rgbd_function/strawberry_pick_ik.py
 ```
+
 Both should return valid output. If `grep` returns nothing, your source file is missing the `main()` function and the node will fail to launch. Remove the old log files and try to rebuild the package. 
 
 ##### Step 5: Open a Fresh Terminal and Launch
