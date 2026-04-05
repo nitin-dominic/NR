@@ -439,7 +439,7 @@ The full autonomous pipeline runs as follows:
   </tbody>
 </table>
 
-##### Key Tuning Parameters
+Key Tuning Parameters
 
 <table style="width:100%; border-collapse:collapse; font-size:0.9em; margin-bottom:1.5em;">
   <thead>
