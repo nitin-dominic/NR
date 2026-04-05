@@ -670,3 +670,13 @@ position[2] -= 0.08   # Aggressive — use to confirm direction first
     </tr>
   </tbody>
 </table>
+
+## 10. Known Issues and Limitations
+
+These are honest limitations from real-world testing, not theoretical concerns.
+
+- **Hand-eye calibration is manual**: the hand2cam_tf_matrix strawberry_pick_ik.py is a fixed matrix. For best accuracy, perform a proper calibration using an AprilTag board and replace this matrix with your measured transform.
+- **Depth noise at close range**: the Aurora 930 can be noisy below ~30cm.
+- The enlarged 24×24 ROI helps but small or partially occluded berries are still challenging.
+- **Single berry per pick cycle**: the node picks the highest-confidence ripe berry per cycle `strawberry_pick_ik.py`. Other berries in frame are ignored until the current pick completes.
+- **Lighting sensitivity**: YOLO performance drops in direct sunlight or low light. Train with diverse lighting in your dataset to minimize this.
