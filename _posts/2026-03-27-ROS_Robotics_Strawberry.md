@@ -600,8 +600,40 @@ All nodes launched together:
 - 🍓 Strawberry pick IK node
 
 ## 8. Running the Pipeline
-Open a terminal inside the Docker container. Before running any ros2 nodes, ensure running, `~/.stop_ros.sh` to stop any auto-start services as it can intervene with the oother nodes and may delay decision-making. You can also try to source it using, `source ~/.bashrc` to source again. However,to avoid any issues, make sure you open a new docker terminal so it is sourced automatically and you can run ros2 nodes successfully! 
+
+Open a terminal inside the Docker container. Before running any ros2 nodes, ensure running `~/.stop_ros.sh` to stop any auto-start services as it can intervene with the oother nodes and may delay decision-making. You can also try to source it using `source ~/.bashrc`. However, I believe, to avoid any issues, make sure you open a new docker terminal so it is sourced automatically and you can run ros2 nodes successfully! 
 
 ```console
 ros2 launch example strawberry_pick_ik.launch.py
 ```
+
+```console
+# Watch all strawberry-related topics. Run these to ensure your Pi is streaming topics from the sensors and robot telemetry. If you do not see any output, high chances are that either the packages have not been built properly or 
+ros2 topic list | grep yolo
+
+# Stream detection center coordinates
+ros2 topic echo /yolo_node/object_detect
+```
+
+## 9. Tuning the Arm for Accurate Picking
+
+This section requires patience. Small adjustments make a big difference.
+
+If the arm grabs above the strawberry, increase the downward offset `strawberry_pick_ik.py`:
+
+```python
+# Tune position[2] in `strawberry_pick_ik.py`
+position[2] -= 0.02   # Default
+position[2] -= 0.05   # If still grabbing above
+position[2] -= 0.08   # Aggressive — use to confirm direction first
+```
+## Common Issues and Fixes
+
+| 🔴 Problem | 🔍 Likely Cause | ✅ Fix |
+| --- | --- | --- |
+| Arm moves up instead of toward berry | `position[2]` too small | Increase to `-0.05` or more |
+| Arm overshoots and misses | `position[2]` too large | Reduce by `0.01` steps |
+| Detection lost during arm motion | Stability timer too short | Increase to `7` or `10` seconds |
+| Arm grabs air to the side | `position[0]` or `position[1]` wrong | Adjust those offsets |
+| No detection at all | Wrong class name | Check `target_class='ripe'` matches `data.yaml` |
+| Arm grabs unripe berries | Confidence too low | Increase `conf` to `0.55` or `0.65` |
