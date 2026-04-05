@@ -483,7 +483,6 @@ Key Tuning Parameters
     </tr>
   </tbody>
 </table>
-
 ---
 
 ## 6. The Main Node: ```strawberry_pick_ik.py```
@@ -627,13 +626,47 @@ position[2] -= 0.02   # Default
 position[2] -= 0.05   # If still grabbing above
 position[2] -= 0.08   # Aggressive — use to confirm direction first
 ```
-## Common Issues and Fixes
 
-| 🔴 Problem | 🔍 Likely Cause | ✅ Fix |
-| --- | --- | --- |
-| Arm moves up instead of toward berry | `position[2]` too small | Increase to `-0.05` or more |
-| Arm overshoots and misses | `position[2]` too large | Reduce by `0.01` steps |
-| Detection lost during arm motion | Stability timer too short | Increase to `7` or `10` seconds |
-| Arm grabs air to the side | `position[0]` or `position[1]` wrong | Adjust those offsets |
-| No detection at all | Wrong class name | Check `target_class='ripe'` matches `data.yaml` |
-| Arm grabs unripe berries | Confidence too low | Increase `conf` to `0.55` or `0.65` |
+##### Common Issues and Fixes
+
+<table style="width:100%; border-collapse:collapse; font-size:0.9em; margin-bottom:1.5em;">
+  <thead>
+    <tr style="background-color:#2d2d2d; color:white;">
+      <th style="padding:8px 12px; text-align:left;">🔴 Problem</th>
+      <th style="padding:8px 12px; text-align:left;">🔍 Likely Cause</th>
+      <th style="padding:8px 12px; text-align:left;">✅ Fix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:8px 12px;">Arm moves up instead of toward berry</td>
+      <td style="padding:8px 12px;"><code>position[2]</code> too small</td>
+      <td style="padding:8px 12px;">Increase to <code>-0.05</code> or more</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;">Arm overshoots and misses</td>
+      <td style="padding:8px 12px;"><code>position[2]</code> too large</td>
+      <td style="padding:8px 12px;">Reduce by <code>0.01</code> steps</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;">Detection lost during arm motion</td>
+      <td style="padding:8px 12px;">Stability timer too short</td>
+      <td style="padding:8px 12px;">Increase to <code>7</code> or <code>10</code> seconds</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;">Arm grabs air to the side</td>
+      <td style="padding:8px 12px;"><code>position[0]</code> or <code>position[1]</code> wrong</td>
+      <td style="padding:8px 12px;">Adjust those offsets</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;">No detection at all</td>
+      <td style="padding:8px 12px;">Wrong class name</td>
+      <td style="padding:8px 12px;">Check <code>target_class='ripe'</code> matches <code>data.yaml</code></td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;">Arm grabs unripe berries</td>
+      <td style="padding:8px 12px;">Confidence too low</td>
+      <td style="padding:8px 12px;">Increase <code>conf</code> to <code>0.55</code> or <code>0.65</code></td>
+    </tr>
+  </tbody>
+</table>
