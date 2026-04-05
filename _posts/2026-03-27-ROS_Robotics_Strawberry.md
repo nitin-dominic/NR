@@ -189,11 +189,6 @@ pip install openvino-dev --break-system-packages #install this package if not al
 # Export your .pt to OpenVINO format
 from ultralytics import YOLO
 yolo export model=/path/to/strawberry.pt format=openvino imgsz=640
-
-# This creates a folder with:
-#   strawberry_openvino_model/
-#     strawberry.xml
-#     strawberry.bin
 ```
 
 This creates a folder `strawberry_openvino_model/` and two files within it:
