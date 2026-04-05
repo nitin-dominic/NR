@@ -180,11 +180,14 @@ strawberry.pt  ──►  strawberry.xml + strawberry.bin
 
 ##### Step 1: Export `.pt` to `.xml` and `.bin` files
 
-```python
-# On the Pi (or your VM)
-pip install openvino-dev --break-system-packages 
+```console
+pip install openvino-dev --break-system-packages #install this package if not already 
+```
 
+```python
+# On the Pi (or your VM) 
 # Export your .pt to OpenVINO format
+from ultralytics import YOLO
 yolo export model=/path/to/strawberry.pt format=openvino imgsz=640
 
 # This creates a folder with:
@@ -193,7 +196,7 @@ yolo export model=/path/to/strawberry.pt format=openvino imgsz=640
 #     strawberry.bin
 ```
 
-This generates:
+This creates a folder `strawberry_openvino_model/` and two files within it:
 
 - `strawberry.xml` — model architecture
 - `strawberry.bin` — model weights
