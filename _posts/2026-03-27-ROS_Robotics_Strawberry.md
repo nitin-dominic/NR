@@ -373,7 +373,7 @@ ros2 launch example strawberry_pick_ik.launch.py
 
 <div style="background-color:#ffcccc; border-left:6px solid #cc0000;
 padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
-<strong>⛔ </strong>Important: Always open a <strong>fresh terminal</strong> after
+<strong>⛔</strong>Important: Always open a fresh terminal after
 building. Reusing the same terminal keeps stale environment variables cached from
 before the build, which can cause sourcing errors even if the build succeeded. I faced this issue and it took me a while to understand.
 </div>
