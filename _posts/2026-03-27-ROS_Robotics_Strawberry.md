@@ -8,17 +8,6 @@ categories: robotics
 thumbnail: assets/img/strawberry_pick.png
 ---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/strawberry_pick.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    A screenshot of HiWonder's LanderPi autonomously detecting and picking a 'ripe' strawberry using YOLOv11 and depth-based inverse kinematics. It consists of three parts within the video: (a) the real-time feed from the depth-camera detecting strawberry, (b) the middle screen with a simulation video on Rviz, and (c) real footage picking strawberry using the end-effector gripper.
-</div>
-
----
-
 ## 🍓 🤖 Background 
 
 Small robots (or mobile manipulators) are extremely helpful in settings that are compact or limited with space, such as greenhouses. Often, strawberries grown in greenhouses are harvested manually, and that is exactly where these small robots could make a real difference. Imagine multiple of these working in coordination (like a swarm), moving autonomously through narrow greenhouse rows, identifying only the berries that are ripe, and picking them one by one without disturbing the plant or the fruit around it. No fatigue, no missed berry, no damage!
@@ -27,6 +16,15 @@ This work imitated, in a small way, a situation in which ripe strawberries could
 `(strawberry_pick_ik.launch.py)`, a depth camera for 3D depth estimation, and inverse kinematics to physically actuate the robotic arm `(strawberry_pick_ik.py)`, the HiWonder LanderPi demonstrated that even a compact, low-cost mobile manipulator running ROS2 Humble inside Docker on a Raspberry Pi 5 can perform a task as nuanced and delicate as selective fruit picking.
 
 The broader implication is not just about strawberries. It is about demonstrating that precision agriculture, the kind that requires *selective*, *gentle*, and *intelligent* interaction with individual plants, no longer has to depend entirely on human hands.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/strawberry_pick.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    A screenshot of HiWonder's LanderPi autonomously detecting and picking a 'ripe' strawberry using YOLOv11 and depth-based inverse kinematics. It consists of three parts within the video: (a) the real-time feed from the depth-camera detecting strawberry, (b) the middle screen with a simulation video on Rviz, and (c) real footage picking strawberry using the end-effector gripper.
+</div>
 
 ## 🍓 Overview
 
