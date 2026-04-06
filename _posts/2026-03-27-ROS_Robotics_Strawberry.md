@@ -641,8 +641,8 @@ This section requires patience. Small adjustments will make a big difference! It
 # Increase Kp for faster tracking, decrease to reduce oscillation
 self.pid_yaw   = pid.PID(20.5, 1.0, 1.2)
 self.pid_pitch = pid.PID(20.5, 1.0, 1.2)
-self.yaw   = 500   # Horizontal servo home position (0–1000)
-self.pitch = 150   # Vertical servo home position (100–720)
+self.yaw   = 500  # Horizontal servo home position (0–1000)
+self.pitch = 150  # Vertical servo home position (100–720)
 ```
 
 ##### Snippet 2: Tracking the strawberry and servo limits (Be aware and read the manual for arm servo limits)
@@ -651,7 +651,7 @@ self.pitch = 150   # Vertical servo home position (100–720)
 # 0.02 = 2% of frame width/height; increase to reduce jitter, decrease for tighter centering
 if abs(center_x_norm - 0.5) > 0.02:
     ...
-    self.yaw = min(max(self.yaw + self.pid_yaw.output, 0), 1000)     # Yaw servo range: 0–1000
+    self.yaw = min(max(self.yaw + self.pid_yaw.output, 0), 1000) # Yaw servo range: 0–1000
     
 if abs(center_y_norm - 0.5) > 0.02:
     ...
@@ -664,7 +664,7 @@ if abs(center_y_norm - 0.5) > 0.02:
 # Both axes must settle within 3 units for 2 seconds before grabbing
 # Increase threshold (3) if arm grabs too rarely; decrease for stricter lock-on
 if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 and abs(self.last_pitch_yaw[1] - p_y[1]) < 3:
-    if time.time() - self.stamp > 2:   # 2s stability window — reduce for faster grabbing
+    if time.time() - self.stamp > 2: # 2s stability window — reduce for faster grabbing
 ```
 
 ##### Snippet 4: Depth estimation and distance compensation
@@ -676,10 +676,10 @@ roi = [
     max(0, int(center_x) - 5),
     min(w, int(center_x) + 5),
 ]
-dist += 0.015   # Strawberry radius compensation (meters) — adjust to actual fruit size
-dist += 0.015   # Systematic error compensation — tune based on real grab accuracy
+dist += 0.015   # Strawberry radius compensation (meters), adjust to actual fruit size
+dist += 0.015   # Systematic error compensation, tune based on real grab accuracy
 
-if dist > 0.35:   # Max grab distance in meters — increase if arm can reach further
+if dist > 0.35:   # Max grab distance in meters, increase if arm can reach further
     continue
 ```
 
@@ -695,13 +695,13 @@ position[2] += 0.03   # Forward/backward correction
 ##### Snippet 6: Arm speed and picking sequence timing
 
 ```python
-set_servo_position(self.joints_pub, 1.5, (...))  # 1.5s move duration — reduce for speed, increase for smoothness
-time.sleep(2.5)   # Wait for arm to reach target — must be >= move duration above
+set_servo_position(self.joints_pub, 1.5, (...))  # 1.5s move duration, reduce for speed, increase for smoothness
+time.sleep(2.5)   # Wait for arm to reach target should be >= move duration above
 
 set_servo_position(self.joints_pub, 1.0, ((10, 450),))  # Gripper close position: 450 (0=open, 500=fully closed)
 time.sleep(1)     # Gripper close wait time
 
-position[2] += 0.08   # Lift height after grab (meters) — increase to clear obstacles
+position[2] += 0.08   # Lift height after grab (meters), increase to clear obstacles
 ```
 ---
 
