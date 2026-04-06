@@ -633,16 +633,78 @@ ros2 topic echo /yolo_node/object_detect
 
 ## 9. Tuning the Arm for Accurate Picking
 
-This section requires patience. Small adjustments make a big difference.
+This section requires patience. Small adjustments will make a big difference! It is going to be a number game and so you will have to find the optimized numbers in order to actuate the arm correctly. I have split the whole section into six parts and changing these will lead to better results. When I first launched the ros2 node, I had to make a lot of adjustments and so be ready to do the same. If the arm grabs above the strawberry, increase the downward offset within `strawberry_pick_ik.py`. Check below for more detail.
 
-If the arm grabs above the strawberry, increase the downward offset `strawberry_pick_ik.py`:
+##### Snippet 1: PID tuning
 
 ```python
-# Tune position[2] in `strawberry_pick_ik.py`
-position[2] -= 0.02   # Default
-position[2] -= 0.05   # If still grabbing above
-position[2] -= 0.08   # Aggressive — use to confirm direction first
+# Kp=20.5 (responsiveness), Ki=1.0 (drift correction), Kd=1.2 (overshoot damping)
+# Increase Kp for faster tracking, decrease to reduce oscillation
+self.pid_yaw   = pid.PID(20.5, 1.0, 1.2)
+self.pid_pitch = pid.PID(20.5, 1.0, 1.2)
+self.yaw   = 500   # Horizontal servo home position (0–1000)
+self.pitch = 150   # Vertical servo home position (100–720)
 ```
+
+##### Snippet 2: Tracking the strawberry and servo limits (Be aware and read the manual for arm servo limits)
+
+```python
+# 0.02 = 2% of frame width/height; increase to reduce jitter, decrease for tighter centering
+if abs(center_x_norm - 0.5) > 0.02:
+    ...
+    self.yaw = min(max(self.yaw + self.pid_yaw.output, 0), 1000)     # Yaw servo range: 0–1000
+    
+if abs(center_y_norm - 0.5) > 0.02:
+    ...
+    self.pitch = min(max(self.pitch + self.pid_pitch.output, 100), 720)  # Pitch servo range: 100–720
+```
+
+##### Snippet 3: Stability check and grab trigger
+
+```python
+# Both axes must settle within 3 units for 2 seconds before grabbing
+# Increase threshold (3) if arm grabs too rarely; decrease for stricter lock-on
+if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 and abs(self.last_pitch_yaw[1] - p_y[1]) < 3:
+    if time.time() - self.stamp > 2:   # 2s stability window — reduce for faster grabbing
+```
+
+##### Snippet 4: Depth estimation and distance compensation
+
+```python
+roi = [
+    max(0, int(center_y) - 5),   # ROI half-size: increase for smoother depth, decrease for precision
+    min(h, int(center_y) + 5),
+    max(0, int(center_x) - 5),
+    min(w, int(center_x) + 5),
+]
+dist += 0.015   # Strawberry radius compensation (meters) — adjust to actual fruit size
+dist += 0.015   # Systematic error compensation — tune based on real grab accuracy
+
+if dist > 0.35:   # Max grab distance in meters — increase if arm can reach further
+    continue
+```
+
+##### Snippet 5: Camera to worls coordinate offset
+
+```python
+# Fine-tune these offsets (meters) if the arm consistently misses in one direction
+position[0] -= 0.01   # Left/right correction
+position[1] -= 0.02   # Up/down correction
+position[2] += 0.03   # Forward/backward correction
+```
+
+##### Snippet 6: Arm speed and picking sequence timing
+
+```python
+set_servo_position(self.joints_pub, 1.5, (...))  # 1.5s move duration — reduce for speed, increase for smoothness
+time.sleep(2.5)   # Wait for arm to reach target — must be >= move duration above
+
+set_servo_position(self.joints_pub, 1.0, ((10, 450),))  # Gripper close position: 450 (0=open, 500=fully closed)
+time.sleep(1)     # Gripper close wait time
+
+position[2] += 0.08   # Lift height after grab (meters) — increase to clear obstacles
+```
+---
 
 ##### Common Issues and Fixes
 
