@@ -19,7 +19,8 @@ thumbnail: assets/img/strawberry_pick.png
         </div>
     </div>
 </div>
-<div class="caption">
+<div class="caption"> 
+</div>
     
 ## 🍓 🤖 Background 
 
