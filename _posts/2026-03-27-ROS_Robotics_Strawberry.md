@@ -564,6 +564,7 @@ if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
         self.moving = True
         threading.Thread(target=self.pick, args=(pose_t,)).start()
 ```
+---
 
 ## 7. The Launch Node: ```strawberry_pick_ik.launch.py```
 
@@ -598,6 +599,8 @@ All nodes launched together:
 - 🧠 YOLOv11 detection node
 - 🍓 Strawberry pick IK node
 
+---
+
 ## 8. Running the Pipeline
 
 Open a terminal inside the Docker container. Before running any ros2 nodes, ensure running `~/.stop_ros.sh` to stop any auto-start services as it can intervene with the oother nodes and may delay decision-making. You can also try to source it using `source ~/.bashrc`. However, I believe, to avoid any issues, make sure you open a new docker terminal so it is sourced automatically and you can run ros2 nodes successfully! 
@@ -613,6 +616,8 @@ ros2 topic list | grep yolo
 # Stream detection center coordinates
 ros2 topic echo /yolo_node/object_detect
 ```
+
+---
 
 ## 9. Tuning the Arm for Accurate Picking
 
@@ -670,6 +675,8 @@ position[2] -= 0.08   # Aggressive — use to confirm direction first
     </tr>
   </tbody>
 </table>
+
+---
 
 ## 10. Known Issues and Limitations
 
