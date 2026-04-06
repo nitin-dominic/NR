@@ -485,7 +485,7 @@ Key Tuning Parameters
 </table>
 ---
 
-## 6. The Main Node: ```strawberry_pick_ik.py```
+## 6. The Main Node: `strawberry_pick_ik.py`
 
 The node uses a custom YoloTracker class that replaces traditional HSV color detection with YOLO bounding box centers ``strawberry_pick_ik.py``. It subscribes to /yolo_node/object_detect and uses PID controllers to center the camera on the best detected ripe strawberry. Within the `strawberry_pick_ik.py`, look for these lines (below) to understand the code structure. 
 
@@ -496,12 +496,12 @@ class YoloTracker:
     """Uses YOLO bounding box center for PID tracking."""
     
     def __init__(self, target_class='ripe'):
-        self.target_class = target_class      # Store the object class to track (default: 'ripe')
-        self.pid_yaw = pid.PID(20.5, 1.0, 1.2)    # PID controller for left/right adjustment
-        self.pid_pitch = pid.PID(20.5, 1.0, 1.2)  # PID controller for up/down adjustment
-        self.yaw = 500       # Initial horizontal servo/motor position
-        self.pitch = 150     # Initial vertical servo/motor position
-        self.center = None   # Will hold (x, y) of detected target center
+        self.target_class = target_class # Store the object class to track (default: 'ripe')
+        self.pid_yaw = pid.PID(20.5, 1.0, 1.2) # PID controller for left/right adjustment
+        self.pid_pitch = pid.PID(20.5, 1.0, 1.2) # PID controller for up/down adjustment
+        self.yaw = 500 # Initial horizontal servo/motor position
+        self.pitch = 150 # Initial vertical servo/motor position
+        self.center = None # Will hold (x, y) of detected target center
         self.detected = False  # Tracks whether target is currently visible
 
     def update_detection(self, objects):
@@ -515,14 +515,14 @@ class YoloTracker:
                 if best is None or obj.score > best[3]:  # Keep only the highest-confidence detection
                     best = (cx, cy,
                             max(abs(obj.box[2]-obj.box[0]),
-                                abs(obj.box[3]-obj.box[1]))/2.0,  # Approximate radius of bounding box
+                                abs(obj.box[3]-obj.box[1]))/2.0, # Approximate radius of bounding box
                             obj.score)  # Store (cx, cy, radius, confidence)
 
         if best is not None:
-            self.center = (best[0], best[1])  # Save center coords of best detection
-            self.detected = True              # Mark target as found
+            self.center = (best[0], best[1]) # Save center coords of best detection
+            self.detected = True # Mark target as found
         else:
-            self.center = None    # Clear center if nothing detected
+            self.center = None  # Clear center if nothing detected
             self.detected = False # Mark target as lost
 ```
 
@@ -560,14 +560,14 @@ if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
             (center_x, center_y), dist, (K[0], K[4], K[2], K[5]))
 
         # Manual offset corrections for RGB-to-depth camera misalignment (meters)
-        position[0] -= 0.01   # Correct left/right offset between RGB and depth lens
-        position[1] -= 0.02   # Correct up/down offset between RGB and depth lens
-        position[2] -= 0.02   # ← Primary grab depth tuning: negative = closer, positive = further
+        position[0] -= 0.01  # Correct left/right offset between RGB and depth lens
+        position[1] -= 0.02  # Correct up/down offset between RGB and depth lens
+        position[2] -= 0.02  # Primary grab depth tuning: negative = closer, positive = further
 
         # Apply hand-eye calibration: camera frame → end-effector frame
         pose_end = np.matmul(
-            self.hand2cam_tf_matrix,                          # Fixed camera-to-hand transform
-            common.xyz_euler_to_mat(position, (0, 0, 0)))    # 3D point as 4x4 homogeneous matrix
+            self.hand2cam_tf_matrix, # Fixed camera-to-hand transform
+            common.xyz_euler_to_mat(position, (0, 0, 0))) # 3D point as 4x4 homogeneous matrix
 
         # Apply forward kinematics: end-effector frame → world frame
         world_pose = np.matmul(self.endpoint, pose_end)
@@ -578,7 +578,7 @@ if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
 ```
 ---
 
-## 7. The Launch Node: ```strawberry_pick_ik.launch.py```
+## 7. The Launch Node: `strawberry_pick_ik.launch.py`
 
 The launch file starts all required nodes together in one command: `strawberry_pick_ik.launch.py`
 
@@ -628,7 +628,6 @@ ros2 topic list | grep yolo
 # Stream detection center coordinates
 ros2 topic echo /yolo_node/object_detect
 ```
-
 ---
 
 ## 9. Tuning the Arm for Accurate Picking
@@ -684,7 +683,7 @@ if dist > 0.35:   # Max grab distance in meters — increase if arm can reach fu
     continue
 ```
 
-##### Snippet 5: Camera to worls coordinate offset
+##### Snippet 5: Camera to world coordinate offset
 
 ```python
 # Fine-tune these offsets (meters) if the arm consistently misses in one direction
