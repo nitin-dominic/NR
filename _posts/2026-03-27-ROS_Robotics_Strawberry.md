@@ -494,75 +494,87 @@ YoloTracker Class
 ```python
 class YoloTracker:
     """Uses YOLO bounding box center for PID tracking."""
-
+    
     def __init__(self, target_class='ripe'):
-        self.target_class = target_class
-        self.pid_yaw = pid.PID(20.5, 1.0, 1.2)
-        self.pid_pitch = pid.PID(20.5, 1.0, 1.2)
-        self.yaw = 500
-        self.pitch = 150
-        self.center = None
-        self.detected = False
+        self.target_class = target_class      # Store the object class to track (default: 'ripe')
+        self.pid_yaw = pid.PID(20.5, 1.0, 1.2)    # PID controller for left/right adjustment
+        self.pid_pitch = pid.PID(20.5, 1.0, 1.2)  # PID controller for up/down adjustment
+        self.yaw = 500       # Initial horizontal servo/motor position
+        self.pitch = 150     # Initial vertical servo/motor position
+        self.center = None   # Will hold (x, y) of detected target center
+        self.detected = False  # Tracks whether target is currently visible
 
     def update_detection(self, objects):
-        best = None
-        for obj in objects:
-            if obj.class_name == self.target_class:
-                cx = (obj.box[0] + obj.box[2]) / 2.0
-                cy = (obj.box[1] + obj.box[3]) / 2.0
-                if best is None or obj.score > best[3]:
+        best = None  # Will hold the highest-confidence matching detection
+        
+        for obj in objects:  # Loop through all detected objects
+            if obj.class_name == self.target_class:  # Only process objects matching target class
+                cx = (obj.box[0] + obj.box[2]) / 2.0  # Compute bounding box center X
+                cy = (obj.box[1] + obj.box[3]) / 2.0  # Compute bounding box center Y
+                
+                if best is None or obj.score > best[3]:  # Keep only the highest-confidence detection
                     best = (cx, cy,
                             max(abs(obj.box[2]-obj.box[0]),
-                                abs(obj.box[3]-obj.box[1]))/2.0,
-                            obj.score)
+                                abs(obj.box[3]-obj.box[1]))/2.0,  # Approximate radius of bounding box
+                            obj.score)  # Store (cx, cy, radius, confidence)
+
         if best is not None:
-            self.center = (best[0], best[1])
-            self.detected = True
+            self.center = (best[0], best[1])  # Save center coords of best detection
+            self.detected = True              # Mark target as found
         else:
-            self.center = None
-            self.detected = False
+            self.center = None    # Clear center if nothing detected
+            self.detected = False # Mark target as lost
 ```
 
 Stability Check and Depth-to-3D Conversion
 
 ```python
-# Stability check: wait 5 seconds of settled tracking before grabbing. Make sure this deplay between detection and grabbing is at least 5 secs. I faced a lot of problem with values below 3. The strawberry was being detected but the arm did not get time to settle-in.
+# Stability check: both yaw and pitch must differ by less than 3 units from last frame
+# Increase threshold (3) if arm grabs too rarely; decrease for stricter lock-on
+
 if abs(self.last_pitch_yaw[0] - p_y[0]) < 3 \
         and abs(self.last_pitch_yaw[1] - p_y[1]) < 3:
+    
+    # Arm must be settled for 5 seconds before grabbing; do not reduce below 3s
+    # (arm needs time to physically reach and stabilize at tracked position)
     if time.time() - self.stamp > 5 and not self.moving:
-
-        # Enlarged 24x24 ROI for stable depth reading
+        
+        # 24x24 pixel ROI centered on detection for depth sampling
+        # Larger ROI = more stable average depth; reduce if targeting small/occluded berries
         roi = [
-            max(0, int(center_y) - 12), min(h, int(center_y) + 12),
-            max(0, int(center_x) - 12), min(w, int(center_x) + 12),
+            max(0, int(center_y) - 12), min(h, int(center_y) + 12), # Y bounds clamped to frame
+            max(0, int(center_x) - 12), min(w, int(center_x) + 12), # X bounds clamped to frame
         ]
-        roi_distance = depth_image[roi[0]:roi[1], roi[2]:roi[3]]
+        roi_distance = depth_image[roi[0]:roi[1], roi[2]:roi[3]] # Crop depth image to ROI
+        
         valid_depths = roi_distance[
-            np.logical_and(roi_distance > 0, roi_distance < 10000)]
-        dist = round(float(np.mean(valid_depths) / 1000.0), 3)
+            np.logical_and(roi_distance > 0, roi_distance < 10000)] # Filter out zeros and sensor noise
+        dist = round(float(np.mean(valid_depths) / 1000.0), 3) # Average depth in meters
 
-        dist += 0.015  # Object radius compensation
-        dist += 0.015  # Error compensation
+        dist += 0.015  # Compensate for strawberry physical radius
+        dist += 0.015  # Compensate for systematic depth sensor error
 
-        # Convert pixel + depth → 3D camera coordinates
+        # Unproject 2D pixel + depth → 3D point in camera frame using intrinsics (fx, fy, cx, cy)
         K = depth_camera_info.k
         position = depth_pixel_to_camera(
             (center_x, center_y), dist, (K[0], K[4], K[2], K[5]))
 
-        # RGB-to-depth camera offset compensation
-        position[0] -= 0.01
-        position[1] -= 0.02
-        position[2] -= 0.02  # ← Tune this if arm grabs above or below berry
+        # Manual offset corrections for RGB-to-depth camera misalignment (meters)
+        position[0] -= 0.01   # Correct left/right offset between RGB and depth lens
+        position[1] -= 0.02   # Correct up/down offset between RGB and depth lens
+        position[2] -= 0.02   # ← Primary grab depth tuning: negative = closer, positive = further
 
-        # Transform to world coordinates via hand-eye calibration matrix
+        # Apply hand-eye calibration: camera frame → end-effector frame
         pose_end = np.matmul(
-            self.hand2cam_tf_matrix,
-            common.xyz_euler_to_mat(position, (0, 0, 0)))
-        world_pose = np.matmul(self.endpoint, pose_end)
-        pose_t, _ = common.mat_to_xyz_euler(world_pose)
+            self.hand2cam_tf_matrix,                          # Fixed camera-to-hand transform
+            common.xyz_euler_to_mat(position, (0, 0, 0)))    # 3D point as 4x4 homogeneous matrix
 
-        self.moving = True
-        threading.Thread(target=self.pick, args=(pose_t,)).start()
+        # Apply forward kinematics: end-effector frame → world frame
+        world_pose = np.matmul(self.endpoint, pose_end)
+        pose_t, _ = common.mat_to_xyz_euler(world_pose) # Extract (x, y, z) world coordinates
+
+        self.moving = True # Lock out new grabs until pick() completes
+        threading.Thread(target=self.pick, args=(pose_t,)).start() # Run pick sequence in background thread
 ```
 ---
 
