@@ -13,7 +13,7 @@ thumbnail: assets/img/strawberry_pick.png
         <div class="embed-responsive embed-responsive-16by9">
             <iframe 
                 class="embed-responsive-item rounded z-depth-1"
-                src="https://www.youtube.com/watch?v=imqnmDfIdLo"
+                src="https://www.youtube.com/embed/imqnmDfIdLo"
                 allowfullscreen>
             </iframe>
         </div>
