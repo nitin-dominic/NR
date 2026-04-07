@@ -1,18 +1,21 @@
 ---
 layout: post
-title: "Generating Crop Disease Images Using Prompt Engineering with Stable Diffusion: A Step-by-Step Guide on HiPerGator"
+title: "# Generating Crop Disease Images Using Prompt Engineering with Stable Diffusion Architecture"
 date: 2026-01-16 09:00:00-0400
 description: "A complete guide to generating synthetic crop disease images using Stable Diffusion and prompt engineering on the University of Florida's HiPerGator HPC system."
 tags: stable-diffusion prompt-engineering deep-learning agriculture computer-vision hipergator generative-ai
 categories: generative-ai
-thumbnail: assets/img/crop_disease_sd.png
+thumbnail: assets/img/synthetic.png
 ---
 
-# Generating Crop Disease Images Using Prompt Engineering with Stable Diffusion Architecture
-
-## A Step-by-Step Guide on HiPerGator
-
----
+<div class="row">
+<div class="col-sm mt-3 mt-md-0">
+{% include figure.html path="assets/img/synthetic_images.png" title="example image" class="img-fluid rounded z-depth-1" %}
+</div>
+</div>
+<div class="caption">
+A screenshot of HiWonder's LanderPi autonomously detecting and picking a 'ripe' strawberry using YOLOv11 and depth-based inverse kinematics. It consists of three parts within the video: (a) the real-time feed from the depth-camera detecting strawberry, (b) the middle screen with a simulation video on Rviz, and (c) real footage picking strawberry using the end-effector gripper.
+</div>
 
 ## Overview
 
