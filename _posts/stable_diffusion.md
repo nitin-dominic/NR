@@ -1,37 +1,62 @@
-# HiPerGator Environment Setup & Deep Learning Tutorial
+---
+layout: post
+title: "Generating Crop Disease Images Using Prompt Engineering with Stable Diffusion: A Step-by-Step Guide on HiPerGator"
+date: 2026-01-16 09:00:00-0400
+description: "A complete guide to generating synthetic crop disease images using Stable Diffusion and prompt engineering on the University of Florida's HiPerGator HPC system."
+tags: stable-diffusion prompt-engineering deep-learning agriculture computer-vision hipergator generative-ai
+categories: generative-ai
+thumbnail: assets/img/crop_disease_sd.png
+---
 
-## Table of Contents
-1. [Prerequisites](#prerequisites)
-2. [Creating a New Conda Environment](#1-creating-a-new-conda-environment)
-3. [Installing Libraries](#2-installing-libraries)
-4. [Setting Up a Jupyter Notebook Kernel](#3-setting-up-a-jupyter-notebook-kernel)
-5. [Configuring the Job File](#4-configuring-the-job-file)
-6. [Starting a HiPerGator Session](#5-starting-a-hipergator-session)
-7. [Connecting via SSH Tunnel](#6-connecting-via-ssh-tunnel)
-8. [Fine-Tuning Your Model](#7-fine-tuning-your-model)
-9. [Tips & Troubleshooting](#8-tips--troubleshooting)
+# Generating Crop Disease Images Using Prompt Engineering with Stable Diffusion Architecture
+
+## A Step-by-Step Guide on HiPerGator
 
 ---
 
-## Prerequisites
+## Overview
+
+Acquiring labeled images of crop diseases is one of the biggest bottlenecks in agricultural AI research. Field data is scarce, seasonal, and expensive to annotate. **Stable Diffusion** offers a powerful alternative: generating photorealistic, diverse, and labeled synthetic images of diseased crops directly from text prompts — at scale, on GPU hardware.
+
+This guide walks you through setting up a HiPerGator environment, installing Stable Diffusion, and using **prompt engineering** to generate high-quality crop disease images for training object detection or classification models.
+
+---
+
+## Table of Contents
+
+1. [Prerequisites](#1-prerequisites)
+2. [Setting Up Your Conda Environment on HiPerGator](#2-setting-up-your-conda-environment-on-hipergator)
+3. [Installing Stable Diffusion Libraries](#3-installing-stable-diffusion-libraries)
+4. [Configuring the Job File](#4-configuring-the-job-file)
+5. [Starting a HiPerGator Session](#5-starting-a-hipergator-session)
+6. [Connecting via SSH Tunnel](#6-connecting-via-ssh-tunnel)
+7. [Prompt Engineering for Crop Disease Images](#7-prompt-engineering-for-crop-disease-images)
+8. [Running Stable Diffusion in Jupyter](#8-running-stable-diffusion-in-jupyter)
+9. [Fine-Tuning Stable Diffusion on Crop Disease Data](#9-fine-tuning-stable-diffusion-on-crop-disease-data)
+10. [Tips & Troubleshooting](#10-tips--troubleshooting)
+
+---
+
+## 1. Prerequisites
 
 - Active UF account with access to [HiPerGator OnDemand](https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions)
 - Duo Mobile installed on your phone
 - Access to `/blue/nsboyd/YOUR_USERNAME/`
-- Your `.job` file configured (see Step 4)
 - Basic familiarity with terminal/command line
+- A `.job` file configured (see Step 4)
 
 ---
 
-## 1. Creating a New Conda Environment
+## 2. Setting Up Your Conda Environment on HiPerGator
 
-> **Why?** Different models (YOLOv5, Mask-RCNN, Faster-RCNN, DeepLabV3+, etc.) require different Python packages. Separate environments prevent version conflicts.
+Different generative models require isolated Python environments to avoid package conflicts [1].
 
-### Steps:
+### Steps
 
-1. Go to: [https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions](https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions)
+1. Go to [https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions](https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions)
 2. Click **Clusters** → **HiPerGator Shell Access**
-3. In the terminal, load Conda:
+3. Load Conda in the terminal:
 
 ```bash
 module load conda
+```
