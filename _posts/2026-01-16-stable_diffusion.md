@@ -14,14 +14,12 @@ thumbnail: assets/img/synthetic.png
 </div>
 </div>
 <div class="caption">
-    Comparison of <strong>real</strong> vs. <strong>synthetic</strong> strawberry images. 
-    Synthetic images were generated using a <strong>text-to-image Stable Diffusion</strong> architecture 
-    to augment training data for improved YOLOv11 detection performance in varied environmental conditions.
+    Comparison of <strong>real</strong> vs. <strong>synthetic</strong> watermelon images. Synthetic images were generated using a <strong>text-to-image Stable Diffusion</strong> architecture to augment training data for classification, detection, or segmentation tasks.
 </div>
 
 ## Overview
 
-Acquiring labeled images of crop diseases is one of the biggest bottlenecks in agricultural AI research. Field data is scarce, seasonal, and expensive to annotate. **Stable Diffusion** offers a powerful alternative: generating photorealistic, diverse, and labeled synthetic images of diseased crops directly from text prompts — at scale, on GPU hardware.
+Acquiring labeled images of crop diseases is one of the biggest bottlenecks in agricultural AI research. Field data is scarce, seasonal, and expensive to annotate. **Stable Diffusion** offers a powerful alternative: generating photorealistic, diverse, and labeled synthetic images of diseased crops directly from text prompts, at scale, on GPU hardware.
 
 This guide walks you through setting up a HiPerGator environment, installing Stable Diffusion, and using **prompt engineering** to generate high-quality crop disease images for training object detection or classification models.
 
