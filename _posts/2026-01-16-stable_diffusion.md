@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "# Generating Crop Disease Images Using Prompt Engineering with Stable Diffusion Architecture"
+title: "Generating Crop Disease Images Using Prompt Engineering with Stable Diffusion Architecture"
 date: 2026-01-16 09:00:00-0400
 description: "A complete guide to generating synthetic crop disease images using Stable Diffusion and prompt engineering on the University of Florida's HiPerGator HPC system."
 tags: stable-diffusion prompt-engineering deep-learning agriculture computer-vision hipergator generative-ai
