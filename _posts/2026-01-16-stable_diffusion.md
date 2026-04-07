@@ -10,11 +10,13 @@ thumbnail: assets/img/synthetic.png
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.html path="assets/img/synthetic_images.png" title="example image" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/synthetic_images.png" title="example image" class="img-fluid rounded z-depth-1" style="background-color: white; padding: 8px;" %}
 </div>
 </div>
 <div class="caption">
-A screenshot of HiWonder's LanderPi autonomously detecting and picking a 'ripe' strawberry using YOLOv11 and depth-based inverse kinematics. It consists of three parts within the video: (a) the real-time feed from the depth-camera detecting strawberry, (b) the middle screen with a simulation video on Rviz, and (c) real footage picking strawberry using the end-effector gripper.
+    Comparison of <strong>real</strong> vs. <strong>synthetic</strong> strawberry images. 
+    Synthetic images were generated using a <strong>text-to-image Stable Diffusion</strong> architecture 
+    to augment training data for improved YOLOv11 detection performance in varied environmental conditions.
 </div>
 
 ## Overview
