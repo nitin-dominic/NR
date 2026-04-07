@@ -44,7 +44,7 @@ This guide walks you through setting up a HiPerGator environment, installing Sta
 
 - Active UF account with access to [HiPerGator OnDemand](https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions)
 - Duo Mobile installed on your phone
-- Access to `/blue/nsboyd/YOUR_USERNAME/`
+- Access to `/blue/$NAME$/YOUR_USERNAME/`
 - Basic familiarity with terminal/command line
 - A `.job` file configured (see Step 4)
 
@@ -52,7 +52,7 @@ This guide walks you through setting up a HiPerGator environment, installing Sta
 
 ## 2. Setting Up Your Conda Environment on HiPerGator
 
-Different generative models require isolated Python environments to avoid package conflicts [1].
+In this step, make sure you make a completely new python environment to install necessary packages pertaining to Stable Diffusion architecture training and generating images. If you use the old ones, the new packages may conflict and you may not be able to import them successfully!
 
 ### Steps
 
