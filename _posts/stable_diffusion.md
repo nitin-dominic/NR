@@ -70,7 +70,7 @@ mamba create -p /blue/$NAME$/$YOUR_USERNAME$/Environment/$CUSTOM_PACKAGE$/ pytho
 mamba activate /blue/$$NAME/$YOUR_USERNAME$/Environment
 ```
 
-Once the environment is activated, you will see the line change below based on the path you gave to activate your environment,
+Once the environment is activated, you will see the shell prompt change below based on the path you gave to activate your environment,
 
 ```text
 (/blue/$NAME$/$YOUR_USERNAME$/Environment/Stable_Diffusion3) [$YOUR_USERNAME$@login10 ~]$
