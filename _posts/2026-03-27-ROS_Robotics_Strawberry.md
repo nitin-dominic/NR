@@ -319,7 +319,7 @@ Here is what each flag means:
       <td style="padding:6px 12px; color:#000000;">
         <strong>Builds only</strong> the <code>example</code> <strong>package instead 
         of rebuilding the entire workspace, much faster during 
-        development.</strong>strong></td>
+        development.</strong></td>
     </tr>
   </tbody>
 </table>
