@@ -52,14 +52,26 @@ This guide walks you through setting up a HiPerGator environment, installing Sta
 
 ## 2. Setting Up Your Conda Environment on HiPerGator
 
-In this step, make sure you make a completely new python environment to install necessary packages pertaining to Stable Diffusion architecture training and generating images. If you use the old ones, the new packages may conflict and you may not be able to import them successfully!
+In this step, make sure you make a completely **new** python environment to install necessary packages pertaining to Stable Diffusion architecture training and generating images. If you use the old ones, the new packages may conflict and you may not be able to import the packages successfully!
 
 ### Steps
 
 1. Go to [https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions](https://ood.rc.ufl.edu/pun/sys/dashboard/batch_connect/sessions)
 2. Click **Clusters** → **HiPerGator Shell Access**
-3. Load Conda in the terminal:
+3. Load Conda in the terminal and run the lines below. Also, wait for all the packages to install. It may take some time and would ask to prompt 'Y' for Yes.
 
 ```bash
 module load conda
+mamba create -p /blue/$NAME$/$YOUR_USERNAME$/Environment/$CUSTOM_PACKAGE$/ python=3.11 # I usually keep all my packages within a folder called 'Environment' so its organized in once place and easy for me to import and run a job file when needed.
+```
+4. Once your custom name environment is created, ensure it is activated with the command below,
+
+```bash
+mamba activate /blue/$$NAME/$YOUR_USERNAME$/Environment
+```
+
+Once the environment is activated, you will see the line change below based on the path you gave to activate your environment,
+
+```text
+(/blue/$NAME$/$YOUR_USERNAME$/Environment/Stable_Diffusion3) [$YOUR_USERNAME$@login10 ~]$
 ```
