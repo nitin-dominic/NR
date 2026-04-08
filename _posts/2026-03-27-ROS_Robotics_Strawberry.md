@@ -317,9 +317,9 @@ Here is what each flag means:
       <td style="padding:6px 12px; color:#000000;">
         <strong><code>--packages-select example</code></strong></td>
       <td style="padding:6px 12px; color:#000000;">
-        Builds <strong>only</strong> the <code>example</code> package instead 
+        <strong>Builds only</strong> the <code>example</code> <strong>package instead 
         of rebuilding the entire workspace, much faster during 
-        development [4]</td>
+        development.</strong>strong></td>
     </tr>
   </tbody>
 </table>
