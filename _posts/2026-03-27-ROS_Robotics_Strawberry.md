@@ -222,7 +222,7 @@ between your Python source code (in this case the strawberry `.py` files) and th
 ```text
 PackageNotFoundError: No package metadata was found for example
 ```
-##### Step 1: Add the Entry Point to `setup.py`
+###### Step 1: Add the Entry Point to `setup.py`
 
 The `setup.py` file lives at `~/ros2_ws/src/example/setup.py`. Open it either using `vim` or `gedit`. For me `gedit` did not work for the first time and threw errors. So, I would recommend using `vim`. 
 
@@ -250,7 +250,7 @@ padding:12px 16px; border-radius:4px; margin:1em 0; color:#000000;">
 <strong>ℹ️</strong>Note: The existing entries in <code>console_scripts</code> are all the other LanderPi nodes, including color detection, hand tracking, navigation transport, etc. Do not remove or modify those lines. Just add your new line at the end of the list, making sure the previous line ends with a comma.
 </div>
 
-##### Step 2: Create `__init__.py` if It Does Not Exist
+###### Step 2: Create `__init__.py` if It Does Not Exist
 
 This step is important and easy to miss. Check if `__init__.py` already exists. Just in case for whatever reasons, if `__init__.py` file does not exist within the `/rgbd_function` folder, create one using the command below. 
 
@@ -263,7 +263,7 @@ So, why is this step important? When `colcon` builds the package, Python needs t
 ```text
 ModuleNotFoundError: No module named 'example.rgbd_function'
 ```
-##### Step 3: Build the ROS2 Package
+###### Step 3: Build the ROS2 Package
 
 Now rebuild the example package so `colcon` picks up your new entry point and registers it in the install directory. Use the code below.
 
@@ -272,7 +272,7 @@ cd ~/ros2_ws
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-select example
 ```
 
-Here is what flag means: 
+Here is what each flag means: 
 
 <table style="width:100%; border-collapse:collapse; font-size:0.9em;">
   <thead>
@@ -350,7 +350,7 @@ Summary: 1 package finished [Xs]
 
 The `stderr` warnings about `setuptools` deprecation are harmless and can be ignored.
 
-##### Step 4: Verify the Build
+###### Step 4: Verify the Build
 
 After building, confirm your node was installed correctly:
 
@@ -366,7 +366,7 @@ grep -n "def main" ~/ros2_ws/src/example/example/rgbd_function/strawberry_pick_i
 
 Both should return valid output. If `grep` returns nothing, your source file is missing the `main()` function and the node will fail to launch. Remove the old log files and try to rebuild the package. 
 
-##### Step 5: Open a Fresh Terminal and Launch
+###### Step 5: Open a Fresh Terminal and Launch
 
 Open a fresh terminal inside the Docker container. Like I said before, everything is sourced already. However, you can source again using `source ~/.zshrc`. IT IS TIME TO LAUNCH AND SEE THE ROBOT IN ACTION!!!!!!!!! 
 
