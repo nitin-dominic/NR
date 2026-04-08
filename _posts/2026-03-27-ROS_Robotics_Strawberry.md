@@ -756,10 +756,10 @@ position[2] += 0.08   # Lift height after grab (meters), increase to clear obsta
 
 ## 10. Known Issues and Limitations
 
-These are honest limitations from real-world testing, not theoretical concerns.
+These are honest limitations from real-world testing, not necessarily theoretical concerns.
 
-- **Hand-eye calibration is manual**: the hand2cam_tf_matrix strawberry_pick_ik.py is a fixed matrix. For best accuracy, perform a proper calibration using an AprilTag board and replace this matrix with your measured transform.
-- **Depth noise at close range**: the Aurora 930 can be noisy below ~30cm.
-- The enlarged 24×24 ROI helps but small or partially occluded berries are still challenging.
-- **Single berry per pick cycle**: the node picks the highest-confidence ripe berry per cycle `strawberry_pick_ik.py`. Other berries in frame are ignored until the current pick completes.
-- **Lighting sensitivity**: YOLO performance drops in direct sunlight or low light. Train with diverse lighting in your dataset to minimize this.
+- **Hand-eye calibration is manual**: The 'hand2cam_tf_matrix' within `strawberry_pick_ik.py` is a fixed matrix. For best accuracy, perform a proper calibration using an AprilTag board (comes with the LanderpI packaging) and replace this matrix with your measured transform.
+- **Depth noise at close range**: The Aurora 930 can be noisy below ~30cm. One of the things I faced constantly during experimenting is that if I kept the strawberry a little far from the RGBD sensor, the arm struggled to pick it and the gripper kept closing itself without even picking the berry. 
+- The enlarged 24×24 ROI helps but small or partially white berries are still challenging for the arm to pick.
+- **Single berry per pick cycle**: the current node I have developed tends to pick only one berry at a time. I even kept multiple berries but the arm was confused which one to pick. I believe in the future, I will have to develop a script that saves the position of all the detected berries and then actuate the arm so picking is done on on-by-one basis.
+- **Lighting sensitivity**: YOLO performance drops in low light. I was carrying out the experiment in considerably moderate lightining conditions, but assuming the RGBD sensor may not be very responsive and everything running on the Pi eventually has latency issues once the YOLO makes a decision.
