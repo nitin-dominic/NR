@@ -199,9 +199,9 @@ This creates a folder `strawberry_openvino_model/` and two files within it:
 - `strawberry.xml` — model architecture
 - `strawberry.bin` — model weights
 
-##### Step 2: Place the Model Files Within the Docker Container on the Pi
+###### Step 2: Place the Model Files Within the Docker Container on the Pi
 
-```console
+```bash
 # Copy the .xml and .bin to the models directory
 
 cp path/to/your/strawberry.xml MentorPi:/home/ubuntu/ros2_ws/src/yolov11_detect/models/
