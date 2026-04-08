@@ -618,13 +618,13 @@ All nodes launched together:
 
 ## 8. Running the Pipeline
 
-Open a terminal inside the Docker container. Before running any ros2 nodes, ensure running `~/.stop_ros.sh` to stop any auto-start services as it can intervene with the oother nodes and may delay decision-making. You can also try to source it using `source ~/.bashrc`. However, I believe, to avoid any issues, make sure you open a new docker terminal so it is sourced automatically and you can run ros2 nodes successfully! 
+Open a terminal inside the Docker container. Before running any ros2 nodes, ensure running `~/.stop_ros.sh` to stop any auto-start services as it can intervene with the other nodes and may delay decision-making. You can also try to source it using `source ~/.bashrc`. However, I believe, to avoid any issues, make sure you open a new docker terminal so it is sourced automatically and you can run ros2 nodes successfully! 
 
-```console
+```bash
 ros2 launch example strawberry_pick_ik.launch.py
 ```
 
-```console
+```bash
 # Watch all strawberry-related topics. Run these to ensure your Pi is streaming topics from the sensors and robot telemetry. If you do not see any output, high chances are that either the packages have not been built properly or 
 ros2 topic list | grep yolo
 
