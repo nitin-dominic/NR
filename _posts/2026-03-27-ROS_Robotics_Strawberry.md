@@ -183,7 +183,7 @@ strawberry.pt  ──►  strawberry.xml + strawberry.bin
 
 ###### Step 1: Export `.pt` to `.xml` and `.bin` files
 
-```console
+```bash
 pip install openvino-dev --break-system-packages #install this package if not already 
 ```
 
