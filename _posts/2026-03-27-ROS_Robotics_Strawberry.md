@@ -175,13 +175,13 @@ model.train(
 
 ## 3. Converting the Model for Deployment on LanderPi
 
-Once your model is trained, you will see `strawberry.pt` (or whatever name you trained your model with) is saved inside the cusotm path. Now this step completely depends on where you trained your model. There are two options: (a) if you trained the model on the Pi, the `.pt` file stays on your Pi based on whatever path you gave, and (b) if you trained it on your desktop with better GPU VRAM (it is recomemnded since Pi will be slow), then you will have to move all the relevant files from the desktop to the Pi. In this case, I have already provided these files on my forked [repo](https://github.com/nitin-dominic/LanderPi/tree/main). But if you trained the model, then just run the command below in order to generate `.xml` and `.bin` files using your `'strawberry.pt.` file. The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for faster inference on the Raspberry Pi CPU `strawberry_pick_ik.launch.py`. So, the next following step is to convert The full conversion pipeline is:
+Once your model is trained, you will see `strawberry.pt` (or whatever name you trained your model with) is saved inside the custom path. Now this step completely depends on where you trained your model. There are two options: (a) if you trained the model on the Pi, the `.pt` file stays on your Pi based on whatever path you gave, and (b) if you trained it on your desktop with better GPU VRAM (it is recomemnded since Pi will be slow), then you will have to move all the relevant files from the desktop to the Pi. In this case, I have already provided these files on my forked [repo](https://github.com/nitin-dominic/LanderPi/tree/main). But if you trained the model, then just run the command below in order to generate `.xml` and `.bin` files using your `'strawberry.pt.` file. The LanderPi's `yolov11_detect node` uses OpenVINO IR format `(.xml/.bin)` for faster inference on the Raspberry Pi CPU `strawberry_pick_ik.launch.py`. So, the next following step is to convert The full conversion pipeline is:
 
 ```text
 strawberry.pt  ──►  strawberry.xml + strawberry.bin
 ```
 
-##### Step 1: Export `.pt` to `.xml` and `.bin` files
+###### Step 1: Export `.pt` to `.xml` and `.bin` files
 
 ```console
 pip install openvino-dev --break-system-packages #install this package if not already 
