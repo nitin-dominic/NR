@@ -32,10 +32,9 @@ This guide walks you through setting up a HiPerGator environment, installing Sta
 3. [Installing Stable Diffusion Libraries](#3-installing-stable-diffusion-libraries)
 4. [Configuring the Job File](#4-configuring-the-job-file)
 5. [Starting a HiPerGator Session and Connecting via SSH Tunnel](#5-starting-a-hipergator-session-and-connecting-via-SSH-tunnel)
-6. [Prompt Engineering for Crop Disease Images](#7-prompt-engineering-for-crop-disease-images)
-7. [Running Stable Diffusion in Jupyter](#8-running-stable-diffusion-in-jupyter)
-8. [Fine-Tuning Stable Diffusion on Crop Disease Data](#9-fine-tuning-stable-diffusion-on-crop-disease-data)
-9. [Tips & Troubleshooting](#10-tips--troubleshooting)
+6. [Running Stable Diffusion in Jupyter](#8-running-stable-diffusion-in-jupyter)
+7. [Fine-Tuning Stable Diffusion on Crop Disease Data](#9-fine-tuning-stable-diffusion-on-crop-disease-data)
+8. [Tips & Troubleshooting](#10-tips--troubleshooting)
 
 ---
 
@@ -125,4 +124,19 @@ After login is successful, open thje log file again, and copy paste the jupyter 
 
 ```console
 http://127.0.0.1:20105/tree?token=39536641ca222572eb10e1a668dab7b133e55bc97bcd08db # this could be different on your machine for the IP address.
+```
+---
+
+## Running Stable Diffusion in Jupyter Notebook
+
+Below is the snippet you will find on [Stable Diffusion HiperGator](https://github.com/nitin-dominic/Stable_Diffusion_HiPerGator). I will go briefly with a specific focus on prompt engineering. 
+
+```python
+!accelerate launch train_dreambooth_lora_sdxl.py \
+  --pretrained_model_name_or_path="stabilityai/stable-diffusion-xl-base-1.0" \ #You can change this to SD3.5M or L based on the correct argument. 
+  --pretrained_vae_model_name_or_path="madebyollin/sdxl-vae-fp16-fix" \ #keep it as it is when fine-tuning SDXL. 
+  --instance_data_dir="/path/to/the/training/data" \
+  --output_dir="/path/to/output/directory/" \
+  --instance_prompt="A dense canopy of field-grown watermelon vines with leaves showing realistic anthracnose (Colletotrichum orbiculare) lesions. Irregular brown, sunken spots along veins and margins, captured with a handheld Canon DSLR in bright natural sunlight. Fine leaf texture, hairy stems, natural shadows, light field background board, and diverse leaf angles resembling real ground-level field photography" \
+  --resolution=1024 \
 ```
