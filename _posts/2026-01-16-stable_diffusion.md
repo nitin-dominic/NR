@@ -118,7 +118,7 @@ Once done, you can check the status of your job file from Jobs -> Active Jobs. A
 
 ```console
 SSH tunnel command:
-	ssh -NL 20105:c1100a-s15.ufhpc:20105 nitin.rai@hpg.rc.ufl.edu
+	ssh -NL 20105:c1100a-s15.ufhpc:20105 $YOUR_USERNAME$@hpg.rc.ufl.edu
 ```
 After login is successful, open thje log file again, and copy paste the jupyter notebook line (below) and start your notebook.
 
