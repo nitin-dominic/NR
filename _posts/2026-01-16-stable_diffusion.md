@@ -60,18 +60,23 @@ In this step, make sure you make a completely **new** python environment to inst
 2. Click **Clusters** → **HiPerGator Shell Access**
 3. Load Conda in the terminal and run the lines below. Also, wait for all the packages to install. It may take some time and would ask to prompt 'Y' for Yes.
 
-```bash
+```console
 module load conda
 mamba create -p /blue/$NAME$/$YOUR_USERNAME$/Environment/$CUSTOM_PACKAGE$/ python=3.11 # I usually keep all my packages within a folder called 'Environment' so its organized in once place and easy for me to import and run a job file when needed.
 ```
 4. Once your custom name environment is created, ensure it is activated with the command below,
 
-```bash
+```console
 mamba activate /blue/$$NAME/$YOUR_USERNAME$/Environment
 ```
 
 Once the environment is activated, you will see the shell prompt change below based on the path you gave to activate your environment,
 
-```text
+```console
 (/blue/$NAME$/$YOUR_USERNAME$/Environment/Stable_Diffusion3) [$YOUR_USERNAME$@login10 ~]$
+```
+Once you see this, go head and start installing all the required packages. At this point, I would also suggest to please consider visiting [Hugging Face diffusers doc](https://huggingface.co/docs/diffusers/index) and repo to gain more information on which packages to install and how to get started. I am anticipating that a few things pertaining to how you train and deploy Stable Diffusion model for image generation may have changed. Also, in my case on the HPC, CUDA was already installed and I did not bother myself changing any versions of it. I checked it via importing torch package. I would recommend doing the same. However, I am giving you a starting point to install packages and get started. See below!
+
+```python
+pip install torch torchaudio torchvision numpy scipy opencv matplotlib glob notebook diffusers transformers accelerate safetensors xformers huggingface_hub Pillow # installing notebook is important since you won't be able to run Jupyter Notebook!
 ```
