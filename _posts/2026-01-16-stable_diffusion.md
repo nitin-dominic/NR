@@ -127,7 +127,7 @@ http://127.0.0.1:20105/tree?token=39536641ca222572eb10e1a668dab7b133e55bc97bcd08
 ```
 ---
 
-## Running Stable Diffusion in Jupyter Notebook
+## 6. Running Stable Diffusion in Jupyter Notebook
 
 Below is the snippet you will find on [Stable Diffusion HiperGator](https://github.com/nitin-dominic/Stable_Diffusion_HiPerGator). I will go briefly with a specific focus on prompt engineering. 
 
