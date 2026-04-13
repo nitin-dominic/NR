@@ -107,3 +107,23 @@ echo -e "\thttp://localhost:${port}"
 host=$(hostname)
 jupyter-notebook --no-browser --port=${port} --ip="$host"
 ```
+---
+
+## 5. Starting a HiPerGator Session
+
+Go to [https://ondemand.rc.ufl.edu/pun/sys/dashboard](https://ondemand.rc.ufl.edu/pun/sys/dashboard), and click on HiPerGator Shell Access thorugh Clusters tab. Once in, submit your job using the command line below.
+
+```console
+sbatch $YOUR_JOB_FILE_NAME$.job
+```
+Once done, you can check the status of your job file from Jobs -> Active Jobs. Alternatively, a log file will appear based on the filename you gave in the job file. Open that and copy paste the line (just the ssh line below) in your command prompt. Once propted, go ahead and put your username and password and login. 
+
+```console
+SSH tunnel command:
+	ssh -NL 20105:c1100a-s15.ufhpc:20105 nitin.rai@hpg.rc.ufl.edu
+```
+After login is successful, open thje log file again, and copy paste the jupyter notebook line (below) and start your notebook.
+
+```console
+http://127.0.0.1:20105/tree?token=39536641ca222572eb10e1a668dab7b133e55bc97bcd08db # this could be different on your machine for the IP address.
+```
