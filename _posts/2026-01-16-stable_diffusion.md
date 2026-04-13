@@ -31,12 +31,11 @@ This guide walks you through setting up a HiPerGator environment, installing Sta
 2. [Setting Up Your Conda Environment on HiPerGator](#2-setting-up-your-conda-environment-on-hipergator)
 3. [Installing Stable Diffusion Libraries](#3-installing-stable-diffusion-libraries)
 4. [Configuring the Job File](#4-configuring-the-job-file)
-5. [Starting a HiPerGator Session](#5-starting-a-hipergator-session)
-6. [Connecting via SSH Tunnel](#6-connecting-via-ssh-tunnel)
-7. [Prompt Engineering for Crop Disease Images](#7-prompt-engineering-for-crop-disease-images)
-8. [Running Stable Diffusion in Jupyter](#8-running-stable-diffusion-in-jupyter)
-9. [Fine-Tuning Stable Diffusion on Crop Disease Data](#9-fine-tuning-stable-diffusion-on-crop-disease-data)
-10. [Tips & Troubleshooting](#10-tips--troubleshooting)
+5. [Starting a HiPerGator Session and Connecting via SSH Tunnel](#5-starting-a-hipergator-session-and-connecting-via-SSH-tunnel)
+6. [Prompt Engineering for Crop Disease Images](#7-prompt-engineering-for-crop-disease-images)
+7. [Running Stable Diffusion in Jupyter](#8-running-stable-diffusion-in-jupyter)
+8. [Fine-Tuning Stable Diffusion on Crop Disease Data](#9-fine-tuning-stable-diffusion-on-crop-disease-data)
+9. [Tips & Troubleshooting](#10-tips--troubleshooting)
 
 ---
 
@@ -109,7 +108,7 @@ jupyter-notebook --no-browser --port=${port} --ip="$host"
 ```
 ---
 
-## 5. Starting a HiPerGator Session
+## 5. Starting a HiPerGator Session and Connecting via SSH Tunnel
 
 Go to [https://ondemand.rc.ufl.edu/pun/sys/dashboard](https://ondemand.rc.ufl.edu/pun/sys/dashboard), and click on HiPerGator Shell Access thorugh Clusters tab. Once in, submit your job using the command line below.
 
