@@ -80,3 +80,30 @@ Once you see this, go head and start installing all the required packages. At th
 ```python
 pip install torch torchaudio torchvision numpy scipy opencv matplotlib glob notebook diffusers transformers accelerate safetensors xformers huggingface_hub Pillow # installing notebook is important since you won't be able to run Jupyter Notebook!
 ```
+---
+
+## 4. Configuring the Job File
+
+So, what is a job file? Consider a job file like placing an order at a restaurant. Likewise, HiPerGator is a shared supercomputer and so hundreds of researchers use it simultaneously. Rather than running your code directly on the machine, you submit a job file *(.job)* that tells the scheduling system (SLURM) exactly what resources you need: how many CPUs, how much RAM, which GPU, and for how long. Upload your .job file via HiPerGator Home Directory which will look like below. 
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=jupyter
+#SBATCH --output=deep_learning_models.log # Your custom name of the log file using which you will add your credentials to upload your scripts
+#SBATCH --cpus-per-task=10
+#SBATCH --mem=64gb # RAM
+#SBATCH --time=120:00:00 # time you would need to finish the job
+#SBATCH --partition=hpg-b200
+#SBATCH --gpus=1
+date;hostname;pwd
+module load conda
+conda activate /path/to/the/environment/you/created/
+port=$(shuf -i 20000-30000 -n 1)
+echo -e "\nStarting Jupyter Notebook on port ${port} on the $(hostname) server."
+echo -e "\nSSH tunnel command:"
+echo -e "\tssh -NL ${port}:$(hostname):${port} ${USER}@hpg.rc.ufl.edu"
+echo -e "\nLocal browser URI:"
+echo -e "\thttp://localhost:${port}"
+host=$(hostname)
+jupyter-notebook --no-browser --port=${port} --ip="$host"
+```
