@@ -32,9 +32,9 @@ This guide walks you through setting up a HiPerGator environment, installing Sta
 3. [Installing Stable Diffusion Libraries](#3-installing-stable-diffusion-libraries)
 4. [Configuring the Job File](#4-configuring-the-job-file)
 5. [Starting a HiPerGator Session and Connecting via SSH Tunnel](#5-starting-a-hipergator-session-and-connecting-via-SSH-tunnel)
-6. [Running Stable Diffusion in Jupyter](#8-running-stable-diffusion-in-jupyter)
-7. [Fine-Tuning Stable Diffusion on Crop Disease Data](#9-fine-tuning-stable-diffusion-on-crop-disease-data)
-8. [Tips & Troubleshooting](#10-tips--troubleshooting)
+6. [Running Stable Diffusion in Jupyter](#6-running-stable-diffusion-in-jupyter)
+7. [Fine-Tuning Stable Diffusion on Crop Disease Data](#7-fine-tuning-stable-diffusion-on-crop-disease-data)
+8. [Tips & Troubleshooting](#8-tips--troubleshooting)
 
 ---
 
