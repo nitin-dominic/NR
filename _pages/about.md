@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postodctoral Associate, <a href='https://abe.ufl.edu/'?>Department of Agricultural and Biological Engineering</a>.
+subtitle: Postdoctoral Associate, <a href='https://abe.ufl.edu/'?>Department of Agricultural and Biological Engineering</a>.
 
 profile:
   align: right
