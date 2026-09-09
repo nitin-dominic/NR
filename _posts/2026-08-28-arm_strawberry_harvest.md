@@ -3,7 +3,7 @@ layout: post
 title: "Pedicel-Targeted Strawberry Harvesting via Behavioral Cloning on a Low-Cost Teleoperation Platform"
 date: 2026-08-28 09:00:00-0400
 description: "A complete guide to training a custom Action Chunking with Transformers (ACT) policy for imitation learning in robotics."
-tags: ros2 robotics yolo deep-learning agriculture computer-vision
+tags: ros2 robotics imitation-learning agriculture computer-vision edge-computing -target-harvesting
 categories: robotics
 thumbnail: assets/img/strawberry_pedicel.jpg
 ---
