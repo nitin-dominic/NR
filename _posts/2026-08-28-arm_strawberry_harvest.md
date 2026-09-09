@@ -14,8 +14,19 @@ August 2026
 
 ---
 
-<!-- YOUTUBE PLACEHOLDER — replace with your video embed link -->
-<!-- [https://www.youtube.com/embed/YOUR_VIDEO_ID](https://www.youtube.com/embed/YOUR_VIDEO_ID) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe 
+                class="embed-responsive-item rounded z-depth-1"
+                src="https://www.youtube.com/watch?v=8q_kwEW0kBY"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+<div class="caption"> 
+</div>
 
 ---
 
