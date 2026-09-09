@@ -29,7 +29,6 @@ August 2026
     Pedicel-targeted strawberry harvesting via behavioral cloning on SO-ARM101.
 </div>
 
----
 
 ## 🍓 🤖 Background
 
