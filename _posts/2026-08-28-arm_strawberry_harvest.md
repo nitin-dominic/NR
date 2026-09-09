@@ -19,13 +19,14 @@ August 2026
         <div class="embed-responsive embed-responsive-16by9">
             <iframe 
                 class="embed-responsive-item rounded z-depth-1"
-                src="https://youtu.be/PYvIJ2udKYU"
+                src="https://www.youtube.com/embed/PYvIJ2udKYU"
                 allowfullscreen>
             </iframe>
         </div>
     </div>
 </div>
-<div class="caption"> 
+<div class="caption">
+    Pedicel-targeted strawberry harvesting via behavioral cloning on SO-ARM101.
 </div>
 
 ---
