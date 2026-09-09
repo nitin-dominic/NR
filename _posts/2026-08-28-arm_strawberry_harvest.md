@@ -21,13 +21,13 @@ August 2026
 
 ## 🍓 🤖 Background
 
-Strawberry harvesting remains one of the most labor-intensive operations in precision agriculture, with producers spending over $1 billion annually on selective harvesting alone. The pedicel — the slender stem connecting the fruit to the plant — measures only 1.4–2.4 mm in diameter and is visually similar to the surrounding calyx and foliage, making it one of the most challenging small-target manipulation tasks in agricultural robotics.
+Strawberry harvesting remains one of the most labor-intensive operations in precision agriculture, with producers spending over $1 billion annually on selective harvesting alone. The pedicel is a slender stem connecting the fruit to the plant and measures only 1.3–3 mm in diameter and is visually similar to the surrounding calyx and foliage, making it one of the most challenging small-target manipulation tasks in agricultural robotics.
 
-Classical approaches to this problem rely on training a vision model for detection, then separately integrating that with motion planning and contact control — three independently engineered components that accumulate error at each handoff. This work takes a fundamentally different approach: instead of programming what to do, we show the robot how.
+Classical approaches to this problem rely on training a vision model for detection, then separately integrating that with motion planning and contact control, three independently engineered components that accumulate error at each handoff. This work takes a fundamentally different approach: instead of programming what to do, we show the robot how.
 
-Using a HiWonder SO-ARM101 bilateral teleoperation platform, we collected human demonstrations of the full reach–grasp–pull–retract sequence and trained an Action Chunking with Transformers (ACT) policy directly from synchronized wrist-camera observations and joint-space actions. The trained policy was deployed autonomously on a Jetson Orin AGX at 15–20 Hz — no cloud compute, no intermediate perception stage, no hand-coded motion planning.
+Using a HiWonder SO-ARM101 bilateral teleoperation platform, we collected human demonstrations of the full reach–grasp–pull–retract sequence and trained an Action Chunking with Transformers (ACT) policy directly from synchronized wrist-camera observations and joint-space actions. The trained policy was deployed autonomously on a Jetson Orin AGX at 15–20 Hz, no cloud compute, no intermediate perception stage, no hand-coded motion planning.
 
-> *"Not farm-ready — yet. From hard-coded to human-taught."*
+> *"Not farm-ready, yet. From hard-coded to human-taught."*
 
 This write-up documents the full pipeline: hardware setup, bilateral teleoperation, dataset collection, training on HiPerGator, FP16 model conversion, and edge deployment on Jetson Orin. If you are working with the SO-ARM101 and want to implement your own imitation learning pipeline, you can clone the repository and follow the steps below.
 
@@ -43,7 +43,7 @@ This tutorial covers the full behavioral cloning pipeline for pedicel-targeted s
 - Converting to **FP16** and deploying on **Jetson Orin AGX** at 15–20 Hz
 - Evaluating autonomous inference and understanding failure modes
 
-> **✅ PRO TIP:** The most time-consuming parts are calibration and dataset collection. Budget 1–2 hours for setup and another 2–3 hours to collect 50+ quality demonstrations. Rushing the demonstrations produces a poor policy — consistency matters more than speed.
+> **✅ PRO TIP:** The most time-consuming parts are calibration and dataset collection. Budget requires a few hours for setup and additional hours could be spent on installing relevant packages on the Nvidia Jetson Orin. For the new users, performing teleoperation could take a hours of practice as it requires one to carefully guide the arm while the policy picks up the visuomotor policy for an efficient motion-planning. For quality data collection, it could take somewhere around 5-6 hours to collect 150+ quality demonstrations. Rushing the demonstrations produces a poor policy, consistency matters more than speed.
 
 **Dataset:** [🤗 strawberry_pedicel_grasp_teleoperation](https://huggingface.co/datasets/nitindominicrai/strawberry_pedicel_grasp_teleoperation) — 131 episodes, 227K frames, publicly available.
 
@@ -145,7 +145,7 @@ ls models/pretrained_model/
 
 ## 3. Arm Calibration
 
-Calibration maps the servo encoder values to physical joint angles. This must be done correctly — a bad calibration directly causes the arm to move to wrong positions during both teleoperation and autonomous inference.
+Calibration maps the servo encoder values to physical joint angles. This must be done correctly as a bad calibration directly causes the arm to move to wrong positions during both teleoperation and autonomous inference.
 
 ```bash
 sudo chmod 666 /dev/ttyACM0   # follower arm
@@ -173,7 +173,7 @@ lerobot-calibrate \
 | Gripper closed | Close gripper until fingers nearly touch | Defines the full close range |
 | Joint range | Move each joint through its complete physical range | Maps encoder limits |
 
-> **⚠️ Common mistake:** Not closing the gripper fully during calibration. The software maps 0–100% of the gripper range based on what you showed during calibration. If you only closed 80% of the way, the policy will only ever command up to that 80% — it will never fully grasp the pedicel.
+> **⚠️ Common mistake:** Not closing the gripper fully during calibration. The software maps 0–100% of the gripper range based on what you showed during calibration. If you only closed 80% of the way, the policy will only ever command up to that 80% and it will never fully grasp the pedicel.
 
 Calibration files are saved to:
 ```
@@ -185,7 +185,7 @@ If you need to recalibrate, delete these files and run the calibration commands 
 
 ---
 
-## 4. Teleoperation — Verifying Setup
+## 4. Teleoperation and Verifying Setup
 
 Before collecting data, verify teleoperation is working correctly. The follower arm should mirror the leader arm smoothly with no lag or erratic motion.
 
@@ -288,18 +288,18 @@ Action   : torch.Size([6])
 
 ---
 
-## 6. Training on HiPerGator
+## 6. Training on HiPerGator (University of Florida)
 
-Training is done on HiPerGator B200 GPU. 100K steps takes approximately 10–15 minutes on a B200.
+I would recommend training the ACT Policy on GPU with amount of VRAM. I trained the policy on HiPerGator B200 GPU. 160K steps takes approximately 4-5 hours on a B200.
 
 ### 6.1 SSH and Environment Setup
 
 ```bash
 # Windows PowerShell
-ssh nitin.rai@hpg.rc.ufl.edu
+ssh [your-username]@hpg.rc.ufl.edu
 
 # On HiPerGator
-source /blue/wslee/nitin.rai/Environment/lerobot_imitation_learning/bin/activate
+source /path/to/your/virtual/environment/
 ```
 
 ### 6.2 Training Command
@@ -329,7 +329,7 @@ python -m lerobot.scripts.lerobot_train \
 |---|---|---|
 | `vision_backbone` | `resnet50` | Better features than default resnet18 for small targets |
 | `pretrained_backbone_weights` | `ResNet50_Weights.IMAGENET1K_V2` | V2 weights give +5% better features |
-| `batch_size` | `32` | Larger causes data bottleneck on B200 |
+| `batch_size` | `32` | I started facing issues with 64 batch size on B200 for some reason. Training got slower |
 | `steps` | `100000` | Loss converges from ~2.84 to ~0.09 |
 | `chunk_size` | `100` | 100 steps = 3.3s of committed action |
 | `kl_weight` | `10.0` | Regularization for CVAE latent space |
@@ -348,7 +348,7 @@ Step 100K     ~0.09  ← well converged
 | > 1.0 | Still learning basic motions |
 | 0.3–1.0 | Partial convergence, trajectory visible |
 | 0.1–0.3 | Good convergence for most joints |
-| < 0.1 | Well converged — ready for deployment |
+| < 0.1 | Well converged and ready for deployment |
 
 > **⚠️ Important:** Low training loss does not guarantee high success rate on the real arm. Generalization depends on demonstration diversity, not just loss convergence. 50 consistent demos typically converge well; 100+ demos improve real-world performance.
 
@@ -356,7 +356,7 @@ Step 100K     ~0.09  ← well converged
 
 ## 7. Converting to FP16 for Edge Deployment
 
-FP16 reduces model size and improves inference speed on Jetson Orin from ~15 Hz to ~20 Hz.
+FP16 reduces model size and could potentially improve inference speed on Jetson Orin from ~15 Hz to ~20 Hz. However, while I was implementing it, I didn't observe high frequency while inferencing. The script for conversion can be found at my [GitHub page](https://github.com/nitin-dominic/autonomous_strawberry_pedicel_harvesting/blob/main/scripts/convert_to_fp16.py).
 
 ```bash
 conda activate lerobot
@@ -367,7 +367,7 @@ python scripts/convert_to_fp16.py
 
 The conversion script saves the FP16 model to:
 ```
-/media/precag/ARM101/models/pretrained_model_resnet50_fp16/
+/path/to/your/local/drive/on/Jetson/
 ```
 
 Verify:
@@ -377,7 +377,7 @@ python -c "
 import sys; sys.path.insert(0, 'src')
 from lerobot.policies.act.modeling_act import ACTPolicy
 policy = ACTPolicy.from_pretrained(
-    '/media/precag/ARM101/models/pretrained_model_resnet50_fp16',
+    '/path/to/your/local/drive/on/Jetson/',
     local_files_only=True
 )
 import torch
@@ -400,7 +400,7 @@ sudo chmod 666 /dev/ttyACM0
 
 lerobot-rollout \
     --strategy.type=base \
-    --policy.path=/media/precag/ARM101/models/pretrained_model_resnet50_fp16 \
+    --policy.path=/path/to/your/local/drive/on/Jetson/ \
     --policy.device=cuda \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
@@ -456,13 +456,13 @@ Full control loop (camera + inference + motor command) runs at **15–20 Hz** in
 
 These are honest limitations from real-world testing:
 
-**Primary failure mode — gripper misalignment:**
+**Primary failure mode: gripper misalignment:**
 The arm consistently reaches the correct area but the gripper closes slightly off-axis from the pedicel stem. The 1.4–2.4 mm target leaves almost no margin for lateral error. This is attributed to limited demonstration diversity — the policy has not seen enough variation in approach angles to generalize robustly.
 
-**Secondary failure mode — motor overload:**
+**Secondary failure mode: motor overload:**
 Motor ID 5 (wrist roll) triggers overload protection when the gripper closes against the berry body rather than the pedicel stem. This causes the rollout to crash mid-episode. Wrap the disconnect method in a try/except block in `so_follower.py` to allow clean episode saving despite the overload.
 
-**Hardware limitation — no cutting mechanism:**
+**Hardware limitation: no cutting mechanism (not included in this work):**
 The pincer end-effector grasps but cannot sever the pedicel. Full harvest requires a cutting or twisting end-effector — identified as a necessary hardware extension for this work.
 
 | 🔴 Problem | 🔍 Likely Cause | ✅ Fix |
