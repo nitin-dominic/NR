@@ -6,7 +6,7 @@ subtitle: Postdoctoral Associate, <a href='https://abe.ufl.edu/'?>Department of 
 
 profile:
   align: right
-  image: RaiN_2.jpg
+  image: bg_rai.png
   image_circular: false # crops the image to make it circular
   more_info:
 
