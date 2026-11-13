@@ -36,7 +36,8 @@ My research interests (areas of focus) include:
 </ul>
 
 <hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
-###Professional Experience
+
+### Professional Experience
 
 <i class="fas fa-briefcase"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a> <br>
@@ -49,7 +50,7 @@ My research interests (areas of focus) include:
 
 ---
 
-###Education
+### Education
 
 🎓 Doctorate (Ph.D.) in Agricultural and Biosystems Engineering (2019&ndash;2023) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Dakota State University, USA
