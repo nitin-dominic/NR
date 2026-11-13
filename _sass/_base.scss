@@ -1152,8 +1152,7 @@ nav[data-toggle="toc"] {
         margin-bottom: 0 !important;
         padding: 10px !important;
         background: linear-gradient(135deg, #f4f2ed 0%, #e4e0d8 100%);
-      }
-      
+
         abbr {
           font-size: 0.85rem;
           font-weight: 700;
@@ -1161,6 +1160,7 @@ nav[data-toggle="toc"] {
           padding: 5px 16px;
           border-radius: 4px;
         }
+      }
 
       // ── CONTENT column (second child: .col-sm-8) ──
       > .row > div:last-child {
