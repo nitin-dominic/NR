@@ -34,12 +34,16 @@ My research interests (areas of focus) include:
   <li><i class="fas fa-project-diagram"></i> Cyber-physical systems, robotic navigation, and spatial analytics.</li>
   <li><i class="fas fa-handshake"></i> Technology transfer and stakeholder-driven transdisciplinary research.</li>
 </ul>
+
 ---
+
 <br>
 <h4>Professional Experience</h4>
 <i class="fas fa-briefcase"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Won Suk Lee](https://abe.ufl.edu/people/faculty/wonsuk-lee/)
+
 ---
+
 <br>
 <h4>Education</h4>
 
