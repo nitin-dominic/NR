@@ -41,7 +41,7 @@ My research interests (areas of focus) include:
 
 <i class="fas fa-flask"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;Present) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
-<ul style="margin-top: -0.3rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
+<ul style="margin-top: 0.0rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
   <li>Developed robotic strawberry phenotyping modules on the ASTIR platform using edge-deployed foundation models.</li>
   <li>Applied imitation learning for pedicel-targeted robotic strawberry harvesting.</li>
   <li>Built physics-informed neural network (PINN) models integrating microclimate sensor data with image-derived canopy metrics for harvest timing prediction.</li>
@@ -49,13 +49,13 @@ My research interests (areas of focus) include:
 
 <i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida (November 2024&ndash;May 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/">Dr. Arnold W. Schumann</a> <br>
-<ul style="margin-top: -0.3rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
+<ul style="margin-top: 0.0rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
   <li>Led a USDA-NIFA SBIR/STTR-funded project developing an AI-enabled targeted spraying system for watermelon disease management.</li>
 </ul>
 
 <i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, NDSU (November 2023&ndash;November 2024) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://www.ndsu.edu/people/xin-rex-sun">Dr. Xin (Rex) Sun</a>
-<ul style="margin-top: -0.3rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
+<ul style="margin-top: 0.0rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
   <li>Co-led projects in high-throughput phenotyping, crop-yield prediction, and disease severity estimation in soybean and wheat using deep learning.</li>
 </ul>
 
