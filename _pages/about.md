@@ -41,13 +41,22 @@ My research interests (areas of focus) include:
 
 I am a Postdoctoral Associate in the Department of [Agricultural and Biological Engineering](https://abe.ufl.edu/) at [University of Florida](https://www.ufl.edu/), supervised by [Dr. Won Suk Lee](https://abe.ufl.edu/people/faculty/wonsuk-lee/). Prior to this, I was a Postdoctoral Research Associate at the [Gulf Coast Research and Education Center](https://gcrec.ifas.ufl.edu/), University of Florida, supervised by [Dr. Arnold W. Schumann](https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/) (Nov. 2024 - May 2026). There, I lead a USDA-NIFA SBIR/STTR-funded project focused on developing an AI-enabled targeted smart spraying system for watermelon growers, emphasizing site-specific disease management and commercialization in collaboration with the agtech startup. I previously served as a Postdoctoral Research Associate at [North Dakota State University](https://www.ndsu.edu/) (NDSU), where I co-led projects in high-throughput phenotyping, aerial and ground robotic systems, crop-yield prediction, and disease severity estimation in soybean and wheat crops using deep learning and computer vision approaches (Nov. 2023 - Nov. 2024). These projects aimed to enable optimized, data-driven agronomic decision-making at the farm scale. I earned my Ph.D. in Agricultural and Biosystems Engineering at NDSU in 2023, working with [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun). Prior to this, I earned my masters degree in Agricultural and Food Engineering with a specialization in Agricultural Systems & Management from the [Indian Institute of Technology (IIT), Kharagpur](https://www.iitkgp.ac.in/), India. While my two years at the institute, I worked in the [Soil Physics Lab](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas) and was advised by [Prof. B.S. Das](https://scholar.google.co.in/citations?hl=en&user=oEvfFMYAAAAJ&view_op=list_works&sortby=pubdate) and co-advised by [Dr. R. Machavaram](https://sites.google.com/site/rajendramachavaram/). I also hold a bachelors degree in Agricultural Engineering from Sam Higginbottom University of Agriculture, Technology and Sciences [(SHUATS)](https://shuats.edu.in/) (formerly, Allahabad Agricultural Institute), India.
 
+<br>
+<h4>Professional Experience</h4>
+<i class="fas fa-briefcase"></i> Doctorate (Ph.D.) in Agricultural and Biosystems Engineering (2019&ndash;2023) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Dakota State University, Fargo, USA
+
+---
 
 <br>
 <h4>Education</h4>
-🎓 Ph.D. in Physics (2018&ndash;2023) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University of California, Berkeley
+🎓 Doctorate (Ph.D.) in Agricultural and Biosystems Engineering (2019&ndash;2023) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Dakota State University, Fargo, USA
 
-🎓 B.Sc. in Honours Mathematics and Physics (2014&ndash;2018) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;McGill University
+🎓 Master of Technology (M.Tech) in Agricultural and Food Engineering (2017&ndash;2019) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indian Institute of Technology, Kharagpur, India
+
+🎓 Bachelor of Technology (B.Tech) in Agricultural Engineering (2013&ndash;2017) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sam Higginbottom University of Agriculture, Technology and Science
 
 ---
