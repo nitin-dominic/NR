@@ -50,6 +50,7 @@ I am a Postdoctoral Associate in the Department of [Agricultural and Biological 
 
 <br>
 <h4>Education</h4>
+
 🎓 Doctorate (Ph.D.) in Agricultural and Biosystems Engineering (2019&ndash;2023) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Dakota State University, Fargo, USA
 
