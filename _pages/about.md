@@ -39,8 +39,13 @@ My research interests (areas of focus) include:
 
 ### Professional Experience
 
-<i class="fas fa-user-tie"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a> <br>
+<i class="fas fa-flask"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;Present) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
+<ul style="margin-top: 0.3rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
+  <li>Worked with Autonomous Strawberry Imaging Robot (ASTIR) to develop robotic-based strawberry phenotyping modules leveraging edge-deployed computer vision models for real-time canopy assessment.</li>
+  <li>Applying imitation learning to train a robotic arm for pedicel-targeted strawberry harvesting, enabling bruise-free fruit detachment.</li>
+  <li>Integrating microclimate sensor data with image-derived canopy metrics to develop physics-informed neural network (PINN) models for strawberry harvest timing prediction.</li>
+</ul>
 
 <i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida (November 2024&ndash;May 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/">Dr. Arnold W. Schumann</a> <br>
