@@ -35,9 +35,7 @@ My research interests (areas of focus) include:
   <li><i class="fas fa-handshake"></i> Technology transfer and stakeholder-driven transdisciplinary research.</li>
 </ul>
 
-<hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
-
-<hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
+<hr style="border: none; height: 13px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
 <h4>Professional Experience</h4>
 
 <i class="fas fa-briefcase"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
