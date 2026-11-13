@@ -37,7 +37,7 @@ My research interests (areas of focus) include:
 
 <hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
 
-### Professional Experience
+### Academic Appointments
 
 <i class="fas fa-flask"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;Present) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
@@ -71,3 +71,5 @@ My research interests (areas of focus) include:
 
 🎓 Bachelor of Technology (B.Tech) in Agricultural Engineering (2013&ndash;2017) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sam Higginbottom University of Agriculture, Technology and Sciences, India
+
+---
