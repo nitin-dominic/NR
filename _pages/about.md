@@ -43,7 +43,9 @@ My research interests (areas of focus) include:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Arnold W. Schumann](https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/)
 <i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering (November 2023&ndash;November 2024) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun)
+
 ---
+
 <br>
 <h4>Education</h4>
 
