@@ -34,12 +34,18 @@ My research interests (areas of focus) include:
   <li><i class="fas fa-project-diagram"></i> Cyber-physical systems, robotic navigation, and spatial analytics.</li>
   <li><i class="fas fa-handshake"></i> Technology transfer and stakeholder-driven transdisciplinary research.</li>
 </ul>
-<hr style="border: none; height: 2px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
+<hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
 <br>
 <h4>Professional Experience</h4>
 <i class="fas fa-briefcase"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Won Suk Lee](https://abe.ufl.edu/people/faculty/wonsuk-lee/)
-<hr style="border: none; height: 2px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
+
+<i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida (November 2024&ndash;May 2026) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Arnold W. Schumann](https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/)
+
+<i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering (November 2023&ndash;November 2024) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun)
+---
 <br>
 <h4>Education</h4>
 
