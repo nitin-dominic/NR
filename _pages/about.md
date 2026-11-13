@@ -54,7 +54,7 @@ My research interests (areas of focus) include:
 🎓 Doctorate (Ph.D.) in Agricultural and Biosystems Engineering (2019&ndash;2023) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Dakota State University, USA
 
-🎓 Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization in Agricultural Systems & Management) (2017&ndash;2019) <br>
+🎓 Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems & Management) (2017&ndash;2019) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indian Institute of Technology, India
 
 🎓 Bachelor of Technology (B.Tech) in Agricultural Engineering (2013&ndash;2017) <br>
