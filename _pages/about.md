@@ -39,13 +39,13 @@ My research interests (areas of focus) include:
 
 ### Professional Experience
 
-<i class="fas fa-briefcase"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
+<i class="fas fa-user-tie"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a> <br>
 
-<i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida (November 2024&ndash;May 2026) <br>
+<i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida (November 2024&ndash;May 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/">Dr. Arnold W. Schumann</a> <br>
 
-<i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, NDSU (November 2023&ndash;November 2024) <br>
+<i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, NDSU (November 2023&ndash;November 2024) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://www.ndsu.edu/people/xin-rex-sun">Dr. Xin (Rex) Sun</a>
 
 ---
