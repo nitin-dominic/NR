@@ -35,18 +35,17 @@ My research interests (areas of focus) include:
   <li><i class="fas fa-handshake"></i> Technology transfer and stakeholder-driven transdisciplinary research.</li>
 </ul>
 <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
-<br>
+
 <h4>Professional Experience</h4>
 <i class="fas fa-briefcase"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;November 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Won Suk Lee](https://abe.ufl.edu/people/faculty/wonsuk-lee/)
 <i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida (November 2024&ndash;May 2026) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Arnold W. Schumann](https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/)
-<i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering (November 2023&ndash;November 2024) <br>
+<i class="fas fa-briefcase"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering (November 2023&ndash;November 2024)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun)
 
 ---
 
-<br>
 <h4>Education</h4>
 
 🎓 Doctorate (Ph.D.) in Agricultural and Biosystems Engineering (2019&ndash;2023) <br>
@@ -55,7 +54,7 @@ My research interests (areas of focus) include:
 🎓 Master of Technology (M.Tech) in Agricultural and Food Engineering (2017&ndash;2019) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indian Institute of Technology, Kharagpur, India
 
-🎓 Bachelor of Technology (B.Tech) in Agricultural Engineering (2013&ndash;2017) <br>
+🎓 Bachelor of Technology (B.Tech) in Agricultural Engineering (2013&ndash;2017)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sam Higginbottom University of Agriculture, Technology and Science
 
 ---
