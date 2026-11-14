@@ -67,7 +67,7 @@ My research interests (areas of focus) include:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural and Biosystems Engineering, North Dakota State University, USA <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Dissertation: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y).
 
-<span style="font-size: 1.3rem;">🎓</span><b>2017-2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems & Management) <br>
+<span style="font-size: 1.3rem;">🎓</span><b>2017-2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems and Management) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural and Food Engineering, Indian Institute of Technology, India <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. B.S. Das](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas), Thesis: Development of a Controlled Soil Dryer for Estimating Soil Hydraulic Properties.
 
