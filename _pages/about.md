@@ -6,7 +6,7 @@ subtitle: Postdoctoral Associate, <a href='https://abe.ufl.edu/'?>Department of 
 
 profile:
   align: right
-  image: iros.jpg
+  image: iros2.jpg
   image_circular: false # crops the image to make it circular
   more_info:
 
@@ -65,13 +65,14 @@ My research interests (areas of focus) include:
 
 🎓 <b>2019-2023:</b> Doctorate (Ph.D.) in Agricultural and Biosystems Engineering <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Dakota State University, USA <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: Dr. [Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Thesis: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Dissertation: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y)
 
 🎓 <b>2017-2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems & Management) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indian Institute of Technology, India <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thesis: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. B.S. Das](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas), Thesis: Development of a Controlled Soil Dryer for Estimating Soil Hydraulic Properties.
 
 🎓 <b>2013-2017:</b> Bachelor of Technology (B.Tech) in Agricultural Engineering <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sam Higginbottom University of Agriculture, Technology and Sciences, India
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sam Higginbottom University of Agriculture, Technology and Sciences, India <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: Dr. Arpan Sherring, Thesis: Feasibility Study of Gravity Drip Irrigation for Small-Scale Farmers.
 
 ---
