@@ -41,7 +41,7 @@ My research interests (areas of focus) include:
 
 <i class="fas fa-user-tie"></i> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida (May 2026&ndash;Present) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
-<ul style="margin-top: -0.5rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
+<ul style="margin-top: -0.5rem; margin-bottom: 0.1rem; padding-left: 2.5rem; font-size: 0.95rem;">
   <li>Developed robotic strawberry phenotyping modules on the ASTIR platform using edge-deployed foundation models.</li>
   <li>Applied imitation learning for pedicel-targeted robotic strawberry harvesting.</li>
   <li>Built physics-informed neural network (PINN) models integrating microclimate sensor data with image-derived canopy metrics for harvest timing prediction.</li>
