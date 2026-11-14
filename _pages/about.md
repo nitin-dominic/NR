@@ -63,7 +63,7 @@ My research interests (areas of focus) include:
 
 ### Education
 
-🎓 <b>2019-2023:</b> Doctorate (Ph.D.) in Agricultural and Biosystems Engineering <br>
+<span style="font-size: 1.5rem;">🎓</span> <b>2019-2023:</b> Doctorate (Ph.D.) in Agricultural and Biosystems Engineering <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural and Biosystems Engineering, North Dakota State University, USA <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Dissertation: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y).
 
