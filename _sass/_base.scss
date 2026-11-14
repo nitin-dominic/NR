@@ -1222,3 +1222,26 @@ nav[data-toggle="toc"] {
     grid-template-columns: 1fr;
   }
 }
+
+// Push profile image down to align with body text
+.profile.float-right {
+  margin-left: 1rem;
+  margin-top: 2.5rem;
+}
+
+.profile.float-left {
+  margin-right: 1rem;
+  margin-top: 2.5rem;
+}
+
+// On mobile, center the image and remove top margin
+@media (max-width: 575.98px) {
+  .profile.float-right,
+  .profile.float-left {
+    float: none !important;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    text-align: center;
+    margin-top: 0;
+  }
+}
