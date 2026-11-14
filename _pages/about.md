@@ -53,7 +53,7 @@ My research interests (areas of focus) include:
   <li>Led a USDA-NIFA SBIR/STTR-funded project developing an AI-enabled targeted spraying system for watermelon disease management.</li>
 </ul>
 
-<i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, NDSU (November 2023&ndash;November 2024) <br>
+<i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, North Dakota State University (November 2023&ndash;November 2024) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://www.ndsu.edu/people/xin-rex-sun">Dr. Xin (Rex) Sun</a>
 <ul style="margin-top: 0.0rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
   <li>Co-led projects in high-throughput phenotyping, crop-yield prediction, and disease severity estimation in soybean and wheat crops using deep learning.</li>
