@@ -1240,10 +1240,3 @@ nav[data-toggle="toc"] {
     margin-top: 0;
   }
 }
-
-// Gradient fade for header separator on about page
-.header-bar {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--global-theme-color), transparent);
-}
