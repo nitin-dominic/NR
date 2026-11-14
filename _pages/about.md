@@ -67,7 +67,7 @@ My research interests (areas of focus) include:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Dakota State University, USA <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: Dr. [Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Thesis: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y)
 
-🎓 <b>2019-2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems & Management) <br>
+🎓 <b>2017-2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems & Management) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indian Institute of Technology, India <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thesis: 
 
