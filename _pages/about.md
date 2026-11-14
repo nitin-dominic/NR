@@ -73,6 +73,6 @@ My research interests (areas of focus) include:
 
 🎓 <b>2013-2017:</b> Bachelor of Technology (B.Tech) in Agricultural Engineering <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vaugh Institute of Agricultural Engineering And Technology (VIAET), Sam Higginbottom University of Agriculture, Technology and Sciences, India <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: Dr. Arpan Sherring, Thesis: Feasibility Study of Gravity Drip Irrigation for Small-Scale Farmers.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Arpan Sherring](https://shuats.org/webwapp/faculty_profile.asp?txtOpt=147), Thesis: Feasibility Study of Gravity Drip Irrigation for Small-Scale Farmers.
 
 ---
