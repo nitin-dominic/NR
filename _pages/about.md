@@ -56,7 +56,7 @@ My research interests (areas of focus) include:
 <i class="fas fa-user-tie"></i> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, NDSU (November 2023&ndash;November 2024) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://www.ndsu.edu/people/xin-rex-sun">Dr. Xin (Rex) Sun</a>
 <ul style="margin-top: 0.0rem; margin-bottom: 0.5rem; padding-left: 2.5rem; font-size: 0.95rem;">
-  <li>Co-led projects in high-throughput phenotyping, crop-yield prediction, and disease severity estimation in soybean and wheat using deep learning.</li>
+  <li>Co-led projects in high-throughput phenotyping, crop-yield prediction, and disease severity estimation in soybean and wheat crops using deep learning.</li>
 </ul>
 
 ---
