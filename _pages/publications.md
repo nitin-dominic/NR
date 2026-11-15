@@ -6,7 +6,6 @@ description: "Papers are arranged in a descending chronological order based on t
 nav: true
 nav_order: 1
 ---
-
 <div style="width: 100%; margin: 2rem 0;">
   <iframe src="/NR/assets/html/citation_map.html" 
           style="width: 100%; height: 500px; border: 1px solid var(--global-divider-color); border-radius: 6px;" 
