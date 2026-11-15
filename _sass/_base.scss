@@ -661,14 +661,14 @@ footer.sticky-bottom {
 
     &::before {
       content: "";
-      flex: 8;
+      flex: 10;
       height: 2px;
       background: linear-gradient(to right, transparent, var(--global-theme-color));
     }
 
     &::after {
       content: "";
-      flex: 1;
+      flex: 2;
       height: 2px;
       background: linear-gradient(to left, transparent, var(--global-theme-color));
     }
