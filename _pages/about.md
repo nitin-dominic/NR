@@ -40,13 +40,13 @@ My research interests (areas of focus) include:
 ### Academic Appointments
 
 <i class="fas fa-user-tie"></i> <b>May 2026 -- Nov. 2026:</b> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
 
 <i class="fas fa-user-tie"></i> <b>Nov. 2024 -- May 2026:</b> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/">Dr. Arnold W. Schumann</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/">Dr. Arnold W. Schumann</a> <br>
 
 <i class="fas fa-user-tie"></i> <b>Nov. 2023 -- Nov. 2024:</b> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, North Dakota State University <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://www.ndsu.edu/people/xin-rex-sun">Dr. Xin (Rex) Sun</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://www.ndsu.edu/people/xin-rex-sun">Dr. Xin (Rex) Sun</a>
 
 ---
 
