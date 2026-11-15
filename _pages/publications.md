@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications and Global Research Impact
-description: Papers are arranged in a descending chronological order based on their publication year. You can also find my publications on Google Scholar. I am grateful that my work has reached researchers across 93 countries. This map visualizes the affiliations of scholars who have cited my publications (Last updated: Nov. 15, 2026).
+description: "Papers are arranged in a descending chronological order based on their publication year. You can also find my publications on Google Scholar. I am grateful that my work has reached researchers across 93 countries. This map visualizes the affiliations of scholars who have cited my publications (Last updated: Nov. 15, 2026)."
 nav: true
 nav_order: 1
 ---
