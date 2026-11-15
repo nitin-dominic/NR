@@ -652,12 +652,26 @@ footer.sticky-bottom {
   h2.bibliography {
     color: var(--global-text-color);
     font-weight: 700;
-    font-size: 1.8rem;
-    border-top: 2px solid var(--global-theme-color);
-    padding-top: 1rem;
+    font-size: 1.4rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &::before {
+      content: "";
+      flex: 8;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--global-theme-color));
+    }
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to left, transparent, var(--global-theme-color));
+    }
   }
   
   ol.bibliography {
