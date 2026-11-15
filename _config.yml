@@ -19,7 +19,7 @@ icon: NR
 
 url: https://nitin-dominic.github.io/NR # the base hostname & protocol for your site
 baseurl: /NR # the subpath of your site, e.g. /blog/
-last_updated: false # set to true if you want to display last updated in the footer
+last_updated: true # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
@@ -71,7 +71,7 @@ x_username: nitindominic5
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: nitindominic5
 telegram_username: # your Telegram user name
-scholar_userid: https://scholar.google.com/citations?hl=en&user=02GjXz4AAAAJ&view_op=list_works&sortby=pubdate
+scholar_userid: 02GjXz4AAAAJ
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 orcid_id: # your ORCID ID
@@ -360,7 +360,7 @@ enable_google_verification: false  # enables google site verification
 enable_bing_verification:   false  # enables bing site verification
 enable_masonry:             true   # enables automatic project cards arrangement
 enable_math:                true   # enables math typesetting (uses MathJax)
-enable_tooltips:            false  # enables automatic tooltip links generated
+enable_tooltips:            true  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
 enable_darkmode:            true   # enables switching between light/dark modes
 enable_navbar_social:       false  # enables displaying social links in the
