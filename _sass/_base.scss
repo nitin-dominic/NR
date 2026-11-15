@@ -650,14 +650,16 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+    font-weight: 700;
+    font-size: 1.8rem;
+    border-top: 2px solid var(--global-theme-color);
     padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     text-align: right;
   }
-
+  
   ol.bibliography {
     list-style: none;
     padding: 0;
