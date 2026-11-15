@@ -8,7 +8,7 @@ middle_name:
 last_name: Rai
 email: nitin.rai@ufl.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Nitin Rai — Postdoctoral Researcher specializing in agricultural robotics, autonomous systems, and AI.
+  Nitin Rai — Postdoctoral Associate specializing in Agricultural Robotics, Autonomous Systems, and AI.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>, and tweaked by Nitin Rai.
 keywords: # add your own keywords or leave empty
