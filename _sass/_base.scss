@@ -19,6 +19,12 @@ strong {
   color: var(--global-text-color);
 }
 
+p,
+div,
+li,
+span {
+  font-weight: 400;
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
