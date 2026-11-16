@@ -54,14 +54,14 @@ My research interests (areas of focus) include:
 
 <span style="font-size: 1.3rem;">🎓</span><b>2019 -- 2023:</b> Doctorate (Ph.D.) in Agricultural and Biosystems Engineering <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural and Biosystems Engineering, North Dakota State University, USA <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Dissertation: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Dissertation: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y)
 
 <span style="font-size: 1.3rem;">🎓</span><b>2017 -- 2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems and Management) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural and Food Engineering, Indian Institute of Technology, India <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. B.S. Das](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas), Thesis: Development of a Controlled Soil Dryer for Estimating Soil Hydraulic Properties.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. B.S. Das](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas), Thesis: Development of a Controlled Soil Dryer for Estimating Soil Hydraulic Properties
 
 <span style="font-size: 1.3rem;">🎓</span><b>2013 -- 2017:</b> Bachelor of Technology (B.Tech) in Agricultural Engineering <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vaugh Institute of Agricultural Engineering And Technology (VIAET), Sam Higginbottom University of Agriculture, Technology and Sciences, India <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Arpan Sherring](https://shuats.org/webwapp/faculty_profile.asp?txtOpt=147), Thesis: Feasibility Study of Gravity Drip Irrigation for Small-Scale Farmers.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Arpan Sherring](https://shuats.org/webwapp/faculty_profile.asp?txtOpt=147), Thesis: Feasibility Study of Gravity Drip Irrigation for Small-Scale Farmers
 
 ---
