@@ -39,28 +39,28 @@ My research interests (areas of focus) include:
 
 ### Academic Appointments
 
-<i class="fas fa-user-tie"></i> <b>May 2026 -- Nov. 2026:</b> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida <br>
+<i class="fas fa-user-tie"></i> <b>May 2026-- ov. 2026:</b> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
 
-<i class="fas fa-user-tie"></i> <b>Nov. 2024 -- May 2026:</b> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida <br>
+<i class="fas fa-user-tie"></i> <b>Nov. 2024--May 2026:</b> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://crec.ifas.ufl.edu/people/faculty/arnold-schumann/">Dr. Arnold W. Schumann</a> <br>
 
-<i class="fas fa-user-tie"></i> <b>Nov. 2023 -- Nov. 2024:</b> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, North Dakota State University <br>
+<i class="fas fa-user-tie"></i> <b>Nov. 2023--Nov. 2024:</b> Postdoctoral Research Associate, Department of Agricultural and Biosystems Engineering, North Dakota State University <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://www.ndsu.edu/people/xin-rex-sun">Dr. Xin (Rex) Sun</a>
 
 ---
 
 ### Education
 
-<span style="font-size: 1.3rem;">🎓</span><b>2019 -- 2023:</b> Doctorate (Ph.D.) in Agricultural and Biosystems Engineering <br>
+<span style="font-size: 1.3rem;">🎓</span><b>2019--2023:</b> Doctorate (Ph.D.) in Agricultural and Biosystems Engineering <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural and Biosystems Engineering, North Dakota State University, USA <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Xin (Rex) Sun](https://www.ndsu.edu/people/xin-rex-sun), Dissertation: [Weed Identification on Drone-Captured Images Using Edge Device for Spot Spraying Application](https://www.proquest.com/openview/f0d13eeebd5023c32df71b57a155d086/1?pq-origsite=gscholar&cbl=18750&diss=y)
 
-<span style="font-size: 1.3rem;">🎓</span><b>2017 -- 2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems and Management) <br>
+<span style="font-size: 1.3rem;">🎓</span><b>2017--2019:</b> Master of Technology (M.Tech) in Agricultural and Food Engineering (Specialization: Agricultural Systems and Management) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural and Food Engineering, Indian Institute of Technology, India <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. B.S. Das](https://www.iitkgp.ac.in/department/AG/faculty/ag-bsdas), Thesis: Development of a Controlled Soil Dryer for Estimating Soil Hydraulic Properties
 
-<span style="font-size: 1.3rem;">🎓</span><b>2013 -- 2017:</b> Bachelor of Technology (B.Tech) in Agricultural Engineering <br>
+<span style="font-size: 1.3rem;">🎓</span><b>2013--2017:</b> Bachelor of Technology (B.Tech) in Agricultural Engineering <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vaugh Institute of Agricultural Engineering And Technology (VIAET), Sam Higginbottom University of Agriculture, Technology and Sciences, India <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: [Dr. Arpan Sherring](https://shuats.org/webwapp/faculty_profile.asp?txtOpt=147), Thesis: Feasibility Study of Gravity Drip Irrigation for Small-Scale Farmers
 
