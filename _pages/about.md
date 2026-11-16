@@ -39,7 +39,7 @@ My research interests (areas of focus) include:
 
 ### Academic Appointments
 
-<i class="fas fa-user-tie"></i> <b>May 2026-- ov. 2026:</b> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida <br>
+<i class="fas fa-user-tie"></i> <b>May 2026--Nov. 2026:</b> Postdoctoral Associate, Department of Agricultural and Biological Engineering, University of Florida <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advisor: <a href="https://abe.ufl.edu/people/faculty/wonsuk-lee/">Dr. Won Suk Lee</a>
 
 <i class="fas fa-user-tie"></i> <b>Nov. 2024--May 2026:</b> Postdoctoral Research Associate, Gulf Coast Research and Education Center, University of Florida <br>
