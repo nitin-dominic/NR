@@ -1263,3 +1263,11 @@ nav[data-toggle="toc"] {
     margin-top: 0;
   }
 }
+
+// Research interests list spacing
+.research-list {
+  li {
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+  }
+}
