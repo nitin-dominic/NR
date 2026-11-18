@@ -29,7 +29,7 @@ I believe the future of agriculture is fundamentally data-driven. However, the t
 
 With over 6+ years of experience in developing data-driven solutions for sustainable practices in precision agriculture, I specialize in both foundational and applied research in artificial intelligence (AI), machine learning, and autonomous systems for site-specific management in row and specialty crops. My expertise spans in-field data acquisition using autonomous ground and aerial robotic systems, the development of predictive AI models, and their deployment on edge platforms for real-time, closed-loop decision-making as part of on-farm research. This includes AI-driven perception, localization, and actuation for tasks such as targeted spraying. Overall, I am blessed to work on cutting-edge research while hoping to lay a foundation for incoming researchers. I believe the **future of agriculture** is fundamentally data-driven. However, the true value of data lies in how effectively we **manage**, **process**, and **interpret** it to generate actionable insights for farmers, growers, stakeholders, agricultural technology providers, and extension educators. I strongly believe in the following principle: -->
 
-> We’ve proven that digital data can transform agriculture. The next step is **execution**, putting autonomous systems in farmers’ fields that act on that data in real time. That’s what growers want to see!
+> We have proven that digital data can transform agriculture. The next step is **"execution**," putting autonomous systems in farmers’ fields that act on that data in real time. That’s what growers want to see!
 
 My research interests (areas of focus) include:
 
