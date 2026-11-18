@@ -34,11 +34,13 @@ With over 6+ years of experience in developing data-driven solutions for sustain
 My research interests (areas of focus) include:
 
 <ul class="research-list">
-  <li><i class="fas fa-eye"></i> AI-driven computer vision for precision agriculture.</li>
-  <li><i class="fas fa-robot"></i> Autonomous ground and aerial robotics with edge computing.</li>
-  <li><i class="fas fa-spray-can"></i> Site-specific crop management including targeted spraying and high-throughput phenotyping.</li>
-  <li><i class="fas fa-project-diagram"></i> Cyber-physical systems, robotic navigation, and spatial analytics.</li>
-  <li><i class="fas fa-handshake"></i> Technology transfer and stakeholder-driven transdisciplinary research.</li>
+  <li><i class="fas fa-brain"></i> Embodied AI and machine perception for agricultural field robotics.</li>
+  <li><i class="fas fa-route"></i> Autonomous navigation, motion planning, and path optimization for ground and aerial platforms.</li>
+  <li><i class="fas fa-spray-can"></i> Site-specific actuation systems including targeted spraying, mechanical weeding, and robotic harvesting.</li>
+  <li><i class="fas fa-seedling"></i> High-throughput phenotyping using multi-sensor fusion and edge-deployed inference.</li>
+  <li><i class="fas fa-microchip"></i> Cyber-physical agricultural systems, sensing, localization, and closed-loop control.</li>
+  <li><i class="fas fa-gamepad"></i> Human-robot interaction, teleoperation, and supervised autonomy for on-farm operations.</li>
+  <li><i class="fas fa-handshake"></i> Translational research, technology transfer, and stakeholder-driven deployment.</li>
 </ul>
 
 <hr style="border: none; height: 4px; background: linear-gradient(to right, transparent, var(--global-theme-color), transparent); margin: 2rem 0;">
