@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-permalink: /
+permalink: /pi/
 subtitle: Postdoctoral Associate, <a href='https://abe.ufl.edu/'?>Department of Agricultural and Biological Engineering</a>
 nav: true
 nav_order: 2
