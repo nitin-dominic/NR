@@ -2,7 +2,7 @@
 layout: page
 title: ACRE Lab
 permalink: /
-nav: true
+nav: false
 nav_order: 1
 ---
 
