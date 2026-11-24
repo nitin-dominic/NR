@@ -3,6 +3,7 @@ layout: page
 title: ACRE Lab
 permalink: /
 nav: true
+nav_order: 1
 ---
 
 <!-- Hero Section -->
